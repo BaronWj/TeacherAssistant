@@ -9,6 +9,8 @@
 #import "EducationalTeachingViewController.h"
 #import "CurriculumTableViewController.h"
 #import "AttendanceViewController.h"
+#import "CallNameViewController.h"
+
 @interface EducationalTeachingViewController ()
 
 @end
@@ -77,21 +79,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 1) {
+    if (indexPath.row == 0) {
+        CallNameViewController * callName = [[CallNameViewController alloc]init];
+        [callName setHidesBottomBarWhenPushed:YES];
+        [callName changeViewControllTitle:@"点名"];
+        
+        [self.navigationController pushViewController:callName animated:YES];
+    }else if (indexPath.row == 1) {
         CurriculumTableViewController * curriculum = [[CurriculumTableViewController alloc]init];
-//        curriculum.title = @"";
+        //        curriculum.title = @"";
         [curriculum setHidesBottomBarWhenPushed:YES];
-
+        
         [self.navigationController pushViewController:curriculum animated:YES];
     }else if (indexPath.row == 4){
         AttendanceViewController * attendance = [[AttendanceViewController alloc]init];
         attendance.title = @"考勤统计";
-    
+        
         [attendance setHidesBottomBarWhenPushed:YES];
         [attendance changeViewControllTitle:@"考勤统计"];
-//        attendance.isBackButton = YES;
+        //        attendance.isBackButton = YES;
         [self.navigationController pushViewController:attendance animated:YES];
-    
+        
     }
 }
 

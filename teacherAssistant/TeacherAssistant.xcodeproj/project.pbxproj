@@ -264,6 +264,8 @@
 		3FEB34E01A6E1EB4002A42EC /* newChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEB34DE1A6E1EB4002A42EC /* newChatTableViewCell.xib */; };
 		3FEB34E41A6E28FA002A42EC /* GroupChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB34E21A6E28FA002A42EC /* GroupChatTableViewCell.m */; };
 		3FEB34E51A6E28FA002A42EC /* GroupChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEB34E31A6E28FA002A42EC /* GroupChatTableViewCell.xib */; };
+		3FEB35201A6E6B10002A42EC /* CallNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB351E1A6E6B10002A42EC /* CallNameViewController.m */; };
+		3FEB35211A6E6B10002A42EC /* CallNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEB351F1A6E6B10002A42EC /* CallNameViewController.xib */; };
 		3FF9D37E1A6C84FB00DD5D38 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9D37C1A6C84FB00DD5D38 /* CollectionViewController.m */; };
 		3FF9D37F1A6C84FB00DD5D38 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9D37D1A6C84FB00DD5D38 /* CollectionViewController.xib */; };
 		3FF9D3831A6C8E1800DD5D38 /* CollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9D3811A6C8E1800DD5D38 /* CollectionTableViewCell.m */; };
@@ -670,6 +672,9 @@
 		3FEB34E11A6E28FA002A42EC /* GroupChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupChatTableViewCell.h; sourceTree = "<group>"; };
 		3FEB34E21A6E28FA002A42EC /* GroupChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupChatTableViewCell.m; sourceTree = "<group>"; };
 		3FEB34E31A6E28FA002A42EC /* GroupChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupChatTableViewCell.xib; sourceTree = "<group>"; };
+		3FEB351D1A6E6B08002A42EC /* CallNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallNameViewController.h; sourceTree = "<group>"; };
+		3FEB351E1A6E6B10002A42EC /* CallNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallNameViewController.m; sourceTree = "<group>"; };
+		3FEB351F1A6E6B10002A42EC /* CallNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallNameViewController.xib; sourceTree = "<group>"; };
 		3FF9D37B1A6C84FB00DD5D38 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		3FF9D37C1A6C84FB00DD5D38 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		3FF9D37D1A6C84FB00DD5D38 /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
@@ -743,6 +748,9 @@
 		3FC1CE081A5F833500120A3B /* 点名 */ = {
 			isa = PBXGroup;
 			children = (
+				3FEB351D1A6E6B08002A42EC /* CallNameViewController.h */,
+				3FEB351E1A6E6B10002A42EC /* CallNameViewController.m */,
+				3FEB351F1A6E6B10002A42EC /* CallNameViewController.xib */,
 			);
 			path = "点名";
 			sourceTree = "<group>";
@@ -1786,6 +1794,7 @@
 				3FF9D37F1A6C84FB00DD5D38 /* CollectionViewController.xib in Resources */,
 				3FC98F1A1A5E19EE00192826 /* addFriend@2x.png in Resources */,
 				3FC321C71A5A935700C4121E /* meSelected@2x.png in Resources */,
+				3FEB35211A6E6B10002A42EC /* CallNameViewController.xib in Resources */,
 				3FC088EC1A5BDEF9009FB115 /* me.png in Resources */,
 				3FC992AB1A63B07A00ECAE64 /* 2.png in Resources */,
 				3FC3218A1A5A65B600C4121E /* 点击前_11.png in Resources */,
@@ -1910,6 +1919,7 @@
 				3FCC578C1A5CCAD400D9A181 /* educationTeachingCell.m in Sources */,
 				3FEB34DB1A6E03B2002A42EC /* tableviewIndexSearch.m in Sources */,
 				3FC992821A63A9C500ECAE64 /* YMButton.m in Sources */,
+				3FEB35201A6E6B10002A42EC /* CallNameViewController.m in Sources */,
 				3FEB34AC1A6DE3C1002A42EC /* NewChatViewController.m in Sources */,
 				3FDF22351A675868002D122F /* TimeCell.m in Sources */,
 				3FC992B41A63BE2000ECAE64 /* AddressBookViewController.m in Sources */,
