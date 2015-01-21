@@ -32,11 +32,11 @@
         UIImageView *headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 5, 50, TableHeader)];
         headerImage.backgroundColor = [UIColor clearColor];
         headerImage.image = [UIImage imageNamed:@"mao.jpg"];
-        CALayer *layer = [headerImage layer];
-        [layer setMasksToBounds:YES];
-        [layer setCornerRadius:5.0];
-        [layer setBorderWidth:0.5];
-        [layer setBorderColor:[[UIColor whiteColor] CGColor]];
+//        CALayer *layer = [headerImage layer];
+//        [layer setMasksToBounds:YES];
+//        [layer setCornerRadius:5.0];
+//        [layer setBorderWidth:0.5];
+//        [layer setBorderColor:[[UIColor whiteColor] CGColor]];
         [self.contentView addSubview:headerImage];
         
         UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(20 + TableHeader + 20, 5, screenWidth - 120, TableHeader/2)];

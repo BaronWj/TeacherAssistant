@@ -28,6 +28,7 @@
 
 #define LANDSCAPE_WIDTH_PADDING 50
 
+#import "UITableViewCell+tableViewCell.h"
 @interface MLKMenuPopover ()
 
 
@@ -64,16 +65,24 @@
         menuPointerView.image = [UIImage imageNamed:@"options_pointer"];
         menuPointerView.tag = MENU_POINTER_TAG;
         [self.containerButton addSubview:menuPointerView];
+////        [menuPointerView.layer setMasksToBounds:YES];
+////        [menuPointerView.layer setCornerRadius:5];
+//        [menuPointerView.layer setBorderWidth:0.5];
+//        [menuPointerView.layer setBorderColor:[UIColor whiteColor].CGColor];
         
         // Adding menu Items table
         UITableView *menuItemsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 11, frame.size.width, frame.size.height)];
-        
         menuItemsTableView.dataSource = self;
         menuItemsTableView.delegate = self;
         menuItemsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         menuItemsTableView.scrollEnabled = NO;
         menuItemsTableView.backgroundColor = [UIColor clearColor];
         menuItemsTableView.tag = MENU_TABLE_VIEW_TAG;
+        [menuItemsTableView.layer setMasksToBounds:YES];
+        [menuItemsTableView.layer setCornerRadius:5];
+//        [menuItemsTableView.layer setBorderWidth:0.5];
+//        [menuItemsTableView.layer setBorderColor:[UIColor whiteColor].CGColor];
+
         
         UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Menu_PopOver_BG"]];
         menuItemsTableView.backgroundView = bgView;
@@ -111,7 +120,7 @@
         [cell.textLabel setFont:[UIFont boldSystemFontOfSize:FONT_SIZE]];
         [cell.textLabel setTextColor:[UIColor whiteColor]];
         [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
-        [cell setBackgroundColor:[UIColor clearColor]];
+        [cell tableViewCellBackbround];
     }
     
     NSInteger numberOfRows = [tableView numberOfRowsInSection:indexPath.section];

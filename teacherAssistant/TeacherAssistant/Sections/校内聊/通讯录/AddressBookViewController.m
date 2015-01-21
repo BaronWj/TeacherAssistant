@@ -8,8 +8,13 @@
 
 #import "AddressBookViewController.h"
 #import "UITableView+tableViewExtraCellHidden.h"
-
-@interface AddressBookViewController ()<UISearchBarDelegate>
+#import "UISearchBar+ChatSearchBar.h"
+#import "DataSearchViewController.h"
+#import "JSONKit.h"
+#import "Bank.h"
+#define DocumentPaths  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)//Document文件路径
+#define CacehFileName(_x) [[DocumentPaths objectAtIndex:0]stringByAppendingPathComponent:_x]
+@interface AddressBookViewController ()<UISearchBarDelegate,DataSearchDelegate>
 
 @end
 
@@ -19,38 +24,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self createShadow:NO];
-//    _Address_searchBar.barStyle = UIBarStyleBlackTranslucent;
-//    _Address_searchBar.inputView.backgroundColor = backGround;
-  
+    
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, ScreenWidth, 40.0f)];
     searchBar.placeholder = @"搜索";
     searchBar.delegate = self;
-//    [searchBar sizeToFit];
-//    searchBar.showsCancelButton =YES;
-    searchBar.showsScopeBar = YES;
-    searchBar.barStyle = UISearchBarStyleDefault;
-    searchBar.barTintColor = UIColorFromRGB(0x13494f);
-//    searchBar.barTintColor = UIColorFromRGB(0x13494f);
-    searchBar.tintColor = [UIColor grayColor];
-//    searchBar.inputView.backgroundColor =  UIColorFromRGB(0x13494f);
-//    searchBar.alpha = 1.0f;
-    searchBar.delegate = self;
-    searchBar.backgroundColor = [UIColor clearColor];
-    for (UIView *subview in searchBar.subviews)
-    {
-        if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")])
-        {
-            [subview removeFromSuperview];
-            break;
-        }
-    }
-    [searchBar becomeFirstResponder];
-    [[[searchBar subviews] lastObject] setBackgroundColor:UIColorFromRGB(0x13494f)];
-    searchBar.keyboardType = UIReturnKeyDefault;
+
+    [searchBar searchBarUICustom];//seacrchBar样式
     [self.view addSubview:searchBar];
-
-
-    
     
     self.address_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 160) style:UITableViewStylePlain];
     self.address_tableView.backgroundColor = [UIColor clearColor];
@@ -61,27 +41,68 @@
     [self.view addSubview:self.address_tableView];
     self.address_tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.address_tableView.sectionIndexColor= [UIColor whiteColor];
+    
+    
 
 }
+
+
+
+
 
 #pragma mark --
 #pragma mark -- searchBarDeletate
 -(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
 //    [self becomeFirstResponder];
-    return YES;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"banks" ofType:@"txt"];
+    NSArray *banks = [NSArray arrayWithContentsOfFile:path];
+    DataSearchViewController *search = [[DataSearchViewController alloc] initWithDataList:banks state:DataSearchStateBank delegate:self];
+    search.titleString = @"搜索";
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:search];
+    [self presentViewController:nav animated:NO completion:^{}];
+
+    return NO;
 }
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
 //    [searchBar becomeFirstResponder];
 
-
 };
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    MyLog(@"search");
+    [self resignFirstResponder];
+
+}
+
+
+
+//-(BOOL)searchDisplayController:(UISearchDisplayController *)controller
+//shouldReloadTableForSearchString:(NSString *)searchString
+//{
+//    return YES;
+//}
+
+- (void)dataSearch:(DataSearchViewController *)controller didSelectWithObject:(id)aObject
+         withState:(DataSearchState)state
+{
+    Bank *bank = [[Bank alloc] initWithDictionary:aObject];
+    MyLog(@"名字%@-----编号:%@",bank.name,bank.code);
+//    _searchField.text = bank.name;
+//    _codeLabel.text = [NSString stringWithFormat:@"编号:%@",bank.code];
+    [controller dismissViewControllerAnimated:NO completion:NULL];
+}
+
+- (void)dataSearchDidCanceled:(DataSearchViewController *)controller
+                    withState:(DataSearchState)state
+{
+    [controller dismissViewControllerAnimated:NO completion:NULL];
+}
+
 
 
 #pragma mark --
 #pragma mark -- tableViewDelegate && tableViewDateSource
-
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
 }

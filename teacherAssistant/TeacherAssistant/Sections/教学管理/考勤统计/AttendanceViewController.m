@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel * titleView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,40)];
+    UILabel * titleView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0,100,40)];
     titleView.textAlignment = NSTextAlignmentCenter;
     titleView.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = titleView;

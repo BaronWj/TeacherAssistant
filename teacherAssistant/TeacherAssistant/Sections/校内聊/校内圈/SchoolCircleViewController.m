@@ -40,7 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor clearColor];
-    [self createShadow:NO];
+//    [self createShadow:NO];
 //    self.view.frame = CGRectMake(0, 44, 320, screenHeight);
     _tableDataSource = [[NSMutableArray alloc] init];
     
@@ -175,13 +175,26 @@
 
 - (void) initTableview{
     
+    UIImageView * head_image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 190)];
+    head_image.image = [UIImage imageNamed:@"headImage1.png"];
+    
     mainTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64)];
     mainTable.backgroundColor = [UIColor clearColor];
     // mainTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     mainTable.delegate = self;
     mainTable.dataSource = self;
+    mainTable.tableHeaderView = head_image ;
     [self.view addSubview:mainTable];
     
+    UILabel * nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth-145, 140, 65, 65)];
+    nameLabel.backgroundColor = [UIColor clearColor];
+    nameLabel.text = @"绿萼";
+    nameLabel.textColor = [UIColor whiteColor];
+    [mainTable addSubview:nameLabel];
+    UIImageView * head_image1 = [[UIImageView alloc]initWithFrame:CGRectMake(ScreenWidth-90, 145, 60, 60)];
+    head_image1.image = [UIImage imageNamed:@"student2"];
+    [mainTable addSubview:head_image1];
+ 
 }
 
 //**
@@ -217,6 +230,7 @@
     [cell setYMViewWith:[_tableDataSource objectAtIndex:indexPath.row]];
     return cell;
 }
+
 
 
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath

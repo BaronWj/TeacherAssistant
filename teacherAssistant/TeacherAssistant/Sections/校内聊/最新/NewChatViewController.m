@@ -7,6 +7,7 @@
 //
 
 #import "NewChatViewController.h"
+#import "UISearchBar+ChatSearchBar.h"
 
 @interface NewChatViewController ()<UISearchBarDelegate>
 
@@ -21,25 +22,7 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, ScreenWidth, 40.0f)];
     searchBar.placeholder = @"搜索";
     searchBar.delegate = self;
-    searchBar.showsCancelButton = NO;
-    searchBar.showsScopeBar = NO;
-    searchBar.barStyle = UISearchBarStyleDefault;
-    searchBar.barTintColor = UIColorFromRGB(0x13494f);
-    //    searchBar.barTintColor = UIColorFromRGB(0x13494f);
-    searchBar.tintColor = [UIColor whiteColor];
-    searchBar.inputView.backgroundColor =  UIColorFromRGB(0x13494f);
-    //    searchBar.alpha = 1.0f;
-    searchBar.backgroundColor = [UIColor clearColor];
-    for (UIView *subview in searchBar.subviews)
-    {
-        if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")])
-        {
-            [subview removeFromSuperview];
-            break;
-        }
-    }
-    [[[searchBar subviews] lastObject] setBackgroundColor:UIColorFromRGB(0x13494f)];
-    searchBar.keyboardType = UIKeyboardTypeDefault;
+    [searchBar searchBarUICustom];//seacrchBar样式
     [self.view addSubview:searchBar];
     
     self.relady_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight -40) style:UITableViewStylePlain];
@@ -52,6 +35,27 @@
     
     NSLog(@"_____++++++++======%@",[self.view superview]);
 }
+
+#pragma mark --
+#pragma mark -- searchBarDeletate
+-(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    [self becomeFirstResponder];
+    return YES;
+}
+
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    //    [searchBar becomeFirstResponder];
+    
+    
+};
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    MyLog(@"search");
+    [self resignFirstResponder];
+    
+}
+
+#pragma mark --
+#pragma mark -- UItableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 56;
 }
