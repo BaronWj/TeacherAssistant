@@ -7,16 +7,18 @@
 //
 
 #import "AddressTableViewCell.h"
-//#import "UIImageView+UIImageCategory.h"
+#import "defineSetting.h"
+#import "UIImageView+UIImageCategory.h"
 @implementation AddressTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
-//    [self.headImage setImageRoundedcorners:];
-    [self.headImage.layer setMasksToBounds:YES];
-    [self.headImage.layer setCornerRadius:21];
+   [self.headImage setImageRoundedcorners:21];
+
     
+    
+  
 }
 
 -(void)setData_array:(NSArray *)data_array{
@@ -26,6 +28,7 @@
         self.videoButton.hidden = YES;
         self.phoneButton.hidden = YES;
         self.messButton.hidden = YES;
+    }else{
     }
     
 }

@@ -262,6 +262,26 @@
 		3FDF22361A675868002D122F /* MeetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF22301A675868002D122F /* MeetModel.m */; };
 		3FDF22401A67C01B002D122F /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF223E1A67C01B002D122F /* AttendanceViewController.m */; };
 		3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDF223F1A67C01B002D122F /* AttendanceViewController.xib */; };
+		3FE2D8DE1A70903000F7019B /* CrossView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8DD1A70903000F7019B /* CrossView.m */; };
+		3FE2D8E31A70C05A00F7019B /* NSDate+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8E01A70C05A00F7019B /* NSDate+Common.m */; };
+		3FE2D8E41A70C05A00F7019B /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8E21A70C05A00F7019B /* NSDate+convenience.m */; };
+		3FE2D8E91A70C09100F7019B /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8E71A70C09100F7019B /* NSDate+Helper.m */; };
+		3FE2D8EA1A70C09100F7019B /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8E81A70C09100F7019B /* README.textile */; };
+		3FE2D8ED1A70CBF500F7019B /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8EB1A70CBF500F7019B /* refresh.png */; };
+		3FE2D8EE1A70CBF500F7019B /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8EC1A70CBF500F7019B /* refresh@2x.png */; };
+		3FE2D8F11A70CD7D00F7019B /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8EF1A70CD7D00F7019B /* menu.png */; };
+		3FE2D8F21A70CD7D00F7019B /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8F01A70CD7D00F7019B /* menu@2x.png */; };
+		3FE2D8F61A70D65700F7019B /* NewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8F41A70D65700F7019B /* NewFriendViewController.m */; };
+		3FE2D8F71A70D65700F7019B /* NewFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8F51A70D65700F7019B /* NewFriendViewController.xib */; };
+		3FE2D8FB1A70D8B800F7019B /* newFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8F91A70D8B800F7019B /* newFriendTableViewCell.m */; };
+		3FE2D8FC1A70D8B800F7019B /* newFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8FA1A70D8B800F7019B /* newFriendTableViewCell.xib */; };
+		3FE2D9001A70E07A00F7019B /* ClassAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8FE1A70E07A00F7019B /* ClassAddressViewController.m */; };
+		3FE2D9011A70E07A00F7019B /* ClassAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D8FF1A70E07A00F7019B /* ClassAddressViewController.xib */; };
+		3FE2D9051A70E1FA00F7019B /* ClassAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D9031A70E1FA00F7019B /* ClassAddressTableViewCell.m */; };
+		3FE2D9061A70E1FA00F7019B /* ClassAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D9041A70E1FA00F7019B /* ClassAddressTableViewCell.xib */; };
+		3FE2D90A1A70F07100F7019B /* UIBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D9091A70F07100F7019B /* UIBadgeView.m */; };
+		3FE2D90E1A71098300F7019B /* CourseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D90C1A71098300F7019B /* CourseInfoViewController.m */; };
+		3FE2D90F1A71098300F7019B /* CourseInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2D90D1A71098300F7019B /* CourseInfoViewController.xib */; };
 		3FE4DD041A66083900F75E24 /* UITableView+tableViewExtraCellHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4DD031A66083900F75E24 /* UITableView+tableViewExtraCellHidden.m */; };
 		3FE4DD0C1A664ED700F75E24 /* CurriculumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4DD0A1A664ED700F75E24 /* CurriculumTableViewController.m */; };
 		3FE4DD0D1A664ED700F75E24 /* CurriculumTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE4DD0B1A664ED700F75E24 /* CurriculumTableViewController.xib */; };
@@ -691,6 +711,36 @@
 		3FDF223D1A67C01B002D122F /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
 		3FDF223E1A67C01B002D122F /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
 		3FDF223F1A67C01B002D122F /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
+		3FE2D8DC1A70903000F7019B /* CrossView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossView.h; sourceTree = "<group>"; };
+		3FE2D8DD1A70903000F7019B /* CrossView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossView.m; sourceTree = "<group>"; };
+		3FE2D8DF1A70C05A00F7019B /* NSDate+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Common.h"; sourceTree = "<group>"; };
+		3FE2D8E01A70C05A00F7019B /* NSDate+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Common.m"; sourceTree = "<group>"; };
+		3FE2D8E11A70C05A00F7019B /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		3FE2D8E21A70C05A00F7019B /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		3FE2D8E61A70C09100F7019B /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		3FE2D8E71A70C09100F7019B /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		3FE2D8E81A70C09100F7019B /* README.textile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.textile; sourceTree = "<group>"; };
+		3FE2D8EB1A70CBF500F7019B /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		3FE2D8EC1A70CBF500F7019B /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@2x.png"; sourceTree = "<group>"; };
+		3FE2D8EF1A70CD7D00F7019B /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		3FE2D8F01A70CD7D00F7019B /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		3FE2D8F31A70D65700F7019B /* NewFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFriendViewController.h; sourceTree = "<group>"; };
+		3FE2D8F41A70D65700F7019B /* NewFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendViewController.m; sourceTree = "<group>"; };
+		3FE2D8F51A70D65700F7019B /* NewFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewFriendViewController.xib; sourceTree = "<group>"; };
+		3FE2D8F81A70D8B800F7019B /* newFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newFriendTableViewCell.h; sourceTree = "<group>"; };
+		3FE2D8F91A70D8B800F7019B /* newFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newFriendTableViewCell.m; sourceTree = "<group>"; };
+		3FE2D8FA1A70D8B800F7019B /* newFriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newFriendTableViewCell.xib; sourceTree = "<group>"; };
+		3FE2D8FD1A70E07A00F7019B /* ClassAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassAddressViewController.h; sourceTree = "<group>"; };
+		3FE2D8FE1A70E07A00F7019B /* ClassAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassAddressViewController.m; sourceTree = "<group>"; };
+		3FE2D8FF1A70E07A00F7019B /* ClassAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassAddressViewController.xib; sourceTree = "<group>"; };
+		3FE2D9021A70E1FA00F7019B /* ClassAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassAddressTableViewCell.h; sourceTree = "<group>"; };
+		3FE2D9031A70E1FA00F7019B /* ClassAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassAddressTableViewCell.m; sourceTree = "<group>"; };
+		3FE2D9041A70E1FA00F7019B /* ClassAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassAddressTableViewCell.xib; sourceTree = "<group>"; };
+		3FE2D9081A70F07100F7019B /* UIBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBadgeView.h; sourceTree = "<group>"; };
+		3FE2D9091A70F07100F7019B /* UIBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBadgeView.m; sourceTree = "<group>"; };
+		3FE2D90B1A71098300F7019B /* CourseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfoViewController.h; sourceTree = "<group>"; };
+		3FE2D90C1A71098300F7019B /* CourseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInfoViewController.m; sourceTree = "<group>"; };
+		3FE2D90D1A71098300F7019B /* CourseInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseInfoViewController.xib; sourceTree = "<group>"; };
 		3FE4DD021A66083900F75E24 /* UITableView+tableViewExtraCellHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+tableViewExtraCellHidden.h"; sourceTree = "<group>"; };
 		3FE4DD031A66083900F75E24 /* UITableView+tableViewExtraCellHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+tableViewExtraCellHidden.m"; sourceTree = "<group>"; };
 		3FE4DD091A664ED700F75E24 /* CurriculumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurriculumTableViewController.h; sourceTree = "<group>"; };
@@ -821,6 +871,8 @@
 				3FDE12651A6F950F00A14839 /* CallNameLongituginalViewCell.h */,
 				3FDE12661A6F950F00A14839 /* CallNameLongituginalViewCell.m */,
 				3FDE12671A6F950F00A14839 /* CallNameLongituginalViewCell.xib */,
+				3FE2D8DC1A70903000F7019B /* CrossView.h */,
+				3FE2D8DD1A70903000F7019B /* CrossView.m */,
 			);
 			path = "点名";
 			sourceTree = "<group>";
@@ -844,6 +896,9 @@
 				3FE4DD091A664ED700F75E24 /* CurriculumTableViewController.h */,
 				3FE4DD0A1A664ED700F75E24 /* CurriculumTableViewController.m */,
 				3FE4DD0B1A664ED700F75E24 /* CurriculumTableViewController.xib */,
+				3FE2D90B1A71098300F7019B /* CourseInfoViewController.h */,
+				3FE2D90C1A71098300F7019B /* CourseInfoViewController.m */,
+				3FE2D90D1A71098300F7019B /* CourseInfoViewController.xib */,
 			);
 			path = "课程表";
 			sourceTree = "<group>";
@@ -1000,6 +1055,7 @@
 		3FC320D21A5A38D200C4121E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3FE2D9071A70F06B00F7019B /* AadgeView */,
 				3FEB34D21A6E03AA002A42EC /* ChineseCharactersChangePinyin */,
 				3FC9921C1A637D8100ECAE64 /* OC-Category */,
 				3F0A16331A5E2466009F5580 /* MenuPopover */,
@@ -1117,6 +1173,10 @@
 		3FC321231A5A4FB000C4121E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FE2D8EF1A70CD7D00F7019B /* menu.png */,
+				3FE2D8F01A70CD7D00F7019B /* menu@2x.png */,
+				3FE2D8EB1A70CBF500F7019B /* refresh.png */,
+				3FE2D8EC1A70CBF500F7019B /* refresh@2x.png */,
 				3FDE126A1A6F9CD200A14839 /* normal.png */,
 				3FDE126B1A6F9CD200A14839 /* normal@2x.png */,
 				3FDE12571A6F7F5900A14839 /* submit.png */,
@@ -1470,6 +1530,11 @@
 			children = (
 				3FC992291A637D8B00ECAE64 /* UIDevice+Info.h */,
 				3FC9922A1A637D8B00ECAE64 /* UIDevice+Info.m */,
+				3FE2D8DF1A70C05A00F7019B /* NSDate+Common.h */,
+				3FE2D8E01A70C05A00F7019B /* NSDate+Common.m */,
+				3FE2D8E51A70C09100F7019B /* NSDate+Helper */,
+				3FE2D8E11A70C05A00F7019B /* NSDate+convenience.h */,
+				3FE2D8E21A70C05A00F7019B /* NSDate+convenience.m */,
 				3FC88A831A68EA8500F0AF27 /* NSArray+descValues.h */,
 				3FC88A841A68EA8500F0AF27 /* NSArray+descValues.m */,
 				3FC9921D1A637D8100ECAE64 /* KDActivityIndicatorView.h */,
@@ -1580,6 +1645,18 @@
 				3FEB34B31A6DEA2C002A42EC /* AddressTableViewCell.h */,
 				3FEB34B41A6DEA2C002A42EC /* AddressTableViewCell.m */,
 				3FEB34B51A6DEA2C002A42EC /* AddressTableViewCell.xib */,
+				3FE2D8F31A70D65700F7019B /* NewFriendViewController.h */,
+				3FE2D8F41A70D65700F7019B /* NewFriendViewController.m */,
+				3FE2D8F51A70D65700F7019B /* NewFriendViewController.xib */,
+				3FE2D8F81A70D8B800F7019B /* newFriendTableViewCell.h */,
+				3FE2D8F91A70D8B800F7019B /* newFriendTableViewCell.m */,
+				3FE2D8FA1A70D8B800F7019B /* newFriendTableViewCell.xib */,
+				3FE2D8FD1A70E07A00F7019B /* ClassAddressViewController.h */,
+				3FE2D8FE1A70E07A00F7019B /* ClassAddressViewController.m */,
+				3FE2D8FF1A70E07A00F7019B /* ClassAddressViewController.xib */,
+				3FE2D9021A70E1FA00F7019B /* ClassAddressTableViewCell.h */,
+				3FE2D9031A70E1FA00F7019B /* ClassAddressTableViewCell.m */,
+				3FE2D9041A70E1FA00F7019B /* ClassAddressTableViewCell.xib */,
 			);
 			path = "通讯录";
 			sourceTree = "<group>";
@@ -1645,6 +1722,25 @@
 				3FDF22301A675868002D122F /* MeetModel.m */,
 			);
 			path = tableCource;
+			sourceTree = "<group>";
+		};
+		3FE2D8E51A70C09100F7019B /* NSDate+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2D8E61A70C09100F7019B /* NSDate+Helper.h */,
+				3FE2D8E71A70C09100F7019B /* NSDate+Helper.m */,
+				3FE2D8E81A70C09100F7019B /* README.textile */,
+			);
+			path = "NSDate+Helper";
+			sourceTree = "<group>";
+		};
+		3FE2D9071A70F06B00F7019B /* AadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2D9081A70F07100F7019B /* UIBadgeView.h */,
+				3FE2D9091A70F07100F7019B /* UIBadgeView.m */,
+			);
+			path = AadgeView;
 			sourceTree = "<group>";
 		};
 		3FE4DD0E1A66594E00F75E24 /* dropDownList */ = {
@@ -1780,6 +1876,7 @@
 				3FC320DA1A5A39A400C4121E /* Instructions.txt in Resources */,
 				3FCC57EB1A5D254E00D9A181 /* image0.png in Resources */,
 				3FC088F91A5BE102009FB115 /* equitAccount@2x.png in Resources */,
+				3FE2D9061A70E1FA00F7019B /* ClassAddressTableViewCell.xib in Resources */,
 				3FC088D61A5BAB13009FB115 /* arrows@2x.png in Resources */,
 				3FC088E81A5BD302009FB115 /* chooseClass.png in Resources */,
 				3F0A163C1A5E24A7009F5580 /* DefaultLine.png in Resources */,
@@ -1799,9 +1896,11 @@
 				3FC321C91A5A935700C4121E /* meSelectedNormal@2x.png in Resources */,
 				3FC88A951A68EE3300F0AF27 /* sectorView.xib in Resources */,
 				3FCC57FF1A5D3C1C00D9A181 /* AsActiveCell.xib in Resources */,
+				3FE2D90F1A71098300F7019B /* CourseInfoViewController.xib in Resources */,
 				3FC321C81A5A935700C4121E /* meSelectedNormal.png in Resources */,
 				3FC321991A5A686100C4121E /* 下导航底图.png in Resources */,
 				3FF9D3941A6CDD7A00DD5D38 /* labelRectNormal.png in Resources */,
+				3FE2D9011A70E07A00F7019B /* ClassAddressViewController.xib in Resources */,
 				3FC321801A5A655C00C4121E /* 点击前_12.png in Resources */,
 				3FC321A71A5A6DBB00C4121E /* ASActiveDynamicViewController.xib in Resources */,
 				3FC088F41A5BE0AF009FB115 /* recommed.png in Resources */,
@@ -1837,6 +1936,7 @@
 				3FC88A721A68E46B00F0AF27 /* 2.png in Resources */,
 				3FDE126C1A6F9CD200A14839 /* normal.png in Resources */,
 				3FCC579E1A5D000B00D9A181 /* checkIn@2x.png in Resources */,
+				3FE2D8F21A70CD7D00F7019B /* menu@2x.png in Resources */,
 				3FC992A71A63AA5D00ECAE64 /* 03@2x.png in Resources */,
 				3FCC579A1A5CFF5F00D9A181 /* calendar@2x.png in Resources */,
 				3FC088FD1A5BE151009FB115 /* opinion@2x.png in Resources */,
@@ -1853,10 +1953,12 @@
 				3FF9D3911A6CC32400DD5D38 /* back02.png in Resources */,
 				3FC992A51A63AA5D00ECAE64 /* 01@2x.png in Resources */,
 				3FC992A11A63AA4E00ECAE64 /* personal_showBac@2x.png in Resources */,
+				3FE2D8ED1A70CBF500F7019B /* refresh.png in Resources */,
 				3FF9D3A11A6CDE6E00DD5D38 /* labelRectNormalSelect@2x.png in Resources */,
 				3FC992A91A63B07600ECAE64 /* 3.png in Resources */,
 				3FCC57981A5CFF5F00D9A181 /* score@2x.png in Resources */,
 				3FDE12591A6F7F5900A14839 /* submit.png in Resources */,
+				3FE2D8FC1A70D8B800F7019B /* newFriendTableViewCell.xib in Resources */,
 				3FF9D38D1A6C97EA00DD5D38 /* ASActiveDetailsViewController.xib in Resources */,
 				3FC88A761A68E5C900F0AF27 /* unfilled@2x.png in Resources */,
 				3FC322031A5A9FD800C4121E /* teacherEducation.png in Resources */,
@@ -1864,6 +1966,7 @@
 				3FC320B61A5A36C100C4121E /* LaunchScreen.xib in Resources */,
 				3F0A163E1A5E24A7009F5580 /* Menu_PopOver_BG@2x.png in Resources */,
 				3FDE12641A6F894500A14839 /* CallNamelongitudinalViewController.xib in Resources */,
+				3FE2D8F11A70CD7D00F7019B /* menu.png in Resources */,
 				3FDE124A1A6F7B4200A14839 /* longitudinal_button@2x.png in Resources */,
 				3FDE123C1A6F4A5000A14839 /* banks.txt in Resources */,
 				3FC321271A5A4FE400C4121E /* icon50reload@2x.png in Resources */,
@@ -1872,6 +1975,7 @@
 				3FC088D01A5B7A4A009FB115 /* FTSlideAddViewController.xib in Resources */,
 				3FEB34CF1A6DF64F002A42EC /* phone@2x.png in Resources */,
 				3FEB34C41A6DF643002A42EC /* labeltag.png in Resources */,
+				3FE2D8EA1A70C09100F7019B /* README.textile in Resources */,
 				3FC321FE1A5A9EF200C4121E /* schoolChatTtitle.png in Resources */,
 				3FEB34B21A6DE3EF002A42EC /* GroupChatViewController.xib in Resources */,
 				3FCC579D1A5D000B00D9A181 /* checkIn.png in Resources */,
@@ -1898,6 +2002,7 @@
 				3FC320B31A5A36C100C4121E /* Images.xcassets in Resources */,
 				3FC3218C1A5A65DC00C4121E /* 点击后_07.png in Resources */,
 				3FEB34AD1A6DE3C1002A42EC /* NewChatViewController.xib in Resources */,
+				3FE2D8F71A70D65700F7019B /* NewFriendViewController.xib in Resources */,
 				3FC089001A5BE193009FB115 /* myschool.png in Resources */,
 				3FC088D21A5B80E9009FB115 /* red_line_and_shadow@2x.png in Resources */,
 				3FF9D3841A6C8E1800DD5D38 /* CollectionTableViewCell.xib in Resources */,
@@ -1917,6 +2022,7 @@
 				3FC088EC1A5BDEF9009FB115 /* me.png in Resources */,
 				3FC992AB1A63B07A00ECAE64 /* 2.png in Resources */,
 				3FC3218A1A5A65B600C4121E /* 点击前_11.png in Resources */,
+				3FE2D8EE1A70CBF500F7019B /* refresh@2x.png in Resources */,
 				3FEB34B71A6DEA2C002A42EC /* AddressTableViewCell.xib in Resources */,
 				3FCC57E81A5D254E00D9A181 /* image3.png in Resources */,
 				3FC88A981A69150600F0AF27 /* arrow.png in Resources */,
@@ -1960,6 +2066,7 @@
 				3FDE12401A6F4AFB00A14839 /* JSONKit.m in Sources */,
 				3FC321101A5A3FB600C4121E /* UIImage+WebP.m in Sources */,
 				3FC3211D1A5A428000C4121E /* OpenUDID.m in Sources */,
+				3FE2D9051A70E1FA00F7019B /* ClassAddressTableViewCell.m in Sources */,
 				3FCC57921A5CD58B00D9A181 /* EucationModel.m in Sources */,
 				3FC3210C1A5A3FB600C4121E /* SDWebImagePrefetcher.m in Sources */,
 				3FF9D37E1A6C84FB00DD5D38 /* CollectionViewController.m in Sources */,
@@ -1974,6 +2081,7 @@
 				3FEB34B11A6DE3EF002A42EC /* GroupChatViewController.m in Sources */,
 				3FC88A801A68EA6600F0AF27 /* MyPieElement.m in Sources */,
 				3FC9920F1A636E5600ECAE64 /* MJRefreshBaseView.m in Sources */,
+				3FE2D8DE1A70903000F7019B /* CrossView.m in Sources */,
 				3FC088C21A5B768D009FB115 /* PeopleMessageViewController.m in Sources */,
 				3FF9D3831A6C8E1800DD5D38 /* CollectionTableViewCell.m in Sources */,
 				3FC992251A637D8100ECAE64 /* KDActivityIndicatorView.m in Sources */,
@@ -1985,6 +2093,7 @@
 				3FC088CB1A5B79CA009FB115 /* FTSlideController.m in Sources */,
 				3FDF22401A67C01B002D122F /* AttendanceViewController.m in Sources */,
 				3FC88A851A68EA8500F0AF27 /* NSArray+descValues.m in Sources */,
+				3FE2D8E31A70C05A00F7019B /* NSDate+Common.m in Sources */,
 				3FC3215A1A5A517400C4121E /* AFURLSessionManager.m in Sources */,
 				3FC321211A5A4A5000C4121E /* FormValidateUtil.m in Sources */,
 				3FC88A8E1A68EAAE00F0AF27 /* NSMutableArray+pieEx.m in Sources */,
@@ -2001,7 +2110,9 @@
 				3FC1CE1A1A5F8FB600120A3B /* UIImageView+LK.m in Sources */,
 				3FC321541A5A517400C4121E /* AFHTTPSessionManager.m in Sources */,
 				3FC992111A636E5600ECAE64 /* MJRefreshFooterView.m in Sources */,
+				3FE2D8FB1A70D8B800F7019B /* newFriendTableViewCell.m in Sources */,
 				3FC992911A63AA1C00ECAE64 /* NSString+NSString_ILExtension.m in Sources */,
+				3FE2D9001A70E07A00F7019B /* ClassAddressViewController.m in Sources */,
 				3FC88A901A68EAAE00F0AF27 /* PieLayer.m in Sources */,
 				3FC88A811A68EA6600F0AF27 /* Example2Controller.m in Sources */,
 				3FCC57FE1A5D3C1C00D9A181 /* AsActiveCell.m in Sources */,
@@ -2023,6 +2134,7 @@
 				3FC321581A5A517400C4121E /* AFURLRequestSerialization.m in Sources */,
 				3FC321751A5A600B00C4121E /* LeveyTabBar.m in Sources */,
 				3F0A16361A5E2466009F5580 /* MLKMenuPopover.m in Sources */,
+				3FE2D90E1A71098300F7019B /* CourseInfoViewController.m in Sources */,
 				3FEB34BD1A6DEDD4002A42EC /* UIImageView+UIImageCategory.m in Sources */,
 				3FC9922B1A637D8B00ECAE64 /* UIDevice+Info.m in Sources */,
 				3FDE12361A6F4A3300A14839 /* DataSearchViewController.m in Sources */,
@@ -2034,11 +2146,13 @@
 				3FC321771A5A600B00C4121E /* UIViewController+FindTabView.m in Sources */,
 				3FC88A6A1A68B36500F0AF27 /* CollapseClickCell.m in Sources */,
 				3FC3215D1A5A517400C4121E /* UIAlertView+AFNetworking.m in Sources */,
+				3FE2D8E91A70C09100F7019B /* NSDate+Helper.m in Sources */,
 				3FC3210A1A5A3FB600C4121E /* SDWebImageDownloaderOperation.m in Sources */,
 				3FC321601A5A517400C4121E /* UIProgressView+AFNetworking.m in Sources */,
 				3FC88A8F1A68EAAE00F0AF27 /* PieElement.m in Sources */,
 				3FC3210E1A5A3FB600C4121E /* UIImage+GIF.m in Sources */,
 				3FC1CE191A5F8FB600120A3B /* THProgressView.m in Sources */,
+				3FE2D8E41A70C05A00F7019B /* NSDate+convenience.m in Sources */,
 				3FC321071A5A3FB600C4121E /* SDWebImageCompat.m in Sources */,
 				3FC321051A5A3FB600C4121E /* NSData+GIF.m in Sources */,
 				3FE4DD141A66594E00F75E24 /* DropDownListView.m in Sources */,
@@ -2052,10 +2166,12 @@
 				3FDF22351A675868002D122F /* TimeCell.m in Sources */,
 				3FC992B41A63BE2000ECAE64 /* AddressBookViewController.m in Sources */,
 				3F0A16451A5E2E0A009F5580 /* CollectionViewCellCustom.m in Sources */,
+				3FE2D90A1A70F07100F7019B /* UIBadgeView.m in Sources */,
 				3FDF22311A675868002D122F /* HeadView.m in Sources */,
 				3FC088D91A5BB673009FB115 /* newlabelView.m in Sources */,
 				3FC321611A5A517400C4121E /* UIWebView+AFNetworking.m in Sources */,
 				3FC320A81A5A36C100C4121E /* main.m in Sources */,
+				3FE2D8F61A70D65700F7019B /* NewFriendViewController.m in Sources */,
 				3FDE12681A6F950F00A14839 /* CallNameLongituginalViewCell.m in Sources */,
 				3FC992101A636E5600ECAE64 /* MJRefreshConst.m in Sources */,
 				3FC321041A5A3FB600C4121E /* MKAnnotationView+WebCache.m in Sources */,

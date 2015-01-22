@@ -25,20 +25,20 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         //        self.modalPresentationCapturesStatusBarAppearance = YES;
     }
-//    if (_isBackButton) {
-//        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [_backButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-//        [_backButton setBackgroundImage:[UIImage imageNamed:nil] forState:UIControlStateHighlighted];
-//        [_backButton setTitle:@"返回" forState:UIControlStateNormal];
-//        [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//        _backButton.frame = CGRectMake(0, 2,40, 14);
-//        _backButton.imageEdgeInsets= UIEdgeInsetsMake(0,0, 0, 10);
-//        _backButton.titleEdgeInsets = UIEdgeInsetsMake(0,0, 0, 0);
-//        _backButton.titleLabel.font = [UIFont systemFontOfSize:16];
-//        [_backButton addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
-//        UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
-//        self.navigationItem.leftBarButtonItem = buttonItem;
-//    }
+    if (_isBackButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+        [_backButton setBackgroundImage:[UIImage imageNamed:nil] forState:UIControlStateHighlighted];
+        [_backButton setTitle:@"返回" forState:UIControlStateNormal];
+        [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _backButton.frame = CGRectMake(0, 2,40, 14);
+        _backButton.imageEdgeInsets= UIEdgeInsetsMake(0,0, 0, 10);
+        _backButton.titleEdgeInsets = UIEdgeInsetsMake(0,0, 0, 0);
+        _backButton.titleLabel.font = [UIFont systemFontOfSize:16];
+        [_backButton addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
+        self.navigationItem.leftBarButtonItem = buttonItem;
+    }
 //    //右边按钮
 //    if (_isRightButton) {
 //        _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];

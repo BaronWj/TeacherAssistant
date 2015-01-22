@@ -14,6 +14,7 @@
 #import "MeetModel.h"
 #define kCount 20
 #import "defineSetting.h"
+#import "CourseInfoViewController.h"
 @interface CurriculumTableViewController ()<UITableViewDataSource,UITableViewDelegate,MyCellDelegate,UIScrollViewDelegate>
 {
     NSMutableArray * chooseArray ;
@@ -162,6 +163,12 @@
     int daysData =(int)(ponit.y/40);
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"clicked room" message:[NSString stringWithFormat:@"time :%@ room :%@",[NSString stringWithFormat:@"%d",daysData],roomNum] delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
     [alert show];
+    
+    CourseInfoViewController * coureseInfo = [[CourseInfoViewController alloc]init];
+    [coureseInfo setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:coureseInfo animated:YES];
+    
+    
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

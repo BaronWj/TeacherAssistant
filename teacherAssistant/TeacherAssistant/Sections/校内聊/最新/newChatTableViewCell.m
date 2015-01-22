@@ -7,14 +7,21 @@
 //
 
 #import "newChatTableViewCell.h"
-
+#import "UIBadgeView.h"
+#import "UIImageView+UIImageCategory.h"
 @implementation newChatTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
-    [self.headImage.layer setMasksToBounds:YES];
-    [self.headImage.layer setCornerRadius:21];
+    [self.headImage setImageRoundedcorners:21];
+  
+    
+    UIBadgeView *  badgeView = [[UIBadgeView alloc] initWithFrame:CGRectMake(44, 0, 40, 30)];
+    badgeView.badgeString = @"2";
+    badgeView.badgeColor = UIColorFromRGB(0xf7bc08);
+    [self addSubview:badgeView];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

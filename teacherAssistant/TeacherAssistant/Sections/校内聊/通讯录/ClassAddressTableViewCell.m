@@ -1,21 +1,20 @@
 //
-//  GroupChatTableViewCell.m
+//  ClassAddressTableViewCell.m
 //  TeacherAssistant
 //
-//  Created by MyUpinup on 15/1/20.
+//  Created by MyUpinup on 15/1/22.
 //  Copyright (c) 2015年 MyUpinup. All rights reserved.
 //
 
-#import "GroupChatTableViewCell.h"
+#import "ClassAddressTableViewCell.h"
 #import "UITableViewCell+tableViewCell.h"
 #import "UIImageView+UIImageCategory.h"
-@implementation GroupChatTableViewCell
+@implementation ClassAddressTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
     [self.headImage setImageRoundedcorners:21];
-
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

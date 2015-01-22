@@ -40,11 +40,11 @@
     titleView.text = @"考勤统计";
     
     chooseArray = [NSMutableArray arrayWithArray:@[
-                                                   @[@"第一周",@"第二周",@"第三周",@"第四周"],
-                                                    @[@"第一天",@"第二天",@"第三天",@"第四天"],
+                                                   @[@"13级多艺101班",@"13级绘画101班",@"13级计算机101班",@"13级土木101班"],
+                                                    @[@"舞蹈与形体",@"艺术概论",@"计算机信息",@"土木工程"],
                                                    ]];
     
-    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,0, titleView.frame.size.width, 40) dataSource:self delegate:self];
+    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 40) dataSource:self delegate:self];
     dropDownView.backgroundColor = [UIColor clearColor];
     dropDownView.mSuperView = self.view;
     [self.view addSubview:dropDownView];
@@ -56,32 +56,7 @@
     // If you want a cell open on load, run this method:
     [myCollapseClick openCollapseClickCellAtIndex:1 animated:NO];
 
-//    for(int year = 2009; year <= 2014; year++){
-//        MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
-//                    elem.title = [NSString stringWithFormat:@"%d year", year];
-//    
-//                    [testView1.layer addValues:@[elem] animated:NO];
-//        }
-//    
-//                //mutch easier do this with array outside
-//        testView1.layer.transformTitleBlock = ^(PieElement* elem){
-//            return [(MyPieElement*)elem title];
-//      };
-//           testView1.layer.showTitles = ShowTitlesAlways;
-    
-//    
-//    for(int year = 2009; year <= 2014; year++){
-//        MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
-//        elem.title = [NSString stringWithFormat:@"%d year", year];
-//        
-//        [testView2.layer addValues:@[elem] animated:NO];
-//    }
-////
-////    //mutch easier do this with array outside
-//    testView2.layer.transformTitleBlock = ^(PieElement* elem){
-//        return [(MyPieElement*)elem title];
-//    };
-//    testView2.layer.showTitles = ShowTitlesAlways;
+
 }
 
 -(UIView *)createView{

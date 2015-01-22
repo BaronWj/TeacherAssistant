@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LeveyTabBarController.h"
 #import "UITableView+tableViewExtraCellHidden.h"
-
+#import "NSDate+Common.h"
 @interface BaseViewController : UIViewController<UINavigationControllerDelegate>{
     LeveyTabBarController * leverTab;
     BOOL isHiddenStatusBar;

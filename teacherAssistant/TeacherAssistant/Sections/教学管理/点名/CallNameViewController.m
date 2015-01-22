@@ -136,7 +136,11 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    MyLog(@"aaaaaaaa");
+    [self.callNameCross destroyTimer];
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -28,13 +28,19 @@
     _educational_tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_educational_tableView];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
+    
+    
 
 //    _education_array = @[@[@"点名"],@[@"课程表"],@[@"选修课"],@[@"日程表"],@[@"评价"],@[@"考勤统计"
 //                                                                        ],@[@"成绩管理"]];
     _education_array = @[@{@"name":@"点名",@"msg":@"目前课程:微积分",@"headImage_url":@"callName"},@{@"name":@"课程表",@"msg":@"班级 2 课程 3 剩余课时 50/300",@"headImage_url":@"classTable"},@{@"name":@"选修课",@"msg":@"目前选报人数 50/60",@"headImage_url":@"chooseClass"},@{@"name":@"评价",@"msg":@"待评价 3 评价结果 2",@"headImage_url":@"evaluate"},@{@"name":@"考勤统计",@"msg":@"最高出勤率",@"headImage_url":@"checkIn"},@{@"name":@"成绩管理",@"msg":@"未打分学生6人 需要补考3人",@"headImage_url":@"score"}];
 }
 
+-(void)refresh{
+    MyLog(@"refresh");
 
+}
 #pragma mark --
 #pragma mark -- tableViewdelegate
 //-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -81,6 +87,7 @@
     if (indexPath.row == 0) {
         CallNameViewController * callName = [[CallNameViewController alloc]init];
         [callName setHidesBottomBarWhenPushed:YES];
+//        callName.isBackButton = YES;
         [callName changeViewControllTitle:@"点名"];
 
         [self.navigationController pushViewController:callName animated:YES];

@@ -9,8 +9,10 @@
 #import "UIImageView+UIImageCategory.h"
 
 @implementation UIImageView (UIImageCategory)
--(void)setImageRoundedcorners :(UIImage *)image{
+-(void)setImageRoundedcorners :(CGFloat )imagefloat{
     [self.layer setMasksToBounds:YES];
-    [self.layer setCornerRadius:image.size.height/2];
+    [self.layer setCornerRadius:imagefloat];
+    [self.layer setBorderWidth:1];
+    [self.layer setBorderColor:[UIColor whiteColor].CGColor];
 }
 @end

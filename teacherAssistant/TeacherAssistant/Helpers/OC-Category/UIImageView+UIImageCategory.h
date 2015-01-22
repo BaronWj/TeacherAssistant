@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (UIImageCategory)
--(void)setImageRoundedcorners :(UIImage *)image;
+-(void)setImageRoundedcorners :(CGFloat )imagefloat;
 @end

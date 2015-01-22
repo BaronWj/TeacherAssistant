@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "CrossView.h"
 @interface CallNameCrossViewController : BaseViewController
-
+@property(nonatomic , strong) UIScrollView * callNameCross_scr;
+@property(nonatomic , strong) CrossView * crossView;
+-(void)destroyTimer;
 @end

@@ -1,61 +1,29 @@
 //
-//  NewChatViewController.m
+//  NewFriendViewController.m
 //  TeacherAssistant
 //
-//  Created by MyUpinup on 15/1/20.
+//  Created by MyUpinup on 15/1/22.
 //  Copyright (c) 2015年 MyUpinup. All rights reserved.
 //
 
-#import "NewChatViewController.h"
-#import "UISearchBar+ChatSearchBar.h"
+#import "NewFriendViewController.h"
 
-@interface NewChatViewController ()<UISearchBarDelegate>
+@interface NewFriendViewController ()
 
 @end
 
-@implementation NewChatViewController
+@implementation NewFriendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    [self createShadow:NO];
-//    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, ScreenWidth, 40.0f)];
-//    searchBar.placeholder = @"搜索";
-//    searchBar.delegate = self;
-//    [searchBar searchBarUICustom];//seacrchBar样式
-//    [self.view addSubview:searchBar];
-    
-    self.relady_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight -40) style:UITableViewStylePlain];
-    self.relady_tableView.delegate = self;
-    self.relady_tableView.dataSource = self;
-    self.relady_tableView.backgroundColor = [UIColor clearColor];
-//    self.relady_tableView.tableHeaderView = searchBar;
-    [self.view addSubview:self.relady_tableView];
-
-    
-    NSLog(@"_____++++++++======%@",[self.view superview]);
+    _friend_tableView = [[UITableView alloc]init];
+    _friend_tableView.frame = CGRectMake(0, 3, ScreenWidth, ScreenHeight-66);
+    _friend_tableView.delegate = self;
+    _friend_tableView.dataSource = self;
+    _friend_tableView.backgroundColor = backGround;
+    [self.view addSubview:_friend_tableView];
 }
-
-#pragma mark --
-#pragma mark -- searchBarDeletate
--(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
-    [self becomeFirstResponder];
-    return YES;
-}
-
--(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    //    [searchBar becomeFirstResponder];
-    
-    
-};
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    MyLog(@"search");
-    [self resignFirstResponder];
-    
-}
-
-#pragma mark --
-#pragma mark -- UItableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 56;
 }
@@ -70,22 +38,22 @@
     // cell = [[[NSBundle mainBundle] loadNibNamed:@"educationTeachingCell" owner:nil options:nil] lastObject];
     if (!cell) {
         //              cell = [[AddressTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"newChatTableViewCell" owner:nil options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"newFriendTableViewCell" owner:nil options:nil] lastObject];
     }
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -93,6 +61,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end

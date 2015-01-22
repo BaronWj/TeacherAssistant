@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "AddressTableViewCell.h"
-@interface AddressBookViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+#import "UIBadgeView.h"
+
+@interface AddressBookViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>{
+    UIBadgeView *badgeView;
+
+}
 @property (nonatomic,strong)UITableView * address_tableView;
 
 @end

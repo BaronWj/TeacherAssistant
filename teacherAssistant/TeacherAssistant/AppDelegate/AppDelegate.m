@@ -36,7 +36,7 @@
     [schoolChat changeViewControllTitle:@"校内聊"];
     UINavigationController * schoolChat_nav = [[UINavigationController alloc]initWithRootViewController:schoolChat];
     schoolChat_nav.delegate = self;
-
+    
     PeopleMessageViewController * peopleMessage = [[PeopleMessageViewController alloc]init];
     [schoolChat changeViewControllTitle:@"我"];
     UINavigationController * peopleMessage_nav = [[UINavigationController alloc]initWithRootViewController:peopleMessage];
@@ -74,7 +74,8 @@
     [leveyTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"下导航底图"]];
     [leveyTabBarController setTabBarTransparent:YES];
     self.window.rootViewController = leveyTabBarController;
-
+   
+   
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated

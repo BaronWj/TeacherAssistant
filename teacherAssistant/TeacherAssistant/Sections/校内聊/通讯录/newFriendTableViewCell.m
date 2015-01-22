@@ -1,22 +1,24 @@
 //
-//  GroupChatTableViewCell.m
+//  newFriendTableViewCell.m
 //  TeacherAssistant
 //
-//  Created by MyUpinup on 15/1/20.
+//  Created by MyUpinup on 15/1/22.
 //  Copyright (c) 2015年 MyUpinup. All rights reserved.
 //
 
-#import "GroupChatTableViewCell.h"
+#import "newFriendTableViewCell.h"
 #import "UITableViewCell+tableViewCell.h"
 #import "UIImageView+UIImageCategory.h"
-@implementation GroupChatTableViewCell
+@implementation newFriendTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
-    [self.headImage setImageRoundedcorners:21];
-
-}
+    [_headImage setImageRoundedcorners:22];
+    [self.passStateButton.layer setMasksToBounds:YES];
+    [self.passStateButton.layer setCornerRadius:5];
+    [self.passStateButton.layer setBorderWidth:1];
+    [self.passStateButton.layer setBorderColor:[UIColor yellowColor].CGColor];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

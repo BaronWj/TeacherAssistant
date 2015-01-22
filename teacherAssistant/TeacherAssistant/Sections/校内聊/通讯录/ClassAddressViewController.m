@@ -1,40 +1,56 @@
 //
-//  AddressBookViewController.m
+//  ClassAddressViewController.m
 //  TeacherAssistant
 //
-//  Created by MyUpinup on 15/1/12.
+//  Created by MyUpinup on 15/1/22.
 //  Copyright (c) 2015年 MyUpinup. All rights reserved.
 //
 
-#import "AddressBookViewController.h"
+#import "ClassAddressViewController.h"
 #import "UITableView+tableViewExtraCellHidden.h"
 #import "UISearchBar+ChatSearchBar.h"
 #import "DataSearchViewController.h"
 #import "JSONKit.h"
 #import "Bank.h"
-#import "NewFriendViewController.h"
-#import "ClassAddressViewController.h"
+#import "ClassAddressTableViewCell.h"
+#import "DropDownListView.h"
 #define DocumentPaths  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)//Document文件路径
 #define CacehFileName(_x) [[DocumentPaths objectAtIndex:0]stringByAppendingPathComponent:_x]
-@interface AddressBookViewController ()<UISearchBarDelegate,DataSearchDelegate>
+@interface ClassAddressViewController ()<UISearchBarDelegate,DataSearchDelegate,DropDownChooseDataSource,DropDownChooseDelegate>
+{
+    NSMutableArray * chooseArray;
 
+}
 @end
 
-@implementation AddressBookViewController
+@implementation ClassAddressViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createShadow:NO];
+    self.view.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
     
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, ScreenWidth, 40.0f)];
+    chooseArray = [NSMutableArray arrayWithArray:@[
+                                                   @[@"13级多艺101班",@"13级绘画101班",@"13级计算机101班",@"13级土木101班"],
+                                                   @[@"舞蹈与形体",@"艺术概论",@"计算机信息",@"土木工程"],
+                                                   ]];
+
+    
+    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,5, ScreenWidth, 40) dataSource:self delegate:self];
+    dropDownView.backgroundColor = [UIColor clearColor];
+    dropDownView.mSuperView = self.view;
+    [self.view addSubview:dropDownView];
+    
+
+    
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame: CGRectMake(0.0f, 40.0f, ScreenWidth, 40.0f)];
     searchBar.placeholder = @"搜索";
     searchBar.delegate = self;
-
+    
     [searchBar searchBarUICustom];//seacrchBar样式
     [self.view addSubview:searchBar];
     
-    self.address_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 160) style:UITableViewStylePlain];
+    self.address_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 43, ScreenWidth, ScreenHeight - 55) style:UITableViewStylePlain];
     self.address_tableView.backgroundColor = [UIColor clearColor];
     [self.address_tableView setExtraCellLineHidden:YES];
     self.address_tableView.delegate = self;
@@ -43,15 +59,40 @@
     [self.view addSubview:self.address_tableView];
     self.address_tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.address_tableView.sectionIndexColor= [UIColor whiteColor];
-    
-
 
 }
+
+#pragma mark -- dropDownListDelegate
+-(void) chooseAtSection:(NSInteger)section index:(NSInteger)index
+{
+    NSLog(@"选了section:%ld ,index:%ld",section,index);
+}
+
+#pragma mark -- dropdownList DataSource
+-(NSInteger)numberOfSections
+{
+    return [chooseArray count];
+}
+-(NSInteger)numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *arry =chooseArray[section];
+    return [arry count];
+}
+-(NSString *)titleInSection:(NSInteger)section index:(NSInteger) index
+{
+    return chooseArray[section][index];
+}
+-(NSInteger)defaultShowSection:(NSInteger)section
+{
+    return 0;
+}
+
+
 
 #pragma mark --
 #pragma mark -- searchBarDeletate
 -(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
-//    [self becomeFirstResponder];
+    //    [self becomeFirstResponder];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"banks" ofType:@"txt"];
     NSArray *banks = [NSArray arrayWithContentsOfFile:path];
@@ -59,18 +100,18 @@
     search.titleString = @"搜索";
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:search];
     [self presentViewController:nav animated:NO completion:^{}];
-
+    
     return NO;
 }
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-//    [searchBar becomeFirstResponder];
-
+    //    [searchBar becomeFirstResponder];
+    
 };
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     MyLog(@"search");
     [self resignFirstResponder];
-
+    
 }
 
 
@@ -86,8 +127,8 @@
 {
     Bank *bank = [[Bank alloc] initWithDictionary:aObject];
     MyLog(@"名字%@-----编号:%@",bank.name,bank.code);
-//    _searchField.text = bank.name;
-//    _codeLabel.text = [NSString stringWithFormat:@"编号:%@",bank.code];
+    //    _searchField.text = bank.name;
+    //    _codeLabel.text = [NSString stringWithFormat:@"编号:%@",bank.code];
     [controller dismissViewControllerAnimated:NO completion:NULL];
 }
 
@@ -97,26 +138,17 @@
     [controller dismissViewControllerAnimated:NO completion:NULL];
 }
 
-
-
 #pragma mark --
 #pragma mark -- tableViewDelegate && tableViewDateSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0){
-        return 2;
-    }else{
         return 5;
-    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        return 0;
-    }else{
         return  35;
-    }
+ 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
@@ -131,9 +163,12 @@
     taglabel.backgroundColor = [UIColor clearColor];
     taglabel.textColor = [UIColor whiteColor];
     if (section == 0) {
-        taglabel.text = @"A";
+        taglabel.text = @"班主任";
     }else if(section == 1){
-        taglabel.text = @"B";
+        taglabel.text = @"辅导员";
+        
+    }else{
+        taglabel.text = @"A";
 
     }
     
@@ -144,33 +179,12 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"Cell";
-        AddressTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-// cell = [[[NSBundle mainBundle] loadNibNamed:@"educationTeachingCell" owner:nil options:nil] lastObject];
+    static NSString * CellIdentifier = @"Cell";
+    ClassAddressTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // cell = [[[NSBundle mainBundle] loadNibNamed:@"educationTeachingCell" owner:nil options:nil] lastObject];
     if (!cell) {
-//              cell = [[AddressTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"AddressTableViewCell" owner:nil options:nil] lastObject];
-    }
-    
-//    NSArray * array = @[@"1"];
-//    cell.data_array =array;
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        cell.headImage.image = [UIImage imageNamed:@"newFriend"];
-        cell.nameLabel.text = @"新的朋友";
-        cell.videoButton.hidden = YES;
-        cell.phoneButton.hidden = YES;
-        cell.messButton.hidden = YES;
-        badgeView = [[UIBadgeView alloc] initWithFrame:CGRectMake(170, 20, 50, 50)];
-        badgeView.badgeString = @"20";
-        badgeView.badgeColor = UIColorFromRGB(0xf7bc08);
-        [cell addSubview:badgeView];
-    }else if (indexPath.section == 0 && indexPath.row ==1){
-        cell.headImage.image = [UIImage imageNamed:@"labeltag"];
-        cell.nameLabel.text = @"班级通讯录";
-        cell.videoButton.hidden = YES;
-        cell.phoneButton.hidden = YES;
-        cell.messButton.hidden = YES;
-
+        //              cell = [[AddressTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ClassAddressTableViewCell" owner:nil options:nil] lastObject];
     }
     
     return cell;
@@ -184,23 +198,6 @@
     [musArray addObjectsFromArray:array];
     return musArray;
 }
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if(indexPath.row == 0 && indexPath.section == 0){
-        NewFriendViewController * newFriend = [[NewFriendViewController alloc]init];
-        newFriend.title = @"新朋友";
-        [newFriend setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:newFriend animated:YES];
-    }else if (indexPath.row ==1 && indexPath.section == 0){
-        ClassAddressViewController * classAddress = [[ClassAddressViewController alloc]init];
-        classAddress.title = @"班级通讯录";
-        [classAddress setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:classAddress animated:YES];
-    
-    }
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

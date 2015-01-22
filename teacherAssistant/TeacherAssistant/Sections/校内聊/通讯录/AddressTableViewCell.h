@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+tableViewCell.h"
-@interface AddressTableViewCell : UITableViewCell
+
+@interface AddressTableViewCell : UITableViewCell{
+}
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *videoButton;

@@ -29,8 +29,8 @@
     self.view.frame =CGRectMake(0, 0, ScreenWidth, ScreenHeight);
 //    self.view.backgroundColor = [UIColor redColor];
     _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_rightButton setBackgroundImage:[UIImage imageNamed:@"addFriend"] forState:UIControlStateNormal];
-    _rightButton.frame = CGRectMake(0, 0, 24, 24);
+    [_rightButton setBackgroundImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    _rightButton.frame = CGRectMake(0, 0, 19, 15);
     UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_rightButton];
     self.navigationItem.rightBarButtonItem = buttonItem;
     [_rightButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];

@@ -52,6 +52,7 @@
             sectionBtn.backgroundColor = [UIColor clearColor];
             sectionBtn.tag = SECTION_BTN_TAG_BEGIN + i;
             [sectionBtn addTarget:self action:@selector(sectionBtnTouch:) forControlEvents:UIControlEventTouchUpInside];
+        
             NSString *sectionBtnTitle = @"--";
             if ([self.dropDownDataSource respondsToSelector:@selector(titleInSection:index:)]) {
                 sectionBtnTitle = [self.dropDownDataSource titleInSection:i index:[self.dropDownDataSource defaultShowSection:i]];
@@ -63,7 +64,7 @@
             [self addSubview:sectionBtn];
             UIImageView *sectionBtnIv;
             if (sectionNum > 1) {
-                sectionBtnIv = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/sectionNum*i + 130, (self.frame.size.height-12)/2 , 12, 12)];
+                sectionBtnIv = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/sectionNum*i + 140, (self.frame.size.height-12)/2 , 12, 12)];
             }else{
                 sectionBtnIv = [[UIImageView alloc] initWithFrame:CGRectMake(sectionWidth*i +(sectionWidth - 16)-50, (self.frame.size.height-12)/2, 12, 12)];
             }
@@ -76,7 +77,7 @@
             if (i<sectionNum && i != 0) {
                 UIView *lineView;
                 if (sectionNum > 1) {
-                    lineView = [[UIView alloc] initWithFrame:CGRectMake(sectionWidth * i, frame.size.height/4, 1, frame.size.height/2)];
+                    lineView = [[UIView alloc] initWithFrame:CGRectMake(ScreenWidth/sectionNum * i, frame.size.height/4, 1, frame.size.height/2)];
                 }else{
                     lineView = [[UIView alloc] initWithFrame:CGRectMake(sectionWidth*i, frame.size.height/4, 1, frame.size.height/2)];
                 }
@@ -177,7 +178,7 @@
     }
     
     //修改tableview的frame
-    int sectionWidth = (self.frame.size.width)/[self.dropDownDataSource numberOfSections];
+    int sectionWidth = ScreenWidth/[self.dropDownDataSource numberOfSections];
     CGRect rect = self.mTableView.frame;
     rect.origin.x = sectionWidth *section;
     //rect.size.width = sectionWidth;
