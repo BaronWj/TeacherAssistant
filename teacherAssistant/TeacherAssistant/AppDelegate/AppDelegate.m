@@ -80,6 +80,26 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
+    if (navigationController.hidesBarsOnSwipe) {
+        MyLog(@"navigationController.hidesBarsOnSwipe");
+    }else{
+        MyLog(@"navigationController.hidesBarsOnSwipe == yes");
+
+    }
+    
+    if (viewController.hidesBottomBarWhenPushed)
+    {
+        MyLog(@"navigationController.hidesBarsPush == yes");
+
+        [leveyTabBarController hidesTabBar:YES animated:YES];
+    }
+    else
+    {
+        MyLog(@"navigationController.hidesBarsPush == No");
+        [leveyTabBarController hidesTabBar:NO animated:YES];
+    }
+}
+-(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (viewController.hidesBottomBarWhenPushed)
     {
         [leveyTabBarController hidesTabBar:YES animated:YES];
@@ -88,8 +108,8 @@
     {
         [leveyTabBarController hidesTabBar:NO animated:YES];
     }
-}
 
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];

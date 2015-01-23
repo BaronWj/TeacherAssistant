@@ -19,5 +19,7 @@
 @interface HeadView : UIView
 @property (nonatomic,strong) NSString *num;
 @property (nonatomic,strong) NSString *detail;
+@property (nonatomic,strong) UILabel *numRoom;
+@property (nonatomic,strong) UILabel *detailRoom;
 @property (nonatomic,assign) id <HeadViewDelegate> delegate;
 @end

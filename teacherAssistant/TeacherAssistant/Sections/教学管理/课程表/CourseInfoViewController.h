@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-@interface CourseInfoViewController : BaseViewController
+@interface CourseInfoViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+{
 
+}
+@property (nonatomic, strong)UITableView * courseTableView;
 @end

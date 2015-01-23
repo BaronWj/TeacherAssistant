@@ -34,7 +34,7 @@
 
 @property(nonatomic,retain) NSArray *menuItems;
 @property(nonatomic,retain) UIButton *containerButton;
-
+@property(nonatomic,retain) NSArray * images_array;
 - (void)hide;
 - (void)addSeparatorImageToCell:(UITableViewCell *)cell;
 
@@ -46,13 +46,14 @@
 @synthesize menuItems;
 @synthesize containerButton;
 
-- (id)initWithFrame:(CGRect)frame menuItems:(NSArray *)aMenuItems
+- (id)initWithFrame:(CGRect)frame menuItems:(NSArray *)aMenuItems withTitleImage:(NSArray *)Images
 {
     self = [super initWithFrame:frame];
     
     if (self)
     {
         self.menuItems = aMenuItems;
+        self.images_array = Images;
         
         // Adding Container Button which will take care of hiding menu when user taps outside of menu area
         self.containerButton = [[UIButton alloc] init];
@@ -117,6 +118,9 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//        @"Vector-Smart-Object"
+        cell.imageView.image = [UIImage imageNamed:[_images_array objectAtIndex:indexPath.row]];
+        cell.imageView.frame = CGRectMake(0, 0, 30, 30);
         [cell.textLabel setFont:[UIFont boldSystemFontOfSize:FONT_SIZE]];
         [cell.textLabel setTextColor:[UIColor whiteColor]];
         [cell setSelectionStyle:UITableViewCellSelectionStyleGray];

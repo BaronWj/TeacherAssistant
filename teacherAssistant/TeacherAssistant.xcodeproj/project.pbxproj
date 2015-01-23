@@ -15,6 +15,8 @@
 		3F0A16401A5E24A7009F5580 /* options_pointer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A163B1A5E24A7009F5580 /* options_pointer@2x.png */; };
 		3F0A16421A5E2DFD009F5580 /* CollectionViewCellCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A16411A5E2DFD009F5580 /* CollectionViewCellCustom.xib */; };
 		3F0A16451A5E2E0A009F5580 /* CollectionViewCellCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A16441A5E2E0A009F5580 /* CollectionViewCellCustom.m */; };
+		3F4E85001A723DA00077D733 /* SettingTableBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */; };
+		3F4E85011A723DA00077D733 /* SettingTableBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */; };
 		3FC088BD1A5B70DC009FB115 /* SchoolChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC088BB1A5B70DC009FB115 /* SchoolChatViewController.m */; };
 		3FC088BE1A5B70DC009FB115 /* SchoolChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088BC1A5B70DC009FB115 /* SchoolChatViewController.xib */; };
 		3FC088C21A5B768D009FB115 /* PeopleMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC088C01A5B768D009FB115 /* PeopleMessageViewController.m */; };
@@ -227,6 +229,11 @@
 		3FCC57FA1A5D310A00D9A181 /* pagebackImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCC57F81A5D310A00D9A181 /* pagebackImage@2x.png */; };
 		3FCC57FE1A5D3C1C00D9A181 /* AsActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC57FC1A5D3C1C00D9A181 /* AsActiveCell.m */; };
 		3FCC57FF1A5D3C1C00D9A181 /* AsActiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCC57FD1A5D3C1C00D9A181 /* AsActiveCell.xib */; };
+		3FD6490B1A71DBDA0061C69D /* CourseInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD649091A71DBDA0061C69D /* CourseInfoTableViewCell.m */; };
+		3FD6490C1A71DBDA0061C69D /* CourseInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6490A1A71DBDA0061C69D /* CourseInfoTableViewCell.xib */; };
+		3FD649111A71EB0D0061C69D /* substituteClass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6490D1A71EB0D0061C69D /* substituteClass@2x.png */; };
+		3FD649141A71EB0D0061C69D /* Vector-Smart-Object@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD649101A71EB0D0061C69D /* Vector-Smart-Object@2x.png */; };
+		3FD649181A71F0D10061C69D /* Vector-Smart-Object.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD649171A71F0D10061C69D /* Vector-Smart-Object.png */; };
 		3FDE12321A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE12311A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m */; };
 		3FDE12361A6F4A3300A14839 /* DataSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE12341A6F4A3300A14839 /* DataSearchViewController.m */; };
 		3FDE12371A6F4A3300A14839 /* DataSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE12351A6F4A3300A14839 /* DataSearchViewController.xib */; };
@@ -349,6 +356,9 @@
 		3F0A16411A5E2DFD009F5580 /* CollectionViewCellCustom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCellCustom.xib; sourceTree = "<group>"; };
 		3F0A16431A5E2E0A009F5580 /* CollectionViewCellCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellCustom.h; sourceTree = "<group>"; };
 		3F0A16441A5E2E0A009F5580 /* CollectionViewCellCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellCustom.m; sourceTree = "<group>"; };
+		3F4E84FD1A723DA00077D733 /* SettingTableBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableBackViewController.h; sourceTree = "<group>"; };
+		3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableBackViewController.m; sourceTree = "<group>"; };
+		3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableBackViewController.xib; sourceTree = "<group>"; };
 		3FC088BA1A5B70DC009FB115 /* SchoolChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolChatViewController.h; sourceTree = "<group>"; };
 		3FC088BB1A5B70DC009FB115 /* SchoolChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolChatViewController.m; sourceTree = "<group>"; };
 		3FC088BC1A5B70DC009FB115 /* SchoolChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchoolChatViewController.xib; sourceTree = "<group>"; };
@@ -662,6 +672,12 @@
 		3FCC57FB1A5D3C1C00D9A181 /* AsActiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsActiveCell.h; sourceTree = "<group>"; };
 		3FCC57FC1A5D3C1C00D9A181 /* AsActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsActiveCell.m; sourceTree = "<group>"; };
 		3FCC57FD1A5D3C1C00D9A181 /* AsActiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AsActiveCell.xib; sourceTree = "<group>"; };
+		3FD649081A71DBDA0061C69D /* CourseInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfoTableViewCell.h; sourceTree = "<group>"; };
+		3FD649091A71DBDA0061C69D /* CourseInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInfoTableViewCell.m; sourceTree = "<group>"; };
+		3FD6490A1A71DBDA0061C69D /* CourseInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseInfoTableViewCell.xib; sourceTree = "<group>"; };
+		3FD6490D1A71EB0D0061C69D /* substituteClass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "substituteClass@2x.png"; sourceTree = "<group>"; };
+		3FD649101A71EB0D0061C69D /* Vector-Smart-Object@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vector-Smart-Object@2x.png"; sourceTree = "<group>"; };
+		3FD649171A71F0D10061C69D /* Vector-Smart-Object.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vector-Smart-Object.png"; sourceTree = "<group>"; };
 		3FDE12301A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+ChatSearchBar.h"; sourceTree = "<group>"; };
 		3FDE12311A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+ChatSearchBar.m"; sourceTree = "<group>"; };
 		3FDE12331A6F4A3300A14839 /* DataSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSearchViewController.h; sourceTree = "<group>"; };
@@ -899,6 +915,12 @@
 				3FE2D90B1A71098300F7019B /* CourseInfoViewController.h */,
 				3FE2D90C1A71098300F7019B /* CourseInfoViewController.m */,
 				3FE2D90D1A71098300F7019B /* CourseInfoViewController.xib */,
+				3FD649081A71DBDA0061C69D /* CourseInfoTableViewCell.h */,
+				3FD649091A71DBDA0061C69D /* CourseInfoTableViewCell.m */,
+				3FD6490A1A71DBDA0061C69D /* CourseInfoTableViewCell.xib */,
+				3F4E84FD1A723DA00077D733 /* SettingTableBackViewController.h */,
+				3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */,
+				3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */,
 			);
 			path = "课程表";
 			sourceTree = "<group>";
@@ -1173,6 +1195,9 @@
 		3FC321231A5A4FB000C4121E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FD6490D1A71EB0D0061C69D /* substituteClass@2x.png */,
+				3FD649171A71F0D10061C69D /* Vector-Smart-Object.png */,
+				3FD649101A71EB0D0061C69D /* Vector-Smart-Object@2x.png */,
 				3FE2D8EF1A70CD7D00F7019B /* menu.png */,
 				3FE2D8F01A70CD7D00F7019B /* menu@2x.png */,
 				3FE2D8EB1A70CBF500F7019B /* refresh.png */,
@@ -1816,9 +1841,11 @@
 				TargetAttributes = {
 					3FC320A11A5A36C100C4121E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CN5D4FN8TG;
 					};
 					3FC320BA1A5A36C100C4121E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CN5D4FN8TG;
 						TestTargetID = 3FC320A11A5A36C100C4121E;
 					};
 				};
@@ -1874,9 +1901,11 @@
 				3FC321D71A5A951900C4121E /* educationNormal@2x.png in Resources */,
 				3FDE12461A6F64B000A14839 /* student2.png in Resources */,
 				3FC320DA1A5A39A400C4121E /* Instructions.txt in Resources */,
+				3F4E85011A723DA00077D733 /* SettingTableBackViewController.xib in Resources */,
 				3FCC57EB1A5D254E00D9A181 /* image0.png in Resources */,
 				3FC088F91A5BE102009FB115 /* equitAccount@2x.png in Resources */,
 				3FE2D9061A70E1FA00F7019B /* ClassAddressTableViewCell.xib in Resources */,
+				3FD649141A71EB0D0061C69D /* Vector-Smart-Object@2x.png in Resources */,
 				3FC088D61A5BAB13009FB115 /* arrows@2x.png in Resources */,
 				3FC088E81A5BD302009FB115 /* chooseClass.png in Resources */,
 				3F0A163C1A5E24A7009F5580 /* DefaultLine.png in Resources */,
@@ -1945,6 +1974,7 @@
 				3FDE126D1A6F9CD200A14839 /* normal@2x.png in Resources */,
 				3FC88A751A68E5C900F0AF27 /* unfilled.png in Resources */,
 				3FC321861A5A65B000C4121E /* 点击后_03.png in Resources */,
+				3FD6490C1A71DBDA0061C69D /* CourseInfoTableViewCell.xib in Resources */,
 				3FC1CE181A5F8FB600120A3B /* remind_noimage@2x.png in Resources */,
 				3FC088E51A5BD2AF009FB115 /* classTable@2x.png in Resources */,
 				3FC088F01A5BDF70009FB115 /* updatePassWord.png in Resources */,
@@ -1977,6 +2007,7 @@
 				3FEB34C41A6DF643002A42EC /* labeltag.png in Resources */,
 				3FE2D8EA1A70C09100F7019B /* README.textile in Resources */,
 				3FC321FE1A5A9EF200C4121E /* schoolChatTtitle.png in Resources */,
+				3FD649181A71F0D10061C69D /* Vector-Smart-Object.png in Resources */,
 				3FEB34B21A6DE3EF002A42EC /* GroupChatViewController.xib in Resources */,
 				3FCC579D1A5D000B00D9A181 /* checkIn.png in Resources */,
 				3FDE124D1A6F7B8800A14839 /* longitudinal_buttonNormal.png in Resources */,
@@ -2032,6 +2063,7 @@
 				3FDE12491A6F7B4200A14839 /* longitudinal_button.png in Resources */,
 				3FDE125A1A6F7F5900A14839 /* submit@2x.png in Resources */,
 				3FC3218E1A5A65ED00C4121E /* 点击后_05.png in Resources */,
+				3FD649111A71EB0D0061C69D /* substituteClass@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2067,6 +2099,7 @@
 				3FC321101A5A3FB600C4121E /* UIImage+WebP.m in Sources */,
 				3FC3211D1A5A428000C4121E /* OpenUDID.m in Sources */,
 				3FE2D9051A70E1FA00F7019B /* ClassAddressTableViewCell.m in Sources */,
+				3F4E85001A723DA00077D733 /* SettingTableBackViewController.m in Sources */,
 				3FCC57921A5CD58B00D9A181 /* EucationModel.m in Sources */,
 				3FC3210C1A5A3FB600C4121E /* SDWebImagePrefetcher.m in Sources */,
 				3FF9D37E1A6C84FB00DD5D38 /* CollectionViewController.m in Sources */,
@@ -2099,6 +2132,7 @@
 				3FC88A8E1A68EAAE00F0AF27 /* NSMutableArray+pieEx.m in Sources */,
 				3FC3215E1A5A517400C4121E /* UIButton+AFNetworking.m in Sources */,
 				3FE4DD0C1A664ED700F75E24 /* CurriculumTableViewController.m in Sources */,
+				3FD6490B1A71DBDA0061C69D /* CourseInfoTableViewCell.m in Sources */,
 				3FC992841A63A9C500ECAE64 /* YMShowImageView.m in Sources */,
 				3FC88A7F1A68EA6600F0AF27 /* Example2PieView.m in Sources */,
 				3FC992861A63A9C500ECAE64 /* YMTapGestureRecongnizer.m in Sources */,
@@ -2256,7 +2290,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: XIN LI (7CWY39C6AK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: XIN LI (7CWY39C6AK)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2276,6 +2311,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2c522a31-7ead-4916-8c1b-5a6c0b0a340a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2298,7 +2334,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: XIN LI (7CWY39C6AK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: XIN LI (7CWY39C6AK)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2311,6 +2348,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "2c522a31-7ead-4916-8c1b-5a6c0b0a340a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2321,6 +2359,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = TeacherAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2329,6 +2369,7 @@
 					"$(SDKROOT)/usr/lib/system",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2336,6 +2377,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = TeacherAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2344,6 +2387,7 @@
 					"$(SDKROOT)/usr/lib/system",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -2351,6 +2395,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2362,6 +2408,7 @@
 				INFOPLIST_FILE = TeacherAssistantTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeacherAssistant.app/TeacherAssistant";
 			};
 			name = Debug;
@@ -2370,6 +2417,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2377,6 +2426,7 @@
 				INFOPLIST_FILE = TeacherAssistantTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeacherAssistant.app/TeacherAssistant";
 			};
 			name = Release;

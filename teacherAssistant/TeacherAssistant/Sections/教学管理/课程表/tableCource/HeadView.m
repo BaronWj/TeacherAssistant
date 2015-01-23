@@ -8,8 +8,7 @@
 #import "HeadView.h"
 
 @interface HeadView()
-@property (nonatomic,strong) UILabel *numRoom;
-@property (nonatomic,strong) UILabel *detailRoom;
+
 @end
 
 @implementation HeadView

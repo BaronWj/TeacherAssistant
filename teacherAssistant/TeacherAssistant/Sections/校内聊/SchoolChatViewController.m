@@ -4,7 +4,7 @@
 //
 //  Created by MyUpinup on 15/1/6.
 //  Copyright (c) 2015年 MyUpinup. All rights reserved.
-//
+//  校内聊
 
 #import "SchoolChatViewController.h"
 #import "MLKMenuPopover.h"
@@ -16,6 +16,7 @@
 }
 @property(nonatomic,strong) MLKMenuPopover *menuPopover;
 @property(nonatomic,strong) NSArray *menuItems;
+@property(nonatomic,strong) NSArray *imageArray;
 
 @end
 
@@ -35,6 +36,8 @@
     self.navigationItem.rightBarButtonItem = buttonItem;
     [_rightButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
     self.menuItems = [NSArray arrayWithObjects:@"添加好友", @"建立群组", nil];
+    self.imageArray = [NSArray arrayWithObjects:@"添加好友", @"建立群组", nil];
+
     NSArray * array = @[@"最新",@"通讯录",@"校内圈",@"群聊"];
     [self createTitleTopView:array];
 //    self
@@ -45,7 +48,8 @@
 -(void)showMenu:(UIButton *)sender{
     if (sender.selected == NO) {
         [self.menuPopover dismissMenuPopover];
-        self.menuPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(ScreenWidth - 150, 0, 140, 88) menuItems:self.menuItems];
+
+        self.menuPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(ScreenWidth - 150, 0, 140, 88) menuItems:self.menuItems withTitleImage:self.imageArray];
         self.menuPopover.menuPopoverDelegate = self;
         [self.menuPopover showInView:self.view];
         sender.selected = YES;
@@ -61,6 +65,7 @@
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0 + ScreenWidth/titleValue.count * i, 0, ScreenWidth/titleValue.count , 40);
         [button setTitle:[titleValue  objectAtIndex:i]forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont boldSystemFontOfSize:16];
         [self.view addSubview:button];
         button.tag = 10000 + i;
 //        button.userInteractionEnabled = YES;
