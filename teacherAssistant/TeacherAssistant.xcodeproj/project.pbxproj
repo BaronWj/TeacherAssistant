@@ -333,6 +333,8 @@
 		3FF9D3951A6CDD7A00DD5D38 /* labelRectNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9D3931A6CDD7A00DD5D38 /* labelRectNormal@2x.png */; };
 		3FF9D3A01A6CDE6E00DD5D38 /* labelRectNormalSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9D39E1A6CDE6E00DD5D38 /* labelRectNormalSelect.png */; };
 		3FF9D3A11A6CDE6E00DD5D38 /* labelRectNormalSelect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF9D39F1A6CDE6E00DD5D38 /* labelRectNormalSelect@2x.png */; };
+		66BC640D1A7487B3009EFB4E /* settingTableCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BC640B1A7487B3009EFB4E /* settingTableCollectionViewCell.m */; };
+		66BC640E1A7487B3009EFB4E /* settingTableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BC640C1A7487B3009EFB4E /* settingTableCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -819,6 +821,9 @@
 		3FF9D3931A6CDD7A00DD5D38 /* labelRectNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "labelRectNormal@2x.png"; sourceTree = "<group>"; };
 		3FF9D39E1A6CDE6E00DD5D38 /* labelRectNormalSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = labelRectNormalSelect.png; sourceTree = "<group>"; };
 		3FF9D39F1A6CDE6E00DD5D38 /* labelRectNormalSelect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "labelRectNormalSelect@2x.png"; sourceTree = "<group>"; };
+		66BC640A1A7487B3009EFB4E /* settingTableCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingTableCollectionViewCell.h; sourceTree = "<group>"; };
+		66BC640B1A7487B3009EFB4E /* settingTableCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingTableCollectionViewCell.m; sourceTree = "<group>"; };
+		66BC640C1A7487B3009EFB4E /* settingTableCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingTableCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -921,6 +926,9 @@
 				3F4E84FD1A723DA00077D733 /* SettingTableBackViewController.h */,
 				3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */,
 				3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */,
+				66BC640A1A7487B3009EFB4E /* settingTableCollectionViewCell.h */,
+				66BC640B1A7487B3009EFB4E /* settingTableCollectionViewCell.m */,
+				66BC640C1A7487B3009EFB4E /* settingTableCollectionViewCell.xib */,
 			);
 			path = "课程表";
 			sourceTree = "<group>";
@@ -1952,6 +1960,7 @@
 				3FC088E11A5BD204009FB115 /* callName@2x.png in Resources */,
 				3FC9920E1A636E5600ECAE64 /* MJRefresh.bundle in Resources */,
 				3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */,
+				66BC640E1A7487B3009EFB4E /* settingTableCollectionViewCell.xib in Resources */,
 				3FEB34CC1A6DF64F002A42EC /* chat.png in Resources */,
 				3F0A16401A5E24A7009F5580 /* options_pointer@2x.png in Resources */,
 				3FC992A61A63AA5D00ECAE64 /* 02@2x.png in Resources */,
@@ -2129,6 +2138,7 @@
 				3FE2D8E31A70C05A00F7019B /* NSDate+Common.m in Sources */,
 				3FC3215A1A5A517400C4121E /* AFURLSessionManager.m in Sources */,
 				3FC321211A5A4A5000C4121E /* FormValidateUtil.m in Sources */,
+				66BC640D1A7487B3009EFB4E /* settingTableCollectionViewCell.m in Sources */,
 				3FC88A8E1A68EAAE00F0AF27 /* NSMutableArray+pieEx.m in Sources */,
 				3FC3215E1A5A517400C4121E /* UIButton+AFNetworking.m in Sources */,
 				3FE4DD0C1A664ED700F75E24 /* CurriculumTableViewController.m in Sources */,

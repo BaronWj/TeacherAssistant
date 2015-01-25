@@ -16,6 +16,7 @@
 #import "defineSetting.h"
 #import "CourseInfoViewController.h"
 #import "MLKMenuPopover.h"
+#import "SettingTableBackViewController.h"
 #define MENU_POPOVER_FRAME  CGRectMake(100, 0, 140, 88)
 
 @interface CurriculumTableViewController ()<UITableViewDataSource,UITableViewDelegate,MyCellDelegate,UIScrollViewDelegate,MLKMenuPopoverDelegate>
@@ -231,7 +232,10 @@
 #pragma mark -- dropDownListDelegate
 -(void) chooseAtSection:(NSInteger)section index:(NSInteger)index
 {
-    NSLog(@"选了section:%d ,index:%d",(int)section,index);
+//    NSLog(@"选了section:%d ,index:%ld",(int)section,(long)index);
+//    if (index == 0) {
+//        <#statements#>
+//    }
 }
 
 #pragma mark -- dropdownList DataSource
@@ -260,11 +264,20 @@
 - (void)menuPopover:(MLKMenuPopover *)menuPopover didSelectMenuItemAtIndex:(NSInteger)selectedIndex
 {
     [self.menuPopover dismissMenuPopover];
-    NSString *title = [NSString stringWithFormat:@"%@ selected.",[self.menuItems objectAtIndex:selectedIndex]];
+//    NSString *title = [NSString stringWithFormat:@"%@ selected.",[self.menuItems objectAtIndex:selectedIndex]];
+//    
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    
+//    [alertView show];
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
-    [alertView show];
+    if (selectedIndex == 0) {
+        SettingTableBackViewController * setting = [[SettingTableBackViewController alloc]init];
+        setting.title = @"背景设置";
+        
+        setting.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:setting animated:YES];
+    }
 }
 
 

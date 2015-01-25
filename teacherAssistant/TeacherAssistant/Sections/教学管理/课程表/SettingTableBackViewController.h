@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SettingTableBackViewController : UIViewController
-
+#import "BaseViewController.h"
+#import "settingTableCollectionViewCell.h"
+@interface SettingTableBackViewController : BaseViewController
+@property(nonatomic, retain) UICollectionView * table_collectionView ;//课表collectionView
+@property(nonatomic, retain) NSMutableArray * backImagesArray;//图片集
 @end
