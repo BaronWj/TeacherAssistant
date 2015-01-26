@@ -10,11 +10,15 @@
 #import "LeveyTabBarController.h"
 #import "UITableView+tableViewExtraCellHidden.h"
 #import "NSDate+Common.h"
-@interface BaseViewController : UIViewController<UINavigationControllerDelegate>{
+#import "ASAPIClient.h"
+#import "MBProgressHUD.h"
+#import "ALToastView.h"
+#import "SVProgressHUD.h"
+@interface BaseViewController : UIViewController<UINavigationControllerDelegate,MBProgressHUDDelegate>{
     LeveyTabBarController * leverTab;
     BOOL isHiddenStatusBar;
     UIImageView * topNavImage;
-
+   
 }
 @property(nonatomic,strong) UIButton * backButton;
 @property(nonatomic,strong) UIButton * rightButton;
@@ -27,6 +31,7 @@
 -(void)createShadow :(BOOL)Show;
 -(void)showAlert :(NSString *)title AndMessage:(NSString *)Message;
 -(void)backBtnAction;
--(void) showToast:(NSString *) format , ...;
+-(void)showToast:(NSString *) format , ...;
 -(void)changeViewControllTitle: (NSString *)selectViewtitle;
+-(void)showMbProgressHud:(BOOL) showState;
 @end

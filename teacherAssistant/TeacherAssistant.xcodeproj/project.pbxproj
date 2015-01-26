@@ -261,6 +261,11 @@
 		3FDE12691A6F950F00A14839 /* CallNameLongituginalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE12671A6F950F00A14839 /* CallNameLongituginalViewCell.xib */; };
 		3FDE126C1A6F9CD200A14839 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE126A1A6F9CD200A14839 /* normal.png */; };
 		3FDE126D1A6F9CD200A14839 /* normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE126B1A6F9CD200A14839 /* normal@2x.png */; };
+		3FDE31391A75E65400B3833B /* asActiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE31381A75E65400B3833B /* asActiveModel.m */; };
+		3FDE313E1A760C3B00B3833B /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE313B1A760C3B00B3833B /* SVProgressHUD.bundle */; };
+		3FDE313F1A760C3B00B3833B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE313D1A760C3B00B3833B /* SVProgressHUD.m */; };
+		3FDE31481A7630F500B3833B /* ViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE31471A7630F500B3833B /* ViewModelClass.m */; };
+		3FDE314B1A76347500B3833B /* asActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE314A1A76347500B3833B /* asActivityViewModel.m */; };
 		3FDF22311A675868002D122F /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF22261A675868002D122F /* HeadView.m */; };
 		3FDF22321A675868002D122F /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF22281A675868002D122F /* MyCell.m */; };
 		3FDF22331A675868002D122F /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF222A1A675868002D122F /* TimeView.m */; };
@@ -714,6 +719,16 @@
 		3FDE12671A6F950F00A14839 /* CallNameLongituginalViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallNameLongituginalViewCell.xib; sourceTree = "<group>"; };
 		3FDE126A1A6F9CD200A14839 /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
 		3FDE126B1A6F9CD200A14839 /* normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal@2x.png"; sourceTree = "<group>"; };
+		3FDE31371A75E65400B3833B /* asActiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asActiveModel.h; sourceTree = "<group>"; };
+		3FDE31381A75E65400B3833B /* asActiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = asActiveModel.m; sourceTree = "<group>"; };
+		3FDE313B1A760C3B00B3833B /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		3FDE313C1A760C3B00B3833B /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		3FDE313D1A760C3B00B3833B /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		3FDE31461A7630F500B3833B /* ViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelClass.h; sourceTree = "<group>"; };
+		3FDE31471A7630F500B3833B /* ViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelClass.m; sourceTree = "<group>"; };
+		3FDE31491A76347500B3833B /* asActivityViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asActivityViewModel.h; sourceTree = "<group>"; };
+		3FDE314A1A76347500B3833B /* asActivityViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = asActivityViewModel.m; sourceTree = "<group>"; };
+		3FDE314C1A76357500B3833B /* configUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configUrl.h; sourceTree = "<group>"; };
 		3FDF22251A675868002D122F /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
 		3FDF22261A675868002D122F /* HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
 		3FDF22271A675868002D122F /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
@@ -1005,6 +1020,7 @@
 		3FC320A41A5A36C100C4121E /* TeacherAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				3FDE31451A7630E600B3833B /* ViewModel */,
 				3FC1CE0E1A5F8F7F00120A3B /* venator */,
 				3FC320D21A5A38D200C4121E /* Helpers */,
 				3FC320DD1A5A3BE600C4121E /* Resources */,
@@ -1072,6 +1088,7 @@
 		3FC320D11A5A38D200C4121E /* General */ = {
 			isa = PBXGroup;
 			children = (
+				3FDE313A1A760C3B00B3833B /* SVProgressHUD */,
 				3FE4DD0E1A66594E00F75E24 /* dropDownList */,
 				3FCC57DB1A5D252F00D9A181 /* AdScrollView */,
 				3FC088C81A5B79CA009FB115 /* FTSlideController */,
@@ -1097,6 +1114,8 @@
 		3FC320D51A5A38DA00C4121E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FDE31371A75E65400B3833B /* asActiveModel.h */,
+				3FDE31381A75E65400B3833B /* asActiveModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1116,6 +1135,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC321281A5A504000C4121E /* defineSetting.h */,
+				3FDE314C1A76357500B3833B /* configUrl.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1738,6 +1758,27 @@
 			path = JOSN;
 			sourceTree = "<group>";
 		};
+		3FDE313A1A760C3B00B3833B /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE313B1A760C3B00B3833B /* SVProgressHUD.bundle */,
+				3FDE313C1A760C3B00B3833B /* SVProgressHUD.h */,
+				3FDE313D1A760C3B00B3833B /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		3FDE31451A7630E600B3833B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE31461A7630F500B3833B /* ViewModelClass.h */,
+				3FDE31471A7630F500B3833B /* ViewModelClass.m */,
+				3FDE31491A76347500B3833B /* asActivityViewModel.h */,
+				3FDE314A1A76347500B3833B /* asActivityViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3FDF22241A67585E002D122F /* tableCource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1973,6 +2014,7 @@
 				3FEB34E01A6E1EB4002A42EC /* newChatTableViewCell.xib in Resources */,
 				3FC88A721A68E46B00F0AF27 /* 2.png in Resources */,
 				3FDE126C1A6F9CD200A14839 /* normal.png in Resources */,
+				3FDE313E1A760C3B00B3833B /* SVProgressHUD.bundle in Resources */,
 				3FCC579E1A5D000B00D9A181 /* checkIn@2x.png in Resources */,
 				3FE2D8F21A70CD7D00F7019B /* menu@2x.png in Resources */,
 				3FC992A71A63AA5D00ECAE64 /* 03@2x.png in Resources */,
@@ -2166,6 +2208,7 @@
 				3FDF22361A675868002D122F /* MeetModel.m in Sources */,
 				3FC88A931A68EBEA00F0AF27 /* SectorView.m in Sources */,
 				3FC992921A63AA1C00ECAE64 /* YMTextData.m in Sources */,
+				3FDE31391A75E65400B3833B /* asActiveModel.m in Sources */,
 				3FC992831A63A9C500ECAE64 /* YMReplyInputView.m in Sources */,
 				3FF9D3881A6C8EFF00DD5D38 /* UITableViewCell+tableViewCell.m in Sources */,
 				3FEB34E41A6E28FA002A42EC /* GroupChatTableViewCell.m in Sources */,
@@ -2174,6 +2217,7 @@
 				3FC3210F1A5A3FB600C4121E /* UIImage+MultiFormat.m in Sources */,
 				3FC3215B1A5A517400C4121E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3FC321531A5A517400C4121E /* AFHTTPRequestOperationManager.m in Sources */,
+				3FDE314B1A76347500B3833B /* asActivityViewModel.m in Sources */,
 				3FC3216D1A5A5E8600C4121E /* ALToastView.m in Sources */,
 				3FC321581A5A517400C4121E /* AFURLRequestSerialization.m in Sources */,
 				3FC321751A5A600B00C4121E /* LeveyTabBar.m in Sources */,
@@ -2190,6 +2234,7 @@
 				3FC321771A5A600B00C4121E /* UIViewController+FindTabView.m in Sources */,
 				3FC88A6A1A68B36500F0AF27 /* CollapseClickCell.m in Sources */,
 				3FC3215D1A5A517400C4121E /* UIAlertView+AFNetworking.m in Sources */,
+				3FDE31481A7630F500B3833B /* ViewModelClass.m in Sources */,
 				3FE2D8E91A70C09100F7019B /* NSDate+Helper.m in Sources */,
 				3FC3210A1A5A3FB600C4121E /* SDWebImageDownloaderOperation.m in Sources */,
 				3FC321601A5A517400C4121E /* UIProgressView+AFNetworking.m in Sources */,
@@ -2214,6 +2259,7 @@
 				3FDF22311A675868002D122F /* HeadView.m in Sources */,
 				3FC088D91A5BB673009FB115 /* newlabelView.m in Sources */,
 				3FC321611A5A517400C4121E /* UIWebView+AFNetworking.m in Sources */,
+				3FDE313F1A760C3B00B3833B /* SVProgressHUD.m in Sources */,
 				3FC320A81A5A36C100C4121E /* main.m in Sources */,
 				3FE2D8F61A70D65700F7019B /* NewFriendViewController.m in Sources */,
 				3FDE12681A6F950F00A14839 /* CallNameLongituginalViewCell.m in Sources */,

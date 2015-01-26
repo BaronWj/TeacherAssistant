@@ -100,21 +100,9 @@
 }
 
 -(void)requestNetworkAAAAAget{
-    NSString * urlstr=@"http://192.168.1.200:8281/api/Account/Login";
+    NSString * urlstr=@"http://192.168.1.200:8281/api/News/GetAllClasses";
     NSDictionary *parameters = @{
-                                 @"userName" :@"admin",
-                                 @"password" :@"123",
-                                 @"lastLogonlp" :@"111",
-                                 @"isEncryption":@"false",
-                                 @"student":@[@{@"id":@"1",
-                                              @"name":@"小明"},
-                                              
-                                              @{@"id":@"2",
-                                                @"name":@"小红"},
-                                              
-                                              @{@"id":@"3",
-                                                @"name":@"小强"}
-                                              ]};
+                               };
     
     //    AFHTTPRequestOperation *operation =
     [[ASAPIClient sharedClient] GET:urlstr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)

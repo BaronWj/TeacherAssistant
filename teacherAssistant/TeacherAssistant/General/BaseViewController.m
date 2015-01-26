@@ -9,7 +9,9 @@
 #import "BaseViewController.h"
 #import "defineSetting.h"
 @interface BaseViewController ()
-
+{
+    MBProgressHUD * HUD ;
+}
 @end
 
 @implementation BaseViewController
@@ -63,7 +65,50 @@
     
     [self createShadow:YES];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    
 }
+
+-(void)showMbProgressHud :(BOOL) showState{
+    if (showState == YES) {
+        HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        
+        // Set determinate mode
+        HUD.mode = MBProgressHUDModeAnnularDeterminate;
+        
+        HUD.delegate = self;
+        HUD.labelText = @"Loading";
+        
+        // myProgressTask uses the HUD instance to update progress
+        [HUD showWhileExecuting:@selector(myProgressTask) onTarget:self withObject:nil animated:YES];
+
+    }else{
+//        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [HUD showWhileExecuting:@selector(hideMyProgressTask) onTarget:self withObject:nil animated:YES];
+    }
+  
+}
+- (void)myProgressTask {
+    // This just increases the progress indicator in a loop
+    float progress = 0.0f;
+    while (progress < 1.0f) {
+        progress += 0.01f;
+        HUD.progress = progress;
+        usleep(50000);
+    }
+}
+- (void)hideMyProgressTask {
+    // This just increases the progress indicator in a loop
+    float progress = 0.0f;
+    while (progress < 1.0f) {
+        progress += 0.01f;
+        HUD.progress = progress;
+        usleep(50000);
+    }
+}
+
+
 //set get方法
 -(void)setNavTitle:(NSString *)navTitle{
     if (ISNULLSTR(navTitle)) {
@@ -94,6 +139,15 @@
 }
 
 -(void)showToast:(NSString *)format, ...{
+    if(!ISNULLSTR(format)){
+        va_list args;
+        va_start(args, format);
+        
+        NSString *str = [[NSString alloc]  initWithFormat:format arguments:args];
+        va_end(args);
+        [ALToastView toastInView:self.navigationController.view withText:str];
+        
+    }
 
 }
 

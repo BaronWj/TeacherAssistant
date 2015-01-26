@@ -14,12 +14,16 @@
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
-    self.abstractLabel.text = @"全面推进从严治党，各级干部也是蛮拼的";
-    self.timeLabel.text = @"2015-01-03";
-    self.titleLabel.text = @"习近平新年贺词";
-
+   
 }
 
+-(void)setActiveModel:(asActiveModel *)activeModel{
+    self.abstractLabel.text = activeModel.abstract_str;
+    self.timeLabel.text = activeModel.time_str;
+    self.titleLabel.text = activeModel.title_str;
+    self.ImageView.image = [UIImage imageNamed:activeModel.imageUrl_str];
+
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

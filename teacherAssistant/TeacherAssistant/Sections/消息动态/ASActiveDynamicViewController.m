@@ -33,6 +33,9 @@
  *  存放假数据
  */
 @property (strong, nonatomic) NSMutableArray *fakeData;
+
+@property (strong, nonatomic) NSArray * asActiveModelArray;
+
 @end
 
 @implementation ASActiveDynamicViewController
@@ -62,6 +65,18 @@
 //    [_asactive_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     // 2.集成刷新控件
     [self setupRefresh];
+    
+    asActivityViewModel * actityViewModel = [[asActivityViewModel alloc]init];
+    [actityViewModel requestActivityViewModelData];
+    [actityViewModel setBlockWithReturnBlock:^(id returnValue){
+        _asActiveModelArray = returnValue;
+        [self.asactive_tableView reloadData];
+        MyLog(@"___%@",returnValue);
+    } WithErrorBlock:^(id errorCode){
+    
+    }WithFailureBlock:^{
+        
+    }];
 }
 
 /**
@@ -157,12 +172,11 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-        AsActiveCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    educationTeachingCell * cell = (educationTeachingCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+      AsActiveCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-//              cell = [[educationTeachingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
        cell = [[[NSBundle mainBundle] loadNibNamed:@"AsActiveCell" owner:nil options:nil] lastObject];
     }
+    cell.activeModel = _asActiveModelArray[indexPath.row];
      return cell;
 }
 
@@ -174,6 +188,28 @@
 //    [asactive changeViewControllTitle:@"新闻详情"];
     [asactive setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:asactive animated:YES];
+}
+
+
+
+-(void)request{
+    [SVProgressHUD showWithStatus:@"正在获取用户信息……" maskType:SVProgressHUDMaskTypeBlack];
+      NSDictionary * dict = @{};
+    [ASAPIClient ActiveDynameicWithParameters:dict result:^(BOOL finish, NSDictionary *results, NSError *error){
+        if (finish) {
+            
+        }
+        MyLog(@"ActiveDynameicWithParameters)))))0000___%@",results);
+        [SVProgressHUD dismiss];
+
+//        [self showMbProgressHud:NO];
+//        if (error) {
+//            [KDProgressHUD handleError:error showOnView:self.navigationController.view.window];
+//            if (loadMore) [self.loadMoreControl endLoading];
+//            else [self endRefreshing];
+//            return;
+//        }
+    }];
 }
 
 

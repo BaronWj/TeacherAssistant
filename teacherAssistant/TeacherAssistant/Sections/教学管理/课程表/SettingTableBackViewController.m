@@ -31,6 +31,13 @@
     [self.view addSubview:_table_collectionView];
     _backImagesArray = [NSMutableArray arrayWithObjects:@"2",@"3",@"student2",@"3",nil];
     
+    UIView * footerView = [[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight-120, ScreenWidth, 60)];
+    footerView.backgroundColor = UIColorFromRGB(0x13494f);
+    [self.view addSubview:footerView];
+    
+    UIButton * setting_button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    setting_button setBackgroundImage:[] forState:<#(UIControlState)#>
+    [footerView addSubview:setting_button];
     
 }
 
@@ -71,12 +78,12 @@
 //定义每个UICollectionView 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(60, 60);
+    return CGSizeMake(90, 130);
 }
 //定义每个UICollectionView 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(25, 20, 5, 5);
+    return UIEdgeInsetsMake(20, 10, 5, 10);
 }
 
 
