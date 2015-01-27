@@ -24,11 +24,13 @@
 #pragma 监测网络的可链接性
 + (BOOL) netWorkReachabilityWithURLString:(NSString *) strUrl;
 //新闻
-+ (AFHTTPRequestOperation *)ActiveDynameicWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
++ (AFHTTPRequestOperation *)getActiveDynameicWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
+//活动标签
++ (AFHTTPRequestOperation *)getActiveLabelWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
 
 
 //+ (NSString*)cacheName:(NSString*)name withID:(NSUInteger)itemID;
-//+ (void)cacheResults:(id)results forName:(NSString*)name;
++ (void)cacheResults:(id)results forName:(NSString*)name;
 //+ (BOOL)removeCache:(NSString *)name;
 //
 //+ (void)setNeedRefresh:(NSString *)name;

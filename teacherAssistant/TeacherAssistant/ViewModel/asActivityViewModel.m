@@ -7,17 +7,20 @@
 //
 
 #import "asActivityViewModel.h"
+#import "NSString+URLEncoding.h"
 @implementation asActivityViewModel
 
 #pragma mark --
 #pragma mark -- 请求新闻数据
--(void)requestActivityViewModelData{
-    NSDictionary *parameter = @{
-                                };
+-(void)requestActivityViewModelData:(NSDictionary *)parameter{
+//    NSDictionary *parameter = @{
+//                                };
 
-    [ASAPIClient ActiveDynameicWithParameters:parameter result:^(BOOL finish, NSDictionary *results, NSError *error){
+    [ASAPIClient getActiveDynameicWithParameters:parameter result:^(BOOL finish, NSDictionary *results, NSError *error){
         if(finish == YES){
             [self fetchValueSuccessWith:results];
+        }else{
+            self.failureBlock(finish);
         }
     
     }];
@@ -30,17 +33,18 @@
      NSMutableArray *activeModelArray = [[NSMutableArray alloc] initWithCapacity:statuses.count];
     for (int i = 0; i < statuses.count; i ++) {
         asActiveModel * activModel = [[asActiveModel alloc] init];
-        activModel.title_str = @"习近平";
-        activModel.time_str = @"2013";
-        activModel.abstract_str = @"习近平新年贺词";
-        activModel.imageUrl_str = @"2.png";
+        activModel.title_str = [statuses objectAtIndex:i][@"Title"];
+        activModel.time_str = [statuses objectAtIndex:i][@"CheckInTime"];
+        NSString * abstract_str =[statuses objectAtIndex:i][@"Brief"];
+        if (!ISNULLSTR(abstract_str)) {
+            activModel.abstract_str = [statuses objectAtIndex:i][@"Brief"];
+        }
+        activModel.imageUrl_str = [NSString string_connctUrl:[statuses objectAtIndex:i][@"PicUrl"]] ;
+        activModel.imageUrl_str = @"http://assets.sbnation.com/assets/2512203/dogflops.gif";
         [activeModelArray addObject:activModel];
-        
     }
-    
     self.returnBlock(activeModelArray);
-
-    
 }
+
 
 @end

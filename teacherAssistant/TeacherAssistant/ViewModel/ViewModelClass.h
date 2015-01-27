@@ -23,4 +23,5 @@
 -(void) setBlockWithReturnBlock: (ReturnValueBlock) returnBlock
                  WithErrorBlock: (ErrorCodeBlock) errorBlock
                WithFailureBlock: (FailureBlock) failureBlock;
+
 @end

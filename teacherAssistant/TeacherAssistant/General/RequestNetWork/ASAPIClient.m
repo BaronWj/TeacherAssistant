@@ -123,7 +123,7 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
 
 #pragma mark -
 #pragma mark _asActiveDynameic
-+ (AFHTTPRequestOperation *)ActiveDynameicWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
++ (AFHTTPRequestOperation *)getActiveDynameicWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
 //    __weak id weakSelf = self;
     AFHTTPRequestOperation *operation =
     [[ASAPIClient sharedClient] GET:GetActivityDataUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
@@ -146,7 +146,30 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
     
     return operation;
 }
-
+//活动标签
++ (AFHTTPRequestOperation *)getActiveLabelWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+    //    __weak id weakSelf = self;
+    AFHTTPRequestOperation *operation =
+    [[ASAPIClient sharedClient] GET:GetActivityLabel parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         MyLog(@"ActiveDynameicWithParameters_________%@",responseObject);
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         //  KCLogInt([userID integerValue]);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
+         //        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+         if (block)block(YES,responseObject,nil);
+         
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         if (block) block(NO, nil, error);
+         MyLog(@"error______%@",error);
+     }];
+    
+    MyLog(@"%@",operation.request.URL);
+    
+    return operation;
+}
 
 
 

@@ -7,7 +7,6 @@
 //
 
 #import "AddressTableViewCell.h"
-#import "defineSetting.h"
 #import "UIImageView+UIImageCategory.h"
 @implementation AddressTableViewCell
 

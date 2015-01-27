@@ -75,7 +75,8 @@
     [leveyTabBarController setTabBarTransparent:YES];
     self.window.rootViewController = leveyTabBarController;
    
-   
+    self.appdelegate = iPhoneDelegate;
+    self.appdelegate.requestUrl = @"http://192.168.1.200:8281";
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated

@@ -8,7 +8,7 @@
 
 #ifndef TeacherAssistant_configUrl_h
 #define TeacherAssistant_configUrl_h
-#define GetActivityDataUrl  @"News/GetAllClasses"
-
-
+//#define GetActivityDataUrl  @"News/GetAllClasses"
+#define GetActivityLabel @"News/GetAllNewsSorts"//新闻标签
+#define GetActivityDataUrl  @"News/GetPaged"//新闻列表
 #endif

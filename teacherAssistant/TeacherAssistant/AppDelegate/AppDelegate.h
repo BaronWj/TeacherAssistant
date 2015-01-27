@@ -23,9 +23,9 @@
 
 }
 @property (nonatomic, retain) LeveyTabBarController *leveyTabBarController;
-
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NSString * requestUrl;
+@property (strong, nonatomic) AppDelegate * appdelegate;
 
 @end
 

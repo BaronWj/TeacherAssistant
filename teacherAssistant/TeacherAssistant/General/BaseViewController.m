@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "defineSetting.h"
 @interface BaseViewController ()
 {
     MBProgressHUD * HUD ;

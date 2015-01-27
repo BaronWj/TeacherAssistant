@@ -36,8 +36,22 @@
     [self.view addSubview:footerView];
     
     UIButton * setting_button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    setting_button setBackgroundImage:[] forState:<#(UIControlState)#>
+    setting_button.frame = CGRectMake(40,15 ,57 * 1.3 , 17 * 1.3);
+    [setting_button setBackgroundImage:[UIImage imageNamed:@"tableSetting"] forState:UIControlStateNormal];
     [footerView addSubview:setting_button];
+    [setting_button addTarget:self action:@selector(settIngBackImage:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImageView * lineImage = [[UIImageView alloc]initWithFrame:CGRectMake(ScreenWidth/2, 15, 2, 25)];
+    lineImage.backgroundColor = [UIColor whiteColor];
+    [footerView addSubview:lineImage];
+    
+    UIButton * delegate_button = [UIButton buttonWithType:UIButtonTypeCustom];
+    delegate_button.frame = CGRectMake(40 + ScreenWidth/2,16,57 * 1.15 , 17 * 1.15);
+    [delegate_button setBackgroundImage:[UIImage imageNamed:@"tabledelect"] forState:UIControlStateNormal];
+    [footerView addSubview:delegate_button];
+    [delegate_button addTarget:self action:@selector(deleteImageBackImage:) forControlEvents:UIControlEventTouchUpInside];
+
+
     
 }
 
@@ -102,10 +116,19 @@
             [self.table_collectionView deleteItemsAtIndexPaths:@[indexPath]];
         } completion:nil];
     
-    
     }
 
 }
+
+
+-(void)settIngBackImage:(UIButton *)_button{
+
+}
+-(void)deleteImageBackImage:(UIButton *)_button{
+
+
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

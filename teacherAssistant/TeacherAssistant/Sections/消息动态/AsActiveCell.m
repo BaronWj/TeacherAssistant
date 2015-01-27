@@ -9,19 +9,21 @@
 #import "AsActiveCell.h"
 #import "defineSetting.h"
 #import "UITableViewCell+tableViewCell.h"
+#import "UIImageView+WebCache.h"
 @implementation AsActiveCell
 
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
-   
 }
 
 -(void)setActiveModel:(asActiveModel *)activeModel{
     self.abstractLabel.text = activeModel.abstract_str;
     self.timeLabel.text = activeModel.time_str;
     self.titleLabel.text = activeModel.title_str;
-    self.ImageView.image = [UIImage imageNamed:activeModel.imageUrl_str];
+//    self.ImageView.image = [UIImage imageNamed:activeModel.imageUrl_str];
+//    [self.ImageView setImageWithURL:[NSURL URLWithString:activeModel.imageUrl_str] placeholderImage:[UIImage imageNamed:@"2"] options:SDWebImageRefreshCached];
+    [self.ImageView setImageWithURL:[NSURL URLWithString:activeModel.imageUrl_str] placeholderImage:nil];
 
 }
 

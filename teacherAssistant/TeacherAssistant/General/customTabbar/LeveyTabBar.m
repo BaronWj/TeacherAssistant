@@ -8,7 +8,7 @@
 //
 
 #import "LeveyTabBar.h"
-
+#import "defineSetting.h"
 @implementation LeveyTabBar
 @synthesize backgroundView = _backgroundView;
 @synthesize delegate = _delegate;

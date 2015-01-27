@@ -15,7 +15,7 @@
 #import "ASActiveDynamicViewController.h"
 #import "MJRefresh.h"
 #import "ASActiveDetailsViewController.h"
-
+#import "UITableView+tableViewRefresh.h"
 //NSString *const MJTableViewCellIdentifier = @"Cell";
  NSString * const  CellIdentifier = @"Cell";
 
@@ -65,19 +65,40 @@
 //    [_asactive_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     // 2.集成刷新控件
     [self setupRefresh];
-    
+    [_asactive_tableView creatRefresh];
+//    [SVProgressHUD showSuccessWithStatus:@"正在加载"];
+    [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
     asActivityViewModel * actityViewModel = [[asActivityViewModel alloc]init];
-    [actityViewModel requestActivityViewModelData];
+    NSDictionary * dict = @{
+                            @"pageNo":@"1",
+                            @"pageSize":@"5"
+                            };
+    [actityViewModel requestActivityViewModelData:dict];
     [actityViewModel setBlockWithReturnBlock:^(id returnValue){
         _asActiveModelArray = returnValue;
         [self.asactive_tableView reloadData];
-        MyLog(@"___%@",returnValue);
-    } WithErrorBlock:^(id errorCode){
-    
-    }WithFailureBlock:^{
+         [SVProgressHUD dismiss];
         
+        for (asActiveModel * labelModel in _asActiveModelArray) {
+            MyLog(@"%@",labelModel.title_str);
+        }
+
+        MyLog(@"__newsInfo_newsInfo______%@",returnValue);
+    } WithErrorBlock:^(id errorCode){
+        [SVProgressHUD dismiss];
+
+    }WithFailureBlock:^{
+        [SVProgressHUD dismiss];
+
     }];
 }
+
+
+
+-(void)requestNetData{
+
+}
+
 
 /**
  *  集成刷新控件
@@ -91,15 +112,6 @@
     
     // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
     [self.asactive_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-    
-    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
-    self.asactive_tableView.headerPullToRefreshText = @"下拉可以刷新了";
-    self.asactive_tableView.headerReleaseToRefreshText = @"松开马上刷新了";
-    self.asactive_tableView.headerRefreshingText = @"正在帮你刷新中……";
-    
-    self.asactive_tableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
-    self.asactive_tableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
-    self.asactive_tableView.footerRefreshingText = @"正在帮你加载中……";
 }
 /**
  *  数据的懒加载
@@ -168,7 +180,7 @@
     return 80;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 7 ;
+    return  [_asActiveModelArray count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -192,25 +204,25 @@
 
 
 
--(void)request{
-    [SVProgressHUD showWithStatus:@"正在获取用户信息……" maskType:SVProgressHUDMaskTypeBlack];
-      NSDictionary * dict = @{};
-    [ASAPIClient ActiveDynameicWithParameters:dict result:^(BOOL finish, NSDictionary *results, NSError *error){
-        if (finish) {
-            
-        }
-        MyLog(@"ActiveDynameicWithParameters)))))0000___%@",results);
-        [SVProgressHUD dismiss];
-
-//        [self showMbProgressHud:NO];
-//        if (error) {
-//            [KDProgressHUD handleError:error showOnView:self.navigationController.view.window];
-//            if (loadMore) [self.loadMoreControl endLoading];
-//            else [self endRefreshing];
-//            return;
+//-(void)request{
+//    [SVProgressHUD showWithStatus:@"正在获取用户信息……" maskType:SVProgressHUDMaskTypeBlack];
+//      NSDictionary * dict = @{};
+//    [ASAPIClient getActiveDynameicWithParameters:dict result:^(BOOL sucess, NSDictionary *results, NSError *error){
+//        if (sucess) {
+//            
 //        }
-    }];
-}
+//        MyLog(@"ActiveDynameicWithParameters)))))0000___%@",results);
+//        [SVProgressHUD dismiss];
+//
+////        [self showMbProgressHud:NO];
+////        if (error) {
+////            [KDProgressHUD handleError:error showOnView:self.navigationController.view.window];
+////            if (loadMore) [self.loadMoreControl endLoading];
+////            else [self endRefreshing];
+////            return;
+////        }
+//    }];
+//}
 
 
 - (void)didReceiveMemoryWarning {

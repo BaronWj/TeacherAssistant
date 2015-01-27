@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "defineSetting.h"
 @interface UITableViewCell (tableViewCell)
 - (void)tableViewCellBackbround;
 

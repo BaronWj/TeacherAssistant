@@ -9,8 +9,8 @@
 
 #ifndef SchoolGateway_defineSetting_h
 #define SchoolGateway_defineSetting_h
-    #define ScreenHeight [UIScreen mainScreen].bounds.size.height
-    #define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 //#endif
 // Get RGBA Color

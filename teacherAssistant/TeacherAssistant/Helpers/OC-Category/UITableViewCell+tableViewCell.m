@@ -7,7 +7,7 @@
 //
 
 #import "UITableViewCell+tableViewCell.h"
-
+#import "defineSetting.h"
 @implementation UITableViewCell (tableViewCell)
 - (void)tableViewCellBackbround
 {

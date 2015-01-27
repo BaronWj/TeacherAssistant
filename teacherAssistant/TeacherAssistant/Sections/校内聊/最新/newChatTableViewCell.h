@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+tableViewCell.h"
+#import "defineSetting.h"
 @interface newChatTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;

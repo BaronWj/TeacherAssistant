@@ -8,7 +8,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "defineSetting.h"
 @protocol LeveyTabBarDelegate;
 
 @interface LeveyTabBar : UIView

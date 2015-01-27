@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "defineSetting.h"
 #import "UIImageView+WebCache.h"
 #import "UIImageView+LK.h"
 #import "NSString_Encryption.h"
@@ -28,9 +27,9 @@
 //    [UIDevice systemInfoDict]
 //    MyLog(@"UIDevice_versions%@",[UIDevice systemInfoDict] );
     
-    NSString * str = @"1A2b";
-    MyLog(@"MD5加密:%@",[str getMd5_32Bit_String:str]);
-    MyLog(@"SH1:%@",[str getSha1String:str]);
+//    NSString * str = @"1A2b";
+//    MyLog(@"MD5加密:%@",[str getMd5_32Bit_String:str]);
+//    MyLog(@"SH1:%@",[str getSha1String:str]);
     
     UIButton * clearCache = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 300, 60)];
     [clearCache setTitle:@"清除缓存" forState:UIControlStateNormal];;
@@ -40,7 +39,7 @@
     
     
     int b = 10;
-    MyLog(@"%d",b);
+//    MyLog(@"%d",b);
     [self requestGetNetwork];
     [self requestNetwork];
     

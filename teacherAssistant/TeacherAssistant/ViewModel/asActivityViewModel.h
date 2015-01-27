@@ -10,6 +10,6 @@
 #import "asActiveModel.h"
 #import "defineSetting.h"
 @interface asActivityViewModel : ViewModelClass
--(void)requestActivityViewModelData;
+-(void)requestActivityViewModelData:(NSDictionary *)parameter;
 
 @end
