@@ -46,7 +46,7 @@
     [self changeViewControllTitle:@"新闻"];
     [self createShadow:NO];
 //    [self createFocusScroller];
-    _asactive_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    _asactive_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-88-40-30)];
     _asactive_tableView.delegate = self;
     _asactive_tableView.dataSource = self;
     _asactive_tableView.backgroundColor = [UIColor clearColor];
@@ -64,7 +64,7 @@
     // 1.注册cell
 //    [_asactive_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     // 2.集成刷新控件
-    [self setupRefresh];
+//    [self setupRefresh];
     [_asactive_tableView creatRefresh];
 //    [SVProgressHUD showSuccessWithStatus:@"正在加载"];
     [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
@@ -100,68 +100,68 @@
 }
 
 
-/**
- *  集成刷新控件
- */
-- (void)setupRefresh
-{
-    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
-    [self.asactive_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-//#warning 自动刷新(一进入程序就下拉刷新)
-    [self.asactive_tableView headerBeginRefreshing];
-    
-    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
-    [self.asactive_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-}
-/**
- *  数据的懒加载
- */
-- (NSMutableArray *)fakeData
-{
-    if (!_fakeData) {
-        self.fakeData = [NSMutableArray array];
-        
-        for (int i = 0; i<12; i++) {
-            [self.fakeData addObject:MJRandomData];
-        }
-    }
-    return _fakeData;
-}
-#pragma mark 开始进入刷新状态
-- (void)headerRereshing
-{
-    // 1.添加假数据
-    for (int i = 0; i<5; i++) {
-        [self.fakeData insertObject:MJRandomData atIndex:0];
-    }
-    
-    // 2.2秒后刷新表格UI
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 刷新表格
-        [self.asactive_tableView reloadData];
-        
-        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [self.asactive_tableView headerEndRefreshing];
-    });
-}
-
-- (void)footerRereshing
-{
-    // 1.添加假数据
-    for (int i = 0; i<5; i++) {
-        [self.fakeData addObject:MJRandomData];
-    }
-    
-    // 2.2秒后刷新表格UI
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 刷新表格
-        [self.asactive_tableView reloadData];
-        
-        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [self.asactive_tableView footerEndRefreshing];
-    });
-}
-
+///**
+// *  集成刷新控件
+// */
+//- (void)setupRefresh
+//{
+//    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+//    [self.asactive_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+////#warning 自动刷新(一进入程序就下拉刷新)
+//    [self.asactive_tableView headerBeginRefreshing];
+//    
+//    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
+//    [self.asactive_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+//}
+///**
+// *  数据的懒加载
+// */
+//- (NSMutableArray *)fakeData
+//{
+//    if (!_fakeData) {
+//        self.fakeData = [NSMutableArray array];
+//        
+//        for (int i = 0; i<12; i++) {
+//            [self.fakeData addObject:MJRandomData];
+//        }
+//    }
+//    return _fakeData;
+//}
+//#pragma mark 开始进入刷新状态
+//- (void)headerRereshing
+//{
+//    // 1.添加假数据
+//    for (int i = 0; i<5; i++) {
+//        [self.fakeData insertObject:MJRandomData atIndex:0];
+//    }
+//    
+//    // 2.2秒后刷新表格UI
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 刷新表格
+//        [self.asactive_tableView reloadData];
+//        
+//        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+//        [self.asactive_tableView headerEndRefreshing];
+//    });
+//}
+//
+//- (void)footerRereshing
+//{
+//    // 1.添加假数据
+//    for (int i = 0; i<5; i++) {
+//        [self.fakeData addObject:MJRandomData];
+//    }
+//    
+//    // 2.2秒后刷新表格UI
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 刷新表格
+//        [self.asactive_tableView reloadData];
+//        
+//        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+//        [self.asactive_tableView footerEndRefreshing];
+//    });
+//}
+//
 
 
 #pragma mark - 构建广告滚动视图
@@ -194,12 +194,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    ASActiveDetailsViewController * asactive = [[ASActiveDetailsViewController alloc]init];
-    
-    asactive.navTitle = @"新闻详情";
-//    [asactive changeViewControllTitle:@"新闻详情"];
-    [asactive setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:asactive animated:YES];
+    asActivityViewModel * asactivity = [[asActivityViewModel alloc]init];
+    [asactivity ActivityDetailWithPublicModel:_asActiveModelArray[indexPath.row] WithViewController:self];
+
 }
 
 

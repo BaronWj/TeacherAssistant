@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self changeViewControllTitle:@"我"];
-    _peopleMess_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-90) style:UITableViewStyleGrouped];
+    _peopleMess_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 5, ScreenWidth, ScreenHeight-90) style:UITableViewStyleGrouped];
     _peopleMess_tableView.delegate = self;
     _peopleMess_tableView.dataSource = self;
     _peopleMess_tableView.backgroundColor = [UIColor clearColor];

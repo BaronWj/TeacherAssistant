@@ -11,4 +11,7 @@
 @interface settingTableCollectionViewCell : UICollectionViewCell
 //@property(nonatomic ,strong)NSString *
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+-(void)selectCollectionView:(NSIndexPath *)indexPath;
+@property (nonatomic ,assign)BOOL selectState;
+@property (nonatomic ,strong)NSString * image_name;
 @end

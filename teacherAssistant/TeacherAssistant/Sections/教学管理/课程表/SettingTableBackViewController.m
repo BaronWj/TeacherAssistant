@@ -8,7 +8,9 @@
 
 #import "SettingTableBackViewController.h"
 
-@interface SettingTableBackViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface SettingTableBackViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>{
+
+}
 @property(nonatomic ,assign)NSInteger runningCount;
 
 @end
@@ -29,7 +31,7 @@
     _table_collectionView.dataSource = self;
     _table_collectionView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_table_collectionView];
-    _backImagesArray = [NSMutableArray arrayWithObjects:@"2",@"3",@"student2",@"3",nil];
+    _backImagesArray = [NSMutableArray arrayWithObjects:@"add",@"3",@"student2",@"3",nil];
     
     UIView * footerView = [[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight-120, ScreenWidth, 60)];
     footerView.backgroundColor = UIColorFromRGB(0x13494f);
@@ -46,13 +48,12 @@
     [footerView addSubview:lineImage];
     
     UIButton * delegate_button = [UIButton buttonWithType:UIButtonTypeCustom];
-    delegate_button.frame = CGRectMake(40 + ScreenWidth/2,16,57 * 1.15 , 17 * 1.15);
+    delegate_button.frame = CGRectMake(50 + ScreenWidth/2,16,57 * 1.15 , 17 * 1.15);
     [delegate_button setBackgroundImage:[UIImage imageNamed:@"tabledelect"] forState:UIControlStateNormal];
     [footerView addSubview:delegate_button];
     [delegate_button addTarget:self action:@selector(deleteImageBackImage:) forControlEvents:UIControlEventTouchUpInside];
 
 
-    
 }
 
 
@@ -80,11 +81,14 @@
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
                                                      forIndexPath:indexPath];
 //    [cell setCurMediaItem: [_backImagesArray objectAtIndex:indexPath.row]];
-    if(indexPath.row == 0){
-        cell.imageView.image = [UIImage imageNamed:@"2"];
-    }else{
-        cell.imageView.image = [UIImage imageNamed:@"3"];
-    }
+    
+    cell.imageView.tag = indexPath.row + 100;
+    [cell setImage_name:[_backImagesArray objectAtIndex:indexPath.row]];
+//    if(indexPath.row == 0){
+//         cell.imageView.image = [UIImage imageNamed:@"add"];
+//    }else{
+//         cell.imageView.image = [UIImage imageNamed:@"3"];
+//    }
     
     return cell;
 }
@@ -102,6 +106,15 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    settingTableCollectionViewCell  * settingTable = [[settingTableCollectionViewCell alloc]init];
+//    [settingTable selectCollectionView:indexPath];
+    
+    
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 130)];
+    imageView.image = [UIImage imageNamed:@"add"];
+    [collectionView addSubview:imageView];
+    
+    
     if (indexPath.row == 0) {
         self.runningCount++;
         [_backImagesArray addObject:@"teacherhead1"];
@@ -110,17 +123,15 @@
         } completion:nil];
         
     }else{
-        [_backImagesArray removeObjectAtIndex:indexPath.item];
         
-        [self.table_collectionView performBatchUpdates:^{
-            [self.table_collectionView deleteItemsAtIndexPaths:@[indexPath]];
-        } completion:nil];
+//        [_backImagesArray removeObjectAtIndex:indexPath.item];
+//        
+//        [self.table_collectionView performBatchUpdates:^{
+//            [self.table_collectionView deleteItemsAtIndexPaths:@[indexPath]];
+//        } completion:nil];
     
     }
-
 }
-
-
 -(void)settIngBackImage:(UIButton *)_button{
 
 }

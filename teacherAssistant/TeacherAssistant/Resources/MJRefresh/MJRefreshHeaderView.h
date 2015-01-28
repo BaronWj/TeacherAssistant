@@ -6,8 +6,6 @@
 //  Copyright (c) 2013年 itcast. All rights reserved.
 //  下拉刷新
 
-
-
 #import "MJRefreshBaseView.h"
 
 @interface MJRefreshHeaderView : MJRefreshBaseView

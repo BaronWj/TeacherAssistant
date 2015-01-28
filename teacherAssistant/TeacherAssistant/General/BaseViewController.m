@@ -26,20 +26,20 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         //        self.modalPresentationCapturesStatusBarAppearance = YES;
     }
-    if (_isBackButton) {
-        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_backButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-        [_backButton setBackgroundImage:[UIImage imageNamed:nil] forState:UIControlStateHighlighted];
-        [_backButton setTitle:@"返回" forState:UIControlStateNormal];
-        [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _backButton.frame = CGRectMake(0, 2,40, 14);
-        _backButton.imageEdgeInsets= UIEdgeInsetsMake(0,0, 0, 10);
-        _backButton.titleEdgeInsets = UIEdgeInsetsMake(0,0, 0, 0);
-        _backButton.titleLabel.font = [UIFont systemFontOfSize:16];
-        [_backButton addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
-        self.navigationItem.leftBarButtonItem = buttonItem;
-    }
+//    if (_isBackButton) {
+//        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [_backButton setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
+//        [_backButton setBackgroundImage:[UIImage imageNamed:nil] forState:UIControlStateHighlighted];
+//        [_backButton setTitle:@"返回" forState:UIControlStateNormal];
+//        [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        _backButton.frame = CGRectMake(0, 2,40, 14);
+//        _backButton.imageEdgeInsets= UIEdgeInsetsMake(0,0, 0, 10);
+//        _backButton.titleEdgeInsets = UIEdgeInsetsMake(0,0, 0, 0);
+//        _backButton.titleLabel.font = [UIFont systemFontOfSize:16];
+//        [_backButton addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
+//        UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
+//        self.navigationItem.leftBarButtonItem = buttonItem;
+//    }
 //    //右边按钮
 //    if (_isRightButton) {
 //        _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -51,13 +51,17 @@
 //    }
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"topNav"] forBarMetrics:UIBarMetricsDefault];
-    UIView * titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
-    _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _titleButton.frame = CGRectMake(0, 0, 100, 40);
-    [_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [titleView addSubview:_titleButton];
-    _titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:19];
-    self.navigationItem.titleView = titleView;
+//    [self.navigationController.navigationBar.layer setMasksToBounds:YES];       // 剪切掉多余的背景
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor],
+                                                                    UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
+//    self.navigationController.navigationBar
+//    UIView * titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
+//    _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    _titleButton.frame = CGRectMake(0, 0, 100, 40);
+//    [_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [titleView addSubview:_titleButton];
+//    _titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:19];
+//    self.navigationItem.titleView = titleView;
     
      topNavImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 6.5)];
 //    [self changeViewControllTitle:_navTitle];

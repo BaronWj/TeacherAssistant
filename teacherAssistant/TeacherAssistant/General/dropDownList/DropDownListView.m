@@ -47,7 +47,7 @@
             if (sectionNum >1) {
                 sectionBtn = [[UIButton alloc] initWithFrame:CGRectMake((ScreenWidth/sectionNum)*i, 1, ScreenWidth/sectionNum, frame.size.height-2)];
             }else{
-                sectionBtn = [[UIButton alloc] initWithFrame:CGRectMake(sectionWidth*i, 1, sectionWidth, frame.size.height-2)];
+                sectionBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 1, sectionWidth, frame.size.height-2)];
             }
             sectionBtn.backgroundColor = [UIColor clearColor];
             sectionBtn.tag = SECTION_BTN_TAG_BEGIN + i;
@@ -79,7 +79,7 @@
                 if (sectionNum > 1) {
                     lineView = [[UIView alloc] initWithFrame:CGRectMake(ScreenWidth/sectionNum * i, frame.size.height/4, 1, frame.size.height/2)];
                 }else{
-                    lineView = [[UIView alloc] initWithFrame:CGRectMake(sectionWidth*i, frame.size.height/4, 1, frame.size.height/2)];
+                    lineView = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height/4, 1, frame.size.height/2)];
                 }
                 lineView.backgroundColor = [UIColor lightGrayColor];
                 [self addSubview:lineView];
@@ -140,10 +140,10 @@
             self.mTableBaseView.alpha = 0.2f;
             self.mTableView.alpha = 0.2;
             if (sectionNum > 1) {
-                self.mTableView.frame = CGRectMake(rect.origin.x , 44, ScreenWidth/sectionNum, 240);
+                self.mTableView.frame = CGRectMake(rect.origin.x , 44, ScreenWidth/sectionNum, 0);
 
             }else{
-                self.mTableView.frame = CGRectMake(self.frame.origin.x/2 + 240/4 , 5, self.frame.size.width, 0);
+                self.mTableView.frame = CGRectMake(0 , 5, self.frame.size.width, 0);
             }
         }completion:^(BOOL finished) {
             [self.mTableView removeFromSuperview];
@@ -155,7 +155,7 @@
 -(void)showChooseListViewInSection:(NSInteger)section choosedIndex:(NSInteger)index
 {
     if (!self.mTableView) {
-        self.mTableBaseView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, 3 , ScreenWidth, self.mSuperView.frame.size.height - self.frame.origin.y - self.frame.size.height)];
+        self.mTableBaseView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, 3 , ScreenWidth, self.mSuperView.frame.size.height - self.frame.origin.y)];
                self.mTableBaseView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5];
         
         UITapGestureRecognizer *bgTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgTappedAction:)];
@@ -164,7 +164,7 @@
              self.mTableView = [[UITableView alloc] initWithFrame:CGRectMake(self.frame.origin.x/2 + 240/4 , 5, self.frame.size.width , ScreenWidth/sectionNum) style:UITableViewStylePlain];
         }else{
         
-            self.mTableView = [[UITableView alloc] initWithFrame:CGRectMake(self.frame.origin.x/2 + 240/4 , 5, self.frame.size.width , 240) style:UITableViewStylePlain];
+            self.mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0 , 5, self.frame.size.width , ScreenHeight -100) style:UITableViewStylePlain];
         }
         
         self.mTableView.delegate = self;
@@ -186,7 +186,7 @@
     if(sectionNum > 1){
         self.mTableView.frame = CGRectMake(rect.origin.x  , 44, ScreenWidth/2, 0);
     }else{
-        self.mTableView.frame =CGRectMake(self.frame.origin.x/2 + 240/4 , 5, self.frame.size.width, 0);
+        self.mTableView.frame =CGRectMake(0, 5, self.frame.size.width, 0);
 
     }
     [self.mSuperView addSubview:self.mTableBaseView];
@@ -204,7 +204,7 @@
           self.mTableView.frame =  CGRectMake(rect.origin.x , 44, ScreenWidth/sectionNum, 240);
 
         }else{
-            self.mTableView.frame =  CGRectMake(self.frame.origin.x/2 + 240/4 , 5, self.frame.size.width, 240);
+            self.mTableView.frame =  CGRectMake(0 , 5, self.frame.size.width, ScreenHeight -100);
         }
     }];
     [self.mTableView reloadData];

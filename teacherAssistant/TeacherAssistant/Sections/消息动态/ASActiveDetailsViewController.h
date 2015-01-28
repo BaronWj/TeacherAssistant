@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 @interface ASActiveDetailsViewController : BaseViewController
-
+@property(nonatomic,strong)NSString * activeNewID;
 @end

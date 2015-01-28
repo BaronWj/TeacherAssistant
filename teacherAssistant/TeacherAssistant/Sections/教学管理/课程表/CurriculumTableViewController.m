@@ -18,7 +18,7 @@
 #import "MLKMenuPopover.h"
 #import "SettingTableBackViewController.h"
 #define MENU_POPOVER_FRAME  CGRectMake(100, 0, 140, 88)
-
+#import "SubstituteClassViewController.h"
 @interface CurriculumTableViewController ()<UITableViewDataSource,UITableViewDelegate,MyCellDelegate,UIScrollViewDelegate,MLKMenuPopoverDelegate>
 {
     NSMutableArray * chooseArray ;
@@ -265,18 +265,19 @@
 {
     [self.menuPopover dismissMenuPopover];
 //    NSString *title = [NSString stringWithFormat:@"%@ selected.",[self.menuItems objectAtIndex:selectedIndex]];
-//    
 //    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//    
 //    [alertView show];
-    
-    
     if (selectedIndex == 0) {
-        SettingTableBackViewController * setting = [[SettingTableBackViewController alloc]init];
-        setting.title = @"背景设置";
-        
-        setting.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:setting animated:YES];
+            SubstituteClassViewController * substituteClass = [[SubstituteClassViewController alloc]init];
+            substituteClass.title = @"代课详情";
+            substituteClass.isBackButton = NO;
+            substituteClass.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:substituteClass animated:YES];
+    }else if (selectedIndex == 1){
+            SettingTableBackViewController * setting = [[SettingTableBackViewController alloc]init];
+            setting.title = @"背景设置";
+            setting.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:setting animated:YES];
     }
 }
 

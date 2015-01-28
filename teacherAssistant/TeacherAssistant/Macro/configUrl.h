@@ -11,4 +11,5 @@
 //#define GetActivityDataUrl  @"News/GetAllClasses"
 #define GetActivityLabel @"News/GetAllNewsSorts"//新闻标签
 #define GetActivityDataUrl  @"News/GetPaged"//新闻列表
+#define GetNewInfo @"News/Show"//新闻详情
 #endif

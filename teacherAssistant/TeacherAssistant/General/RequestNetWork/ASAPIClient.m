@@ -30,31 +30,31 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
     return _sharedClient;
 }
 
-+ (BOOL)networkReachable {
-    // Create zero addy
-    struct sockaddr_in zeroAddress;
-    bzero(&zeroAddress, sizeof(zeroAddress));
-    zeroAddress.sin_len = sizeof(zeroAddress);
-    zeroAddress.sin_family = AF_INET;
-    
-    // Recover reachability flags
-    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
-    SCNetworkReachabilityFlags flags;
-    
-    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
-    CFRelease(defaultRouteReachability);
-    
-    if (!didRetrieveFlags) {
-        NSLog(@"Error: Could not recover network reachability flags");
-        return NO;
-    }
-    
-    BOOL isReachable = flags & kSCNetworkFlagsReachable;
-    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
-    
-    return (isReachable && !needsConnection) ? YES : NO;
-}
-
+//+ (BOOL)networkReachable {
+//    // Create zero addy
+//    struct sockaddr_in zeroAddress;
+//    bzero(&zeroAddress, sizeof(zeroAddress));
+//    zeroAddress.sin_len = sizeof(zeroAddress);
+//    zeroAddress.sin_family = AF_INET;
+//    
+//    // Recover reachability flags
+//    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+//    SCNetworkReachabilityFlags flags;
+//    
+//    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+//    CFRelease(defaultRouteReachability);
+//    
+//    if (!didRetrieveFlags) {
+//        NSLog(@"Error: Could not recover network reachability flags");
+//        return NO;
+//    }
+//    
+//    BOOL isReachable = flags & kSCNetworkFlagsReachable;
+//    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
+//    
+//    return (isReachable && !needsConnection) ? YES : NO;
+//}
+//
 #pragma 监测网络的可链接性
 + (BOOL) netWorkReachabilityWithURLString:(NSString *) strUrl
 {

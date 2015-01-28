@@ -7,8 +7,9 @@
 //
 
 #import "ASActiveDetailsViewController.h"
-
-@interface ASActiveDetailsViewController ()
+#import "NSString+URLEncoding.h"
+@interface ASActiveDetailsViewController ()<UIWebViewDelegate>
+@property (nonatomic,strong)UIWebView *webView;
 
 @end
 
@@ -17,8 +18,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _webView=[[UIWebView alloc] initWithFrame:CGRectZero];
+    _webView.translatesAutoresizingMaskIntoConstraints=NO;
+    _webView.delegate = self;
+    [self.view addSubview:_webView];
+    self.webView.opaque = NO;
+    NSArray *h=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[webView]-0-|" options:0 metrics:nil views:@{@"webView":_webView}];
+    NSArray *v=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-3-[webView]-0-|" options:0 metrics:nil views:@{@"webView":_webView}];
+    
+    [self.view addConstraints:h];
+    [self.view addConstraints:v];
+    
+    _webView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    _webView.scrollView.backgroundColor = backGround;
+//    _webView.
+    NSString * info_url =[NSString stringWithFormat:@"/%@/"@"%@",[NSString string_connctUrl:GetNewInfo],_activeNewID];
+    
+    NSURLRequest * req=[NSURLRequest requestWithURL:[NSURL URLWithString:info_url]];
+    
+    [_webView loadRequest:req];
+//    [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
+    [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeBlack];
+
 }
 
+#pragma mark --
+#pragma mark -- webViewdelegate
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    MyLog(@"%@",error);
+    [SVProgressHUD dismiss];
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    MyLog(@"webViewDidFinishLoad%@",webView);
+    [SVProgressHUD dismiss];
+
+}
+
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    MyLog(@"webViewDidStartLoad%@",webView);
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

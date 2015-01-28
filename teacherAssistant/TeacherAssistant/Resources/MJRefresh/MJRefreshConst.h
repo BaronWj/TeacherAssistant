@@ -6,30 +6,21 @@
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
-
-
-#import <UIKit/UIKit.h>
-//#import <Foundation/Foundation.h>
 #ifdef DEBUG
 #define MJLog(...) NSLog(__VA_ARGS__)
 #else
 #define MJLog(...)
 #endif
 
-// objc_msgSend
-#define msgSend(...) ((void (*)(void *, SEL, UIView *))objc_msgSend)(__VA_ARGS__)
-
-
-#define MJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 // 文字颜色
-#define MJRefreshLabelTextColor MJColor(150, 150, 150)
+#define MJRefreshLabelTextColor [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1.0]
+#import <UIKit/UIKit.h>
 
 extern const CGFloat MJRefreshViewHeight;
-extern const CGFloat MJRefreshFastAnimationDuration;
-extern const CGFloat MJRefreshSlowAnimationDuration;
+extern const CGFloat MJRefreshAnimationDuration;
 
 extern NSString *const MJRefreshBundleName;
-#define MJRefreshSrcName(file) [MJRefreshBundleName stringByAppendingPathComponent:file]
+#define kSrcName(file) [MJRefreshBundleName stringByAppendingPathComponent:file]
 
 extern NSString *const MJRefreshFooterPullToRefresh;
 extern NSString *const MJRefreshFooterReleaseToRefresh;

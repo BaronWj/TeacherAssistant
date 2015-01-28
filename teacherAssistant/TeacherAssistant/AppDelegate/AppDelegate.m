@@ -21,6 +21,7 @@
     FTSlideAddViewController * newActiveDynamic = [[FTSlideAddViewController alloc]init];
     UINavigationController * newActiveDynamic_nav = [[UINavigationController alloc]initWithRootViewController:newActiveDynamic];
     newActiveDynamic_nav.delegate = self;
+    newActiveDynamic.title = @"新闻";
 //    ASActiveDynamicViewController * activeDynamic = [[ASActiveDynamicViewController alloc]init];
 //    [activeDynamic changeViewControllTitle:@"新闻"];
 //    UINavigationController * public_nav = [[UINavigationController alloc]initWithRootViewController:activeDynamic];
@@ -28,17 +29,20 @@
     
     EducationalTeachingViewController * education = [[EducationalTeachingViewController alloc]init];
     [education changeViewControllTitle:@"教学教务"];
+    education.title = @"教学教务";
     UINavigationController * education_nav = [[UINavigationController alloc]initWithRootViewController:education];
     education_nav.delegate = self;
     
     
     SchoolChatViewController * schoolChat = [[SchoolChatViewController alloc]init];
     [schoolChat changeViewControllTitle:@"校内聊"];
+    schoolChat.title = @"校内聊";
     UINavigationController * schoolChat_nav = [[UINavigationController alloc]initWithRootViewController:schoolChat];
     schoolChat_nav.delegate = self;
     
     PeopleMessageViewController * peopleMessage = [[PeopleMessageViewController alloc]init];
     [schoolChat changeViewControllTitle:@"我"];
+    peopleMessage.title = @"我";
     UINavigationController * peopleMessage_nav = [[UINavigationController alloc]initWithRootViewController:peopleMessage];
     peopleMessage_nav.delegate = self;
     

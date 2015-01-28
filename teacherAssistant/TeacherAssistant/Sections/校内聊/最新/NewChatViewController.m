@@ -8,7 +8,7 @@
 
 #import "NewChatViewController.h"
 #import "UISearchBar+ChatSearchBar.h"
-
+#import "ChatViewController.h"
 @interface NewChatViewController ()<UISearchBarDelegate>
 
 @end
@@ -77,7 +77,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    ChatViewController * chatView = [[ChatViewController alloc]init];
+    chatView.title = @"聊天";
+    [chatView setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:chatView animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

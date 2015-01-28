@@ -13,4 +13,5 @@
 @property (strong, nonatomic) NSString * abstract_str;//摘要
 @property (strong, nonatomic) NSString * time_str;//时间
 @property (strong, nonatomic) NSString * imageUrl_str;//图片地址
+@property (strong, nonatomic) NSString * activetyID;//活动ID
 @end

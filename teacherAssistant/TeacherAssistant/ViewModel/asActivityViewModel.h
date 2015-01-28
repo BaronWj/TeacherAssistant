@@ -11,5 +11,6 @@
 #import "defineSetting.h"
 @interface asActivityViewModel : ViewModelClass
 -(void)requestActivityViewModelData:(NSDictionary *)parameter;
-
+//跳转到微博详情页
+-(void)ActivityDetailWithPublicModel: (asActiveModel *) publicModel WithViewController: (UIViewController *)superController;
 @end

@@ -17,6 +17,48 @@
 		3F0A16451A5E2E0A009F5580 /* CollectionViewCellCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A16441A5E2E0A009F5580 /* CollectionViewCellCustom.m */; };
 		3F4E85001A723DA00077D733 /* SettingTableBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */; };
 		3F4E85011A723DA00077D733 /* SettingTableBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */; };
+		3FB7DFB21A78729C005CE41F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFB11A78729C005CE41F /* UIRefreshControl+AFNetworking.m */; };
+		3FB7DFB81A78CEB9005CE41F /* SubstituteClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFB61A78CEB9005CE41F /* SubstituteClassViewController.m */; };
+		3FB7DFB91A78CEB9005CE41F /* SubstituteClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFB71A78CEB9005CE41F /* SubstituteClassViewController.xib */; };
+		3FB7DFBD1A78D2E5005CE41F /* SubstituteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFBB1A78D2E5005CE41F /* SubstituteTableViewCell.m */; };
+		3FB7DFBE1A78D2E5005CE41F /* SubstituteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFBC1A78D2E5005CE41F /* SubstituteTableViewCell.xib */; };
+		3FB7DFC21A78E1B6005CE41F /* EvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFC01A78E1B6005CE41F /* EvaluationViewController.m */; };
+		3FB7DFC31A78E1B6005CE41F /* EvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFC11A78E1B6005CE41F /* EvaluationViewController.xib */; };
+		3FB7DFD61A78E9C9005CE41F /* UUAVAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFC71A78E9C9005CE41F /* UUAVAudioPlayer.m */; };
+		3FB7DFD71A78E9C9005CE41F /* UUImageAvatarBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFC91A78E9C9005CE41F /* UUImageAvatarBrowser.m */; };
+		3FB7DFD81A78E9C9005CE41F /* UUInputFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFCB1A78E9C9005CE41F /* UUInputFunctionView.m */; };
+		3FB7DFD91A78E9C9005CE41F /* UUMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFCD1A78E9C9005CE41F /* UUMessage.m */; };
+		3FB7DFDA1A78E9C9005CE41F /* UUMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFCF1A78E9C9005CE41F /* UUMessageCell.m */; };
+		3FB7DFDB1A78E9C9005CE41F /* UUMessageContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFD11A78E9C9005CE41F /* UUMessageContentButton.m */; };
+		3FB7DFDC1A78E9C9005CE41F /* UUMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFD31A78E9C9005CE41F /* UUMessageFrame.m */; };
+		3FB7DFDD1A78E9C9005CE41F /* UUProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFD51A78E9C9005CE41F /* UUProgressHUD.m */; };
+		3FB7DFE11A78E9E3005CE41F /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE01A78E9E3005CE41F /* NSDate+Utils.m */; };
+		3FB7DFF31A78E9EE005CE41F /* chat_animation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE31A78E9EE005CE41F /* chat_animation1.png */; };
+		3FB7DFF41A78E9EE005CE41F /* chat_animation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE41A78E9EE005CE41F /* chat_animation2.png */; };
+		3FB7DFF51A78E9EE005CE41F /* chat_animation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE51A78E9EE005CE41F /* chat_animation3.png */; };
+		3FB7DFF61A78E9EE005CE41F /* chat_animation_white1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE61A78E9EE005CE41F /* chat_animation_white1.png */; };
+		3FB7DFF71A78E9EE005CE41F /* chat_animation_white2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE71A78E9EE005CE41F /* chat_animation_white2.png */; };
+		3FB7DFF81A78E9EE005CE41F /* chat_animation_white3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE81A78E9EE005CE41F /* chat_animation_white3.png */; };
+		3FB7DFF91A78E9EE005CE41F /* chat_ipunt_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFE91A78E9EE005CE41F /* chat_ipunt_message.png */; };
+		3FB7DFFA1A78E9EE005CE41F /* chat_message_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFEA1A78E9EE005CE41F /* chat_message_back.png */; };
+		3FB7DFFB1A78E9EE005CE41F /* Chat_record_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFEB1A78E9EE005CE41F /* Chat_record_circle.png */; };
+		3FB7DFFC1A78E9EE005CE41F /* chat_send_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFEC1A78E9EE005CE41F /* chat_send_message.png */; };
+		3FB7DFFD1A78E9EE005CE41F /* Chat_take_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFED1A78E9EE005CE41F /* Chat_take_picture.png */; };
+		3FB7DFFE1A78E9EE005CE41F /* chat_voice_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFEE1A78E9EE005CE41F /* chat_voice_record.png */; };
+		3FB7DFFF1A78E9EE005CE41F /* chatfrom_bg_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFEF1A78E9EE005CE41F /* chatfrom_bg_normal.png */; };
+		3FB7E0001A78E9EE005CE41F /* chatfrom_doctor_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFF01A78E9EE005CE41F /* chatfrom_doctor_icon.png */; };
+		3FB7E0011A78E9EE005CE41F /* chatto_bg_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFF11A78E9EE005CE41F /* chatto_bg_normal.png */; };
+		3FB7E0021A78E9EE005CE41F /* haha.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFF21A78E9EE005CE41F /* haha.jpeg */; };
+		3FB7E0081A78E9F6005CE41F /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB7E0051A78E9F6005CE41F /* libmp3lame.a */; };
+		3FB7E0091A78E9F6005CE41F /* Mp3Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E0071A78E9F6005CE41F /* Mp3Recorder.m */; };
+		3FB7E00D1A78EA0D005CE41F /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E00B1A78EA0D005CE41F /* ChatViewController.m */; };
+		3FB7E00E1A78EA0D005CE41F /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7E00C1A78EA0D005CE41F /* ChatViewController.xib */; };
+		3FB7E0111A78EA53005CE41F /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E0101A78EA53005CE41F /* ChatModel.m */; };
+		3FB7E01D1A78ED22005CE41F /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7E0131A78ED22005CE41F /* MJRefresh.bundle */; };
+		3FB7E01E1A78ED22005CE41F /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E0161A78ED22005CE41F /* MJRefreshBaseView.m */; };
+		3FB7E01F1A78ED22005CE41F /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E0181A78ED22005CE41F /* MJRefreshConst.m */; };
+		3FB7E0201A78ED22005CE41F /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E01A1A78ED22005CE41F /* MJRefreshFooterView.m */; };
+		3FB7E0211A78ED22005CE41F /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E01C1A78ED22005CE41F /* MJRefreshHeaderView.m */; };
 		3FC088BD1A5B70DC009FB115 /* SchoolChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC088BB1A5B70DC009FB115 /* SchoolChatViewController.m */; };
 		3FC088BE1A5B70DC009FB115 /* SchoolChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088BC1A5B70DC009FB115 /* SchoolChatViewController.xib */; };
 		3FC088C21A5B768D009FB115 /* PeopleMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC088C01A5B768D009FB115 /* PeopleMessageViewController.m */; };
@@ -171,14 +213,6 @@
 		3FC88A991A69150600F0AF27 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC88A971A69150600F0AF27 /* arrow@2x.png */; };
 		3FC98F191A5E19EE00192826 /* addFriend.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC98F171A5E19EE00192826 /* addFriend.png */; };
 		3FC98F1A1A5E19EE00192826 /* addFriend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC98F181A5E19EE00192826 /* addFriend@2x.png */; };
-		3FC9920E1A636E5600ECAE64 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FC991FE1A636E5600ECAE64 /* MJRefresh.bundle */; };
-		3FC9920F1A636E5600ECAE64 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992011A636E5600ECAE64 /* MJRefreshBaseView.m */; };
-		3FC992101A636E5600ECAE64 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992031A636E5600ECAE64 /* MJRefreshConst.m */; };
-		3FC992111A636E5600ECAE64 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992051A636E5600ECAE64 /* MJRefreshFooterView.m */; };
-		3FC992121A636E5600ECAE64 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992071A636E5600ECAE64 /* MJRefreshHeaderView.m */; };
-		3FC992131A636E5600ECAE64 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992091A636E5600ECAE64 /* UIScrollView+MJExtension.m */; };
-		3FC992141A636E5600ECAE64 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9920B1A636E5600ECAE64 /* UIScrollView+MJRefresh.m */; };
-		3FC992151A636E5600ECAE64 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9920D1A636E5600ECAE64 /* UIView+MJExtension.m */; };
 		3FC992251A637D8100ECAE64 /* KDActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9921E1A637D8100ECAE64 /* KDActivityIndicatorView.m */; };
 		3FC992261A637D8100ECAE64 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992201A637D8100ECAE64 /* NSString+Encryption.m */; };
 		3FC992271A637D8100ECAE64 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992221A637D8100ECAE64 /* NSString+URLEncoding.m */; };
@@ -375,6 +409,71 @@
 		3F4E84FD1A723DA00077D733 /* SettingTableBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableBackViewController.h; sourceTree = "<group>"; };
 		3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableBackViewController.m; sourceTree = "<group>"; };
 		3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableBackViewController.xib; sourceTree = "<group>"; };
+		3FB7DFB01A78729C005CE41F /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		3FB7DFB11A78729C005CE41F /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		3FB7DFB51A78CEB9005CE41F /* SubstituteClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubstituteClassViewController.h; sourceTree = "<group>"; };
+		3FB7DFB61A78CEB9005CE41F /* SubstituteClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubstituteClassViewController.m; sourceTree = "<group>"; };
+		3FB7DFB71A78CEB9005CE41F /* SubstituteClassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubstituteClassViewController.xib; sourceTree = "<group>"; };
+		3FB7DFBA1A78D2E5005CE41F /* SubstituteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubstituteTableViewCell.h; sourceTree = "<group>"; };
+		3FB7DFBB1A78D2E5005CE41F /* SubstituteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubstituteTableViewCell.m; sourceTree = "<group>"; };
+		3FB7DFBC1A78D2E5005CE41F /* SubstituteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubstituteTableViewCell.xib; sourceTree = "<group>"; };
+		3FB7DFBF1A78E1B6005CE41F /* EvaluationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluationViewController.h; sourceTree = "<group>"; };
+		3FB7DFC01A78E1B6005CE41F /* EvaluationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluationViewController.m; sourceTree = "<group>"; };
+		3FB7DFC11A78E1B6005CE41F /* EvaluationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaluationViewController.xib; sourceTree = "<group>"; };
+		3FB7DFC61A78E9C9005CE41F /* UUAVAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUAVAudioPlayer.h; sourceTree = "<group>"; };
+		3FB7DFC71A78E9C9005CE41F /* UUAVAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUAVAudioPlayer.m; sourceTree = "<group>"; };
+		3FB7DFC81A78E9C9005CE41F /* UUImageAvatarBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUImageAvatarBrowser.h; sourceTree = "<group>"; };
+		3FB7DFC91A78E9C9005CE41F /* UUImageAvatarBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUImageAvatarBrowser.m; sourceTree = "<group>"; };
+		3FB7DFCA1A78E9C9005CE41F /* UUInputFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUInputFunctionView.h; sourceTree = "<group>"; };
+		3FB7DFCB1A78E9C9005CE41F /* UUInputFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUInputFunctionView.m; sourceTree = "<group>"; };
+		3FB7DFCC1A78E9C9005CE41F /* UUMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessage.h; sourceTree = "<group>"; };
+		3FB7DFCD1A78E9C9005CE41F /* UUMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessage.m; sourceTree = "<group>"; };
+		3FB7DFCE1A78E9C9005CE41F /* UUMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageCell.h; sourceTree = "<group>"; };
+		3FB7DFCF1A78E9C9005CE41F /* UUMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageCell.m; sourceTree = "<group>"; };
+		3FB7DFD01A78E9C9005CE41F /* UUMessageContentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageContentButton.h; sourceTree = "<group>"; };
+		3FB7DFD11A78E9C9005CE41F /* UUMessageContentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageContentButton.m; sourceTree = "<group>"; };
+		3FB7DFD21A78E9C9005CE41F /* UUMessageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMessageFrame.h; sourceTree = "<group>"; };
+		3FB7DFD31A78E9C9005CE41F /* UUMessageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMessageFrame.m; sourceTree = "<group>"; };
+		3FB7DFD41A78E9C9005CE41F /* UUProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUProgressHUD.h; sourceTree = "<group>"; };
+		3FB7DFD51A78E9C9005CE41F /* UUProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUProgressHUD.m; sourceTree = "<group>"; };
+		3FB7DFDE1A78E9D9005CE41F /* ACMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMacros.h; sourceTree = "<group>"; };
+		3FB7DFDF1A78E9E3005CE41F /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		3FB7DFE01A78E9E3005CE41F /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
+		3FB7DFE31A78E9EE005CE41F /* chat_animation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_animation1.png; sourceTree = "<group>"; };
+		3FB7DFE41A78E9EE005CE41F /* chat_animation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_animation2.png; sourceTree = "<group>"; };
+		3FB7DFE51A78E9EE005CE41F /* chat_animation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_animation3.png; sourceTree = "<group>"; };
+		3FB7DFE61A78E9EE005CE41F /* chat_animation_white1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_animation_white1.png; sourceTree = "<group>"; };
+		3FB7DFE71A78E9EE005CE41F /* chat_animation_white2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_animation_white2.png; sourceTree = "<group>"; };
+		3FB7DFE81A78E9EE005CE41F /* chat_animation_white3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_animation_white3.png; sourceTree = "<group>"; };
+		3FB7DFE91A78E9EE005CE41F /* chat_ipunt_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_ipunt_message.png; sourceTree = "<group>"; };
+		3FB7DFEA1A78E9EE005CE41F /* chat_message_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_message_back.png; sourceTree = "<group>"; };
+		3FB7DFEB1A78E9EE005CE41F /* Chat_record_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat_record_circle.png; sourceTree = "<group>"; };
+		3FB7DFEC1A78E9EE005CE41F /* chat_send_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_send_message.png; sourceTree = "<group>"; };
+		3FB7DFED1A78E9EE005CE41F /* Chat_take_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat_take_picture.png; sourceTree = "<group>"; };
+		3FB7DFEE1A78E9EE005CE41F /* chat_voice_record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_voice_record.png; sourceTree = "<group>"; };
+		3FB7DFEF1A78E9EE005CE41F /* chatfrom_bg_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatfrom_bg_normal.png; sourceTree = "<group>"; };
+		3FB7DFF01A78E9EE005CE41F /* chatfrom_doctor_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatfrom_doctor_icon.png; sourceTree = "<group>"; };
+		3FB7DFF11A78E9EE005CE41F /* chatto_bg_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatto_bg_normal.png; sourceTree = "<group>"; };
+		3FB7DFF21A78E9EE005CE41F /* haha.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = haha.jpeg; sourceTree = "<group>"; };
+		3FB7E0041A78E9F6005CE41F /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		3FB7E0051A78E9F6005CE41F /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		3FB7E0061A78E9F6005CE41F /* Mp3Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3Recorder.h; sourceTree = "<group>"; };
+		3FB7E0071A78E9F6005CE41F /* Mp3Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3Recorder.m; sourceTree = "<group>"; };
+		3FB7E00A1A78EA0D005CE41F /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		3FB7E00B1A78EA0D005CE41F /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		3FB7E00C1A78EA0D005CE41F /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		3FB7E00F1A78EA53005CE41F /* ChatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatModel.h; sourceTree = "<group>"; };
+		3FB7E0101A78EA53005CE41F /* ChatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
+		3FB7E0131A78ED22005CE41F /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		3FB7E0141A78ED22005CE41F /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		3FB7E0151A78ED22005CE41F /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		3FB7E0161A78ED22005CE41F /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		3FB7E0171A78ED22005CE41F /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		3FB7E0181A78ED22005CE41F /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		3FB7E0191A78ED22005CE41F /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		3FB7E01A1A78ED22005CE41F /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		3FB7E01B1A78ED22005CE41F /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		3FB7E01C1A78ED22005CE41F /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
 		3FC088BA1A5B70DC009FB115 /* SchoolChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolChatViewController.h; sourceTree = "<group>"; };
 		3FC088BB1A5B70DC009FB115 /* SchoolChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolChatViewController.m; sourceTree = "<group>"; };
 		3FC088BC1A5B70DC009FB115 /* SchoolChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchoolChatViewController.xib; sourceTree = "<group>"; };
@@ -599,22 +698,6 @@
 		3FC88A971A69150600F0AF27 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		3FC98F171A5E19EE00192826 /* addFriend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addFriend.png; sourceTree = "<group>"; };
 		3FC98F181A5E19EE00192826 /* addFriend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addFriend@2x.png"; sourceTree = "<group>"; };
-		3FC991FE1A636E5600ECAE64 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
-		3FC991FF1A636E5600ECAE64 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
-		3FC992001A636E5600ECAE64 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
-		3FC992011A636E5600ECAE64 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
-		3FC992021A636E5600ECAE64 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
-		3FC992031A636E5600ECAE64 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
-		3FC992041A636E5600ECAE64 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
-		3FC992051A636E5600ECAE64 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
-		3FC992061A636E5600ECAE64 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
-		3FC992071A636E5600ECAE64 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
-		3FC992081A636E5600ECAE64 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
-		3FC992091A636E5600ECAE64 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
-		3FC9920A1A636E5600ECAE64 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		3FC9920B1A636E5600ECAE64 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
-		3FC9920C1A636E5600ECAE64 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
-		3FC9920D1A636E5600ECAE64 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		3FC9921D1A637D8100ECAE64 /* KDActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDActivityIndicatorView.h; sourceTree = "<group>"; };
 		3FC9921E1A637D8100ECAE64 /* KDActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDActivityIndicatorView.m; sourceTree = "<group>"; };
 		3FC9921F1A637D8100ECAE64 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
@@ -868,6 +951,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB7E0081A78E9F6005CE41F /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +972,107 @@
 				3F0A16351A5E2466009F5580 /* MLKMenuPopover.m */,
 			);
 			path = MenuPopover;
+			sourceTree = "<group>";
+		};
+		3FB7DFB31A78CE04005CE41F /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		3FB7DFB41A78CE15005CE41F /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelView;
+			sourceTree = "<group>";
+		};
+		3FB7DFC41A78E9B5005CE41F /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				3FB7E00A1A78EA0D005CE41F /* ChatViewController.h */,
+				3FB7E00B1A78EA0D005CE41F /* ChatViewController.m */,
+				3FB7E00F1A78EA53005CE41F /* ChatModel.h */,
+				3FB7E0101A78EA53005CE41F /* ChatModel.m */,
+				3FB7E00C1A78EA0D005CE41F /* ChatViewController.xib */,
+				3FB7DFC51A78E9C9005CE41F /* UUChat */,
+			);
+			path = "聊天";
+			sourceTree = "<group>";
+		};
+		3FB7DFC51A78E9C9005CE41F /* UUChat */ = {
+			isa = PBXGroup;
+			children = (
+				3FB7DFC61A78E9C9005CE41F /* UUAVAudioPlayer.h */,
+				3FB7DFC71A78E9C9005CE41F /* UUAVAudioPlayer.m */,
+				3FB7DFC81A78E9C9005CE41F /* UUImageAvatarBrowser.h */,
+				3FB7DFC91A78E9C9005CE41F /* UUImageAvatarBrowser.m */,
+				3FB7DFCA1A78E9C9005CE41F /* UUInputFunctionView.h */,
+				3FB7DFCB1A78E9C9005CE41F /* UUInputFunctionView.m */,
+				3FB7DFCC1A78E9C9005CE41F /* UUMessage.h */,
+				3FB7DFCD1A78E9C9005CE41F /* UUMessage.m */,
+				3FB7DFCE1A78E9C9005CE41F /* UUMessageCell.h */,
+				3FB7DFCF1A78E9C9005CE41F /* UUMessageCell.m */,
+				3FB7DFD01A78E9C9005CE41F /* UUMessageContentButton.h */,
+				3FB7DFD11A78E9C9005CE41F /* UUMessageContentButton.m */,
+				3FB7DFD21A78E9C9005CE41F /* UUMessageFrame.h */,
+				3FB7DFD31A78E9C9005CE41F /* UUMessageFrame.m */,
+				3FB7DFD41A78E9C9005CE41F /* UUProgressHUD.h */,
+				3FB7DFD51A78E9C9005CE41F /* UUProgressHUD.m */,
+			);
+			path = UUChat;
+			sourceTree = "<group>";
+		};
+		3FB7DFE21A78E9EE005CE41F /* pic */ = {
+			isa = PBXGroup;
+			children = (
+				3FB7DFE31A78E9EE005CE41F /* chat_animation1.png */,
+				3FB7DFE41A78E9EE005CE41F /* chat_animation2.png */,
+				3FB7DFE51A78E9EE005CE41F /* chat_animation3.png */,
+				3FB7DFE61A78E9EE005CE41F /* chat_animation_white1.png */,
+				3FB7DFE71A78E9EE005CE41F /* chat_animation_white2.png */,
+				3FB7DFE81A78E9EE005CE41F /* chat_animation_white3.png */,
+				3FB7DFE91A78E9EE005CE41F /* chat_ipunt_message.png */,
+				3FB7DFEA1A78E9EE005CE41F /* chat_message_back.png */,
+				3FB7DFEB1A78E9EE005CE41F /* Chat_record_circle.png */,
+				3FB7DFEC1A78E9EE005CE41F /* chat_send_message.png */,
+				3FB7DFED1A78E9EE005CE41F /* Chat_take_picture.png */,
+				3FB7DFEE1A78E9EE005CE41F /* chat_voice_record.png */,
+				3FB7DFEF1A78E9EE005CE41F /* chatfrom_bg_normal.png */,
+				3FB7DFF01A78E9EE005CE41F /* chatfrom_doctor_icon.png */,
+				3FB7DFF11A78E9EE005CE41F /* chatto_bg_normal.png */,
+				3FB7DFF21A78E9EE005CE41F /* haha.jpeg */,
+			);
+			path = pic;
+			sourceTree = "<group>";
+		};
+		3FB7E0031A78E9F6005CE41F /* VoiceLib */ = {
+			isa = PBXGroup;
+			children = (
+				3FB7E0041A78E9F6005CE41F /* lame.h */,
+				3FB7E0051A78E9F6005CE41F /* libmp3lame.a */,
+				3FB7E0061A78E9F6005CE41F /* Mp3Recorder.h */,
+				3FB7E0071A78E9F6005CE41F /* Mp3Recorder.m */,
+			);
+			path = VoiceLib;
+			sourceTree = "<group>";
+		};
+		3FB7E0121A78ED22005CE41F /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				3FB7E0131A78ED22005CE41F /* MJRefresh.bundle */,
+				3FB7E0141A78ED22005CE41F /* MJRefresh.h */,
+				3FB7E0151A78ED22005CE41F /* MJRefreshBaseView.h */,
+				3FB7E0161A78ED22005CE41F /* MJRefreshBaseView.m */,
+				3FB7E0171A78ED22005CE41F /* MJRefreshConst.h */,
+				3FB7E0181A78ED22005CE41F /* MJRefreshConst.m */,
+				3FB7E0191A78ED22005CE41F /* MJRefreshFooterView.h */,
+				3FB7E01A1A78ED22005CE41F /* MJRefreshFooterView.m */,
+				3FB7E01B1A78ED22005CE41F /* MJRefreshHeaderView.h */,
+				3FB7E01C1A78ED22005CE41F /* MJRefreshHeaderView.m */,
+			);
+			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		3FC088C81A5B79CA009FB115 /* FTSlideController */ = {
@@ -951,6 +1136,8 @@
 		3FC1CE0A1A5F833500120A3B /* 课程表 */ = {
 			isa = PBXGroup;
 			children = (
+				3FB7DFB41A78CE15005CE41F /* ModelView */,
+				3FB7DFB31A78CE04005CE41F /* model */,
 				3FDF22241A67585E002D122F /* tableCource */,
 				3FE4DD091A664ED700F75E24 /* CurriculumTableViewController.h */,
 				3FE4DD0A1A664ED700F75E24 /* CurriculumTableViewController.m */,
@@ -967,6 +1154,12 @@
 				66BC640A1A7487B3009EFB4E /* settingTableCollectionViewCell.h */,
 				66BC640B1A7487B3009EFB4E /* settingTableCollectionViewCell.m */,
 				66BC640C1A7487B3009EFB4E /* settingTableCollectionViewCell.xib */,
+				3FB7DFB51A78CEB9005CE41F /* SubstituteClassViewController.h */,
+				3FB7DFB61A78CEB9005CE41F /* SubstituteClassViewController.m */,
+				3FB7DFB71A78CEB9005CE41F /* SubstituteClassViewController.xib */,
+				3FB7DFBA1A78D2E5005CE41F /* SubstituteTableViewCell.h */,
+				3FB7DFBB1A78D2E5005CE41F /* SubstituteTableViewCell.m */,
+				3FB7DFBC1A78D2E5005CE41F /* SubstituteTableViewCell.xib */,
 			);
 			path = "课程表";
 			sourceTree = "<group>";
@@ -974,6 +1167,9 @@
 		3FC1CE0B1A5F833500120A3B /* 评价 */ = {
 			isa = PBXGroup;
 			children = (
+				3FB7DFBF1A78E1B6005CE41F /* EvaluationViewController.h */,
+				3FB7DFC01A78E1B6005CE41F /* EvaluationViewController.m */,
+				3FB7DFC11A78E1B6005CE41F /* EvaluationViewController.xib */,
 			);
 			path = "评价";
 			sourceTree = "<group>";
@@ -1160,6 +1356,7 @@
 			isa = PBXGroup;
 			children = (
 				3FD718581A774B0200681D1A /* defineSetting.h */,
+				3FB7DFDE1A78E9D9005CE41F /* ACMacros.h */,
 				3FDE314C1A76357500B3833B /* configUrl.h */,
 				3FD7185F1A7754AC00681D1A /* asActiveSetting.h */,
 			);
@@ -1169,8 +1366,8 @@
 		3FC320DD1A5A3BE600C4121E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3FB7E0121A78ED22005CE41F /* MJRefresh */,
 				3FDE123D1A6F4AF400A14839 /* JOSN */,
-				3FC991FD1A636E5600ECAE64 /* MJRefresh */,
 				3FC3212E1A5A517300C4121E /* AFNetworking */,
 				3FC321421A5A517300C4121E /* UIKit+AFNetworking */,
 				3FC321231A5A4FB000C4121E /* Images */,
@@ -1424,6 +1621,8 @@
 		3FC321421A5A517300C4121E /* UIKit+AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				3FB7DFB01A78729C005CE41F /* UIRefreshControl+AFNetworking.h */,
+				3FB7DFB11A78729C005CE41F /* UIRefreshControl+AFNetworking.m */,
 				3FC321431A5A517300C4121E /* AFNetworkActivityIndicatorManager.h */,
 				3FC321441A5A517300C4121E /* AFNetworkActivityIndicatorManager.m */,
 				3FC321451A5A517300C4121E /* UIActivityIndicatorView+AFNetworking.h */,
@@ -1523,6 +1722,11 @@
 		3FC321A51A5A6DBB00C4121E /* 校内聊 */ = {
 			isa = PBXGroup;
 			children = (
+				3FB7E0031A78E9F6005CE41F /* VoiceLib */,
+				3FB7DFE21A78E9EE005CE41F /* pic */,
+				3FB7DFDF1A78E9E3005CE41F /* NSDate+Utils.h */,
+				3FB7DFE01A78E9E3005CE41F /* NSDate+Utils.m */,
+				3FB7DFC41A78E9B5005CE41F /* 聊天 */,
 				3FC992B01A63BDF200ECAE64 /* 最新 */,
 				3FC992AE1A63BDEB00ECAE64 /* 群聊 */,
 				3FC992AF1A63BDEB00ECAE64 /* 通讯录 */,
@@ -1584,29 +1788,6 @@
 				3FC88A8D1A68EAAE00F0AF27 /* PieLayer.m */,
 			);
 			path = MagicPieLayer;
-			sourceTree = "<group>";
-		};
-		3FC991FD1A636E5600ECAE64 /* MJRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				3FC991FE1A636E5600ECAE64 /* MJRefresh.bundle */,
-				3FC991FF1A636E5600ECAE64 /* MJRefresh.h */,
-				3FC992001A636E5600ECAE64 /* MJRefreshBaseView.h */,
-				3FC992011A636E5600ECAE64 /* MJRefreshBaseView.m */,
-				3FC992021A636E5600ECAE64 /* MJRefreshConst.h */,
-				3FC992031A636E5600ECAE64 /* MJRefreshConst.m */,
-				3FC992041A636E5600ECAE64 /* MJRefreshFooterView.h */,
-				3FC992051A636E5600ECAE64 /* MJRefreshFooterView.m */,
-				3FC992061A636E5600ECAE64 /* MJRefreshHeaderView.h */,
-				3FC992071A636E5600ECAE64 /* MJRefreshHeaderView.m */,
-				3FC992081A636E5600ECAE64 /* UIScrollView+MJExtension.h */,
-				3FC992091A636E5600ECAE64 /* UIScrollView+MJExtension.m */,
-				3FC9920A1A636E5600ECAE64 /* UIScrollView+MJRefresh.h */,
-				3FC9920B1A636E5600ECAE64 /* UIScrollView+MJRefresh.m */,
-				3FC9920C1A636E5600ECAE64 /* UIView+MJExtension.h */,
-				3FC9920D1A636E5600ECAE64 /* UIView+MJExtension.m */,
-			);
-			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		3FC9921C1A637D8100ECAE64 /* OC-Category */ = {
@@ -1964,6 +2145,7 @@
 				3F0A163F1A5E24A7009F5580 /* options_pointer.png in Resources */,
 				3FC088D51A5BAB13009FB115 /* arrows.png in Resources */,
 				3FC088E01A5BD204009FB115 /* callName.png in Resources */,
+				3FB7DFF31A78E9EE005CE41F /* chat_animation1.png in Resources */,
 				3FC992B51A63BE2000ECAE64 /* AddressBookViewController.xib in Resources */,
 				3FDE12561A6F7E8100A14839 /* croess@2x.png in Resources */,
 				3FC321921A5A664700C4121E /* 点击后_11.png in Resources */,
@@ -1974,6 +2156,7 @@
 				3FC088C31A5B768D009FB115 /* PeopleMessageViewController.xib in Resources */,
 				3FCC57991A5CFF5F00D9A181 /* calendar.png in Resources */,
 				3FC322011A5A9FD400C4121E /* teacherEducation@2x.png in Resources */,
+				3FB7DFFF1A78E9EE005CE41F /* chatfrom_bg_normal.png in Resources */,
 				3FC089041A5BE1D8009FB115 /* soaft.png in Resources */,
 				3FDE12371A6F4A3300A14839 /* DataSearchViewController.xib in Resources */,
 				3FC321F71A5A9D1000C4121E /* newNormal@2x.png in Resources */,
@@ -1988,11 +2171,13 @@
 				3F4E85011A723DA00077D733 /* SettingTableBackViewController.xib in Resources */,
 				3FCC57EB1A5D254E00D9A181 /* image0.png in Resources */,
 				3FC088F91A5BE102009FB115 /* equitAccount@2x.png in Resources */,
+				3FB7DFB91A78CEB9005CE41F /* SubstituteClassViewController.xib in Resources */,
 				3FE2D9061A70E1FA00F7019B /* ClassAddressTableViewCell.xib in Resources */,
 				3FD649141A71EB0D0061C69D /* Vector-Smart-Object@2x.png in Resources */,
 				3FC088D61A5BAB13009FB115 /* arrows@2x.png in Resources */,
 				3FC088E81A5BD302009FB115 /* chooseClass.png in Resources */,
 				3F0A163C1A5E24A7009F5580 /* DefaultLine.png in Resources */,
+				3FB7DFF61A78E9EE005CE41F /* chat_animation_white1.png in Resources */,
 				3FC088ED1A5BDEF9009FB115 /* me@2x.png in Resources */,
 				3FC321F91A5A9D1700C4121E /* newSelect@2x.png in Resources */,
 				3FC321D61A5A951900C4121E /* educationNormal.png in Resources */,
@@ -2000,9 +2185,12 @@
 				3FCC57EA1A5D254E00D9A181 /* image1.png in Resources */,
 				3FC089011A5BE193009FB115 /* myschool@2x.png in Resources */,
 				3FCC57971A5CFF5F00D9A181 /* score.png in Resources */,
+				3FB7DFF51A78E9EE005CE41F /* chat_animation3.png in Resources */,
 				3FC98F191A5E19EE00192826 /* addFriend.png in Resources */,
 				3FC88A601A68A60400F0AF27 /* icon57.png in Resources */,
 				3FC0890B1A5BEF72009FB115 /* educationCell.xib in Resources */,
+				3FB7E0001A78E9EE005CE41F /* chatfrom_doctor_icon.png in Resources */,
+				3FB7DFFE1A78E9EE005CE41F /* chat_voice_record.png in Resources */,
 				3FCC57FA1A5D310A00D9A181 /* pagebackImage@2x.png in Resources */,
 				3FC992311A63A19500ECAE64 /* SchoolCircleViewController.xib in Resources */,
 				3FE4DD0D1A664ED700F75E24 /* CurriculumTableViewController.xib in Resources */,
@@ -2013,6 +2201,7 @@
 				3FC321C81A5A935700C4121E /* meSelectedNormal.png in Resources */,
 				3FC321991A5A686100C4121E /* 下导航底图.png in Resources */,
 				3FF9D3941A6CDD7A00DD5D38 /* labelRectNormal.png in Resources */,
+				3FB7DFFA1A78E9EE005CE41F /* chat_message_back.png in Resources */,
 				3FD7186A1A775BA100681D1A /* properties.plist in Resources */,
 				3FE2D9011A70E07A00F7019B /* ClassAddressViewController.xib in Resources */,
 				3FC321801A5A655C00C4121E /* 点击前_12.png in Resources */,
@@ -2024,6 +2213,7 @@
 				3FC320D41A5A38D200C4121E /* Main.storyboard in Resources */,
 				3FC088BE1A5B70DC009FB115 /* SchoolChatViewController.xib in Resources */,
 				3FD718781A778E6000681D1A /* tabledelect@2x.png in Resources */,
+				3FB7DFC31A78E1B6005CE41F /* EvaluationViewController.xib in Resources */,
 				3F0A16421A5E2DFD009F5580 /* CollectionViewCellCustom.xib in Resources */,
 				3FC321D11A5A947600C4121E /* schoolChatSelectedNormal@2x.png in Resources */,
 				3FC3217D1A5A653900C4121E /* 点击前_03.png in Resources */,
@@ -2036,8 +2226,8 @@
 				3FC9929E1A63AA4E00ECAE64 /* button_send_comment@2x.png in Resources */,
 				3FEB34E51A6E28FA002A42EC /* GroupChatTableViewCell.xib in Resources */,
 				3FDE12691A6F950F00A14839 /* CallNameLongituginalViewCell.xib in Resources */,
+				3FB7DFF71A78E9EE005CE41F /* chat_animation_white2.png in Resources */,
 				3FC088E11A5BD204009FB115 /* callName@2x.png in Resources */,
-				3FC9920E1A636E5600ECAE64 /* MJRefresh.bundle in Resources */,
 				3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */,
 				66BC640E1A7487B3009EFB4E /* settingTableCollectionViewCell.xib in Resources */,
 				3FEB34CC1A6DF64F002A42EC /* chat.png in Resources */,
@@ -2054,13 +2244,16 @@
 				3FDE313E1A760C3B00B3833B /* SVProgressHUD.bundle in Resources */,
 				3FCC579E1A5D000B00D9A181 /* checkIn@2x.png in Resources */,
 				3FE2D8F21A70CD7D00F7019B /* menu@2x.png in Resources */,
+				3FB7E0021A78E9EE005CE41F /* haha.jpeg in Resources */,
 				3FC992A71A63AA5D00ECAE64 /* 03@2x.png in Resources */,
+				3FB7DFFB1A78E9EE005CE41F /* Chat_record_circle.png in Resources */,
 				3FCC579A1A5CFF5F00D9A181 /* calendar@2x.png in Resources */,
 				3FC088FD1A5BE151009FB115 /* opinion@2x.png in Resources */,
 				3FC088FC1A5BE151009FB115 /* opinion.png in Resources */,
 				3FC320B11A5A36C100C4121E /* Main.storyboard in Resources */,
 				3FD718711A778A0E00681D1A /* add@2x.png in Resources */,
 				3FDE126D1A6F9CD200A14839 /* normal@2x.png in Resources */,
+				3FB7E0011A78E9EE005CE41F /* chatto_bg_normal.png in Resources */,
 				3FC88A751A68E5C900F0AF27 /* unfilled.png in Resources */,
 				3FC321861A5A65B000C4121E /* 点击后_03.png in Resources */,
 				3FD6490C1A71DBDA0061C69D /* CourseInfoTableViewCell.xib in Resources */,
@@ -2070,11 +2263,14 @@
 				3FCC578D1A5CCAD400D9A181 /* educationTeachingCell.xib in Resources */,
 				3FD718741A778AD500681D1A /* tableSetting@2x.png in Resources */,
 				3FDE124E1A6F7B8800A14839 /* longitudinal_buttonNormal@2x.png in Resources */,
+				3FB7DFF81A78E9EE005CE41F /* chat_animation_white3.png in Resources */,
 				3FF9D3911A6CC32400DD5D38 /* back02.png in Resources */,
 				3FC992A51A63AA5D00ECAE64 /* 01@2x.png in Resources */,
 				3FC992A11A63AA4E00ECAE64 /* personal_showBac@2x.png in Resources */,
+				3FB7DFFC1A78E9EE005CE41F /* chat_send_message.png in Resources */,
 				3FE2D8ED1A70CBF500F7019B /* refresh.png in Resources */,
 				3FF9D3A11A6CDE6E00DD5D38 /* labelRectNormalSelect@2x.png in Resources */,
+				3FB7DFF91A78E9EE005CE41F /* chat_ipunt_message.png in Resources */,
 				3FC992A91A63B07600ECAE64 /* 3.png in Resources */,
 				3FCC57981A5CFF5F00D9A181 /* score@2x.png in Resources */,
 				3FDE12591A6F7F5900A14839 /* submit.png in Resources */,
@@ -2086,6 +2282,7 @@
 				3FC320B61A5A36C100C4121E /* LaunchScreen.xib in Resources */,
 				3F0A163E1A5E24A7009F5580 /* Menu_PopOver_BG@2x.png in Resources */,
 				3FDE12641A6F894500A14839 /* CallNamelongitudinalViewController.xib in Resources */,
+				3FB7DFF41A78E9EE005CE41F /* chat_animation2.png in Resources */,
 				3FE2D8F11A70CD7D00F7019B /* menu.png in Resources */,
 				3FDE124A1A6F7B4200A14839 /* longitudinal_button@2x.png in Resources */,
 				3FDE123C1A6F4A5000A14839 /* banks.txt in Resources */,
@@ -2117,6 +2314,7 @@
 				3FEB34C31A6DF643002A42EC /* newFriend@2x.png in Resources */,
 				3FC321821A5A656600C4121E /* 点击后_12.png in Resources */,
 				3FC321F61A5A9D1000C4121E /* newNormal.png in Resources */,
+				3FB7DFFD1A78E9EE005CE41F /* Chat_take_picture.png in Resources */,
 				3FC321B11A5A6E6500C4121E /* EducationalTeachingViewController.xib in Resources */,
 				3FC88A701A68E21800F0AF27 /* username-01.png in Resources */,
 				3FC88A6B1A68B36500F0AF27 /* CollapseClickCell.xib in Resources */,
@@ -2128,6 +2326,7 @@
 				3FC088D21A5B80E9009FB115 /* red_line_and_shadow@2x.png in Resources */,
 				3FF9D3841A6C8E1800DD5D38 /* CollectionTableViewCell.xib in Resources */,
 				3FC321CF1A5A947600C4121E /* schoolChatSelected@2x.png in Resources */,
+				3FB7DFBE1A78D2E5005CE41F /* SubstituteTableViewCell.xib in Resources */,
 				3FC88A991A69150600F0AF27 /* arrow@2x.png in Resources */,
 				3FC321261A5A4FE400C4121E /* icon50reload.png in Resources */,
 				3FCC57A21A5D008100D9A181 /* evaluate@2x.png in Resources */,
@@ -2149,12 +2348,14 @@
 				3FCC57E81A5D254E00D9A181 /* image3.png in Resources */,
 				3FC88A981A69150600F0AF27 /* arrow.png in Resources */,
 				3FEB34D11A6DF64F002A42EC /* video@2x.png in Resources */,
+				3FB7E00E1A78EA0D005CE41F /* ChatViewController.xib in Resources */,
 				3FDE12511A6F7D0200A14839 /* croessNormal.png in Resources */,
 				3FDE12551A6F7E8100A14839 /* croess.png in Resources */,
 				3FDE12491A6F7B4200A14839 /* longitudinal_button.png in Resources */,
 				3FDE125A1A6F7F5900A14839 /* submit@2x.png in Resources */,
 				3FD718751A778AD500681D1A /* tableSetting.png in Resources */,
 				3FC3218E1A5A65ED00C4121E /* 点击后_05.png in Resources */,
+				3FB7E01D1A78ED22005CE41F /* MJRefresh.bundle in Resources */,
 				3FD649111A71EB0D0061C69D /* substituteClass@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2177,16 +2378,17 @@
 				3FC3212B1A5A507200C4121E /* AppDelegate.m in Sources */,
 				3FC3215C1A5A517400C4121E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3FC88A691A68B36500F0AF27 /* CollapseClick.m in Sources */,
+				3FB7DFDB1A78E9C9005CE41F /* UUMessageContentButton.m in Sources */,
 				3FEB34B61A6DEA2C002A42EC /* AddressTableViewCell.m in Sources */,
 				3FC992271A637D8100ECAE64 /* NSString+URLEncoding.m in Sources */,
 				3FC088BD1A5B70DC009FB115 /* SchoolChatViewController.m in Sources */,
 				3FC321521A5A517400C4121E /* AFHTTPRequestOperation.m in Sources */,
 				3FC321591A5A517400C4121E /* AFURLResponseSerialization.m in Sources */,
+				3FB7DFDA1A78E9C9005CE41F /* UUMessageCell.m in Sources */,
 				3FC321B01A5A6E6500C4121E /* EducationalTeachingViewController.m in Sources */,
 				3FC321A61A5A6DBB00C4121E /* ASActiveDynamicViewController.m in Sources */,
 				3FC320AE1A5A36C100C4121E /* ViewController.m in Sources */,
 				3FC3215F1A5A517400C4121E /* UIImageView+AFNetworking.m in Sources */,
-				3FC992121A636E5600ECAE64 /* MJRefreshHeaderView.m in Sources */,
 				3FDE12401A6F4AFB00A14839 /* JSONKit.m in Sources */,
 				3FC321101A5A3FB600C4121E /* UIImage+WebP.m in Sources */,
 				3FC3211D1A5A428000C4121E /* OpenUDID.m in Sources */,
@@ -2198,6 +2400,7 @@
 				3FD7186D1A777D4E00681D1A /* UITableView+tableViewRefresh.m in Sources */,
 				3FC321081A5A3FB600C4121E /* SDWebImageDecoder.m in Sources */,
 				3FC992261A637D8100ECAE64 /* NSString+Encryption.m in Sources */,
+				3FB7DFD71A78E9C9005CE41F /* UUImageAvatarBrowser.m in Sources */,
 				3FC321761A5A600B00C4121E /* LeveyTabBarController.m in Sources */,
 				3FDE12631A6F894500A14839 /* CallNamelongitudinalViewController.m in Sources */,
 				3FDE12321A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m in Sources */,
@@ -2206,10 +2409,10 @@
 				3FC321091A5A3FB600C4121E /* SDWebImageDownloader.m in Sources */,
 				3FEB34B11A6DE3EF002A42EC /* GroupChatViewController.m in Sources */,
 				3FC88A801A68EA6600F0AF27 /* MyPieElement.m in Sources */,
-				3FC9920F1A636E5600ECAE64 /* MJRefreshBaseView.m in Sources */,
 				3FE2D8DE1A70903000F7019B /* CrossView.m in Sources */,
 				3FC088C21A5B768D009FB115 /* PeopleMessageViewController.m in Sources */,
 				3FF9D3831A6C8E1800DD5D38 /* CollectionTableViewCell.m in Sources */,
+				3FB7DFBD1A78D2E5005CE41F /* SubstituteTableViewCell.m in Sources */,
 				3FC992251A637D8100ECAE64 /* KDActivityIndicatorView.m in Sources */,
 				3FC320E51A5A3EC600C4121E /* MBProgressHUD.m in Sources */,
 				3FCC57F61A5D2A4F00D9A181 /* EScrollerView.m in Sources */,
@@ -2221,23 +2424,27 @@
 				3FC88A851A68EA8500F0AF27 /* NSArray+descValues.m in Sources */,
 				3FE2D8E31A70C05A00F7019B /* NSDate+Common.m in Sources */,
 				3FC3215A1A5A517400C4121E /* AFURLSessionManager.m in Sources */,
+				3FB7E00D1A78EA0D005CE41F /* ChatViewController.m in Sources */,
 				3FC321211A5A4A5000C4121E /* FormValidateUtil.m in Sources */,
+				3FB7E01F1A78ED22005CE41F /* MJRefreshConst.m in Sources */,
 				66BC640D1A7487B3009EFB4E /* settingTableCollectionViewCell.m in Sources */,
+				3FB7DFDD1A78E9C9005CE41F /* UUProgressHUD.m in Sources */,
+				3FB7DFB21A78729C005CE41F /* UIRefreshControl+AFNetworking.m in Sources */,
 				3FC88A8E1A68EAAE00F0AF27 /* NSMutableArray+pieEx.m in Sources */,
 				3FC3215E1A5A517400C4121E /* UIButton+AFNetworking.m in Sources */,
 				3FE4DD0C1A664ED700F75E24 /* CurriculumTableViewController.m in Sources */,
 				3FD6490B1A71DBDA0061C69D /* CourseInfoTableViewCell.m in Sources */,
+				3FB7DFC21A78E1B6005CE41F /* EvaluationViewController.m in Sources */,
 				3FC992841A63A9C500ECAE64 /* YMShowImageView.m in Sources */,
+				3FB7E0201A78ED22005CE41F /* MJRefreshFooterView.m in Sources */,
 				3FC88A7F1A68EA6600F0AF27 /* Example2PieView.m in Sources */,
 				3FC992861A63A9C500ECAE64 /* YMTapGestureRecongnizer.m in Sources */,
 				3FC321661A5A534300C4121E /* ASAPIClient.m in Sources */,
 				3FEB34DA1A6E03B2002A42EC /* ChineseString.m in Sources */,
 				3FC3210B1A5A3FB600C4121E /* SDWebImageManager.m in Sources */,
-				3FC992131A636E5600ECAE64 /* UIScrollView+MJExtension.m in Sources */,
 				3FC088CF1A5B7A4A009FB115 /* FTSlideAddViewController.m in Sources */,
 				3FC1CE1A1A5F8FB600120A3B /* UIImageView+LK.m in Sources */,
 				3FC321541A5A517400C4121E /* AFHTTPSessionManager.m in Sources */,
-				3FC992111A636E5600ECAE64 /* MJRefreshFooterView.m in Sources */,
 				3FE2D8FB1A70D8B800F7019B /* newFriendTableViewCell.m in Sources */,
 				3FC992911A63AA1C00ECAE64 /* NSString+NSString_ILExtension.m in Sources */,
 				3FE2D9001A70E07A00F7019B /* ClassAddressViewController.m in Sources */,
@@ -2254,8 +2461,8 @@
 				3FC992831A63A9C500ECAE64 /* YMReplyInputView.m in Sources */,
 				3FF9D3881A6C8EFF00DD5D38 /* UITableViewCell+tableViewCell.m in Sources */,
 				3FEB34E41A6E28FA002A42EC /* GroupChatTableViewCell.m in Sources */,
+				3FB7E0091A78E9F6005CE41F /* Mp3Recorder.m in Sources */,
 				3FC321551A5A517400C4121E /* AFNetworkReachabilityManager.m in Sources */,
-				3FC992141A636E5600ECAE64 /* UIScrollView+MJRefresh.m in Sources */,
 				3FC3210F1A5A3FB600C4121E /* UIImage+MultiFormat.m in Sources */,
 				3FC3215B1A5A517400C4121E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3FC321531A5A517400C4121E /* AFHTTPRequestOperationManager.m in Sources */,
@@ -2265,12 +2472,13 @@
 				3FC321751A5A600B00C4121E /* LeveyTabBar.m in Sources */,
 				3F0A16361A5E2466009F5580 /* MLKMenuPopover.m in Sources */,
 				3FE2D90E1A71098300F7019B /* CourseInfoViewController.m in Sources */,
+				3FB7E01E1A78ED22005CE41F /* MJRefreshBaseView.m in Sources */,
 				3FEB34BD1A6DEDD4002A42EC /* UIImageView+UIImageCategory.m in Sources */,
 				3FC9922B1A637D8B00ECAE64 /* UIDevice+Info.m in Sources */,
 				3FDE12361A6F4A3300A14839 /* DataSearchViewController.m in Sources */,
+				3FB7E0211A78ED22005CE41F /* MJRefreshHeaderView.m in Sources */,
 				3FEB34DF1A6E1EB4002A42EC /* newChatTableViewCell.m in Sources */,
 				3FC321111A5A3FB600C4121E /* UIImageView+WebCache.m in Sources */,
-				3FC992151A636E5600ECAE64 /* UIView+MJExtension.m in Sources */,
 				3FC992901A63AA1C00ECAE64 /* NSArray+NSArray_ILExtension.m in Sources */,
 				3FDE125E1A6F891000A14839 /* CallNameCrossViewController.m in Sources */,
 				3FC321771A5A600B00C4121E /* UIViewController+FindTabView.m in Sources */,
@@ -2282,10 +2490,12 @@
 				3FD718531A772E9000681D1A /* asActiVityLabelModel.m in Sources */,
 				3FC321601A5A517400C4121E /* UIProgressView+AFNetworking.m in Sources */,
 				3FC88A8F1A68EAAE00F0AF27 /* PieElement.m in Sources */,
+				3FB7DFD61A78E9C9005CE41F /* UUAVAudioPlayer.m in Sources */,
 				3FC3210E1A5A3FB600C4121E /* UIImage+GIF.m in Sources */,
 				3FC1CE191A5F8FB600120A3B /* THProgressView.m in Sources */,
 				3FE2D8E41A70C05A00F7019B /* NSDate+convenience.m in Sources */,
 				3FC321071A5A3FB600C4121E /* SDWebImageCompat.m in Sources */,
+				3FB7E0111A78EA53005CE41F /* ChatModel.m in Sources */,
 				3FC321051A5A3FB600C4121E /* NSData+GIF.m in Sources */,
 				3FE4DD141A66594E00F75E24 /* DropDownListView.m in Sources */,
 				3FC992301A63A19500ECAE64 /* SchoolCircleViewController.m in Sources */,
@@ -2305,17 +2515,21 @@
 				3FDE313F1A760C3B00B3833B /* SVProgressHUD.m in Sources */,
 				3FC320A81A5A36C100C4121E /* main.m in Sources */,
 				3FE2D8F61A70D65700F7019B /* NewFriendViewController.m in Sources */,
+				3FB7DFD91A78E9C9005CE41F /* UUMessage.m in Sources */,
 				3FDE12681A6F950F00A14839 /* CallNameLongituginalViewCell.m in Sources */,
-				3FC992101A636E5600ECAE64 /* MJRefreshConst.m in Sources */,
 				3FC321041A5A3FB600C4121E /* MKAnnotationView+WebCache.m in Sources */,
 				3FDE123A1A6F4A4900A14839 /* Bank.m in Sources */,
 				3FDF22341A675868002D122F /* MyLabel.m in Sources */,
+				3FB7DFB81A78CEB9005CE41F /* SubstituteClassViewController.m in Sources */,
 				3FC321061A5A3FB600C4121E /* SDImageCache.m in Sources */,
+				3FB7DFE11A78E9E3005CE41F /* NSDate+Utils.m in Sources */,
+				3FB7DFDC1A78E9C9005CE41F /* UUMessageFrame.m in Sources */,
 				3FDF22321A675868002D122F /* MyCell.m in Sources */,
 				3FC992851A63A9C500ECAE64 /* YMTableViewCell.m in Sources */,
 				3FD718501A772DD800681D1A /* asActivityLabelViewModel.m in Sources */,
 				3FC321B81A5A71D500C4121E /* BaseViewController.m in Sources */,
 				3FDF22331A675868002D122F /* TimeView.m in Sources */,
+				3FB7DFD81A78E9C9005CE41F /* UUInputFunctionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2472,6 +2686,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)/TeacherAssistant/Sections/校内聊/VoiceLib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2491,6 +2706,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)/TeacherAssistant/Sections/校内聊/VoiceLib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
