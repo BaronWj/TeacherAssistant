@@ -171,6 +171,29 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
     return operation;
 }
 
++ (AFHTTPRequestOperation *)getPeopleInfoParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+//    __weak id weakSelf = self;
+    AFHTTPRequestOperation *operation =
+    [[ASAPIClient sharedClient] GET:GetPeopleInfo parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         MyLog(@"%@",responseObject);
+//         NSString *userID = [responseObject objectForKey:@"userid"];
+         //  KCLogInt([userID integerValue]);
+//         if ([userID integerValue] > 0)
+//             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+//         if (block) block([userID integerValue] > 0, responseObject, nil);
+         if (block)block(YES,responseObject,nil);
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         if (block) block(NO, nil, error);
+     }];
+    
+    MyLog(@"%@",operation.request.URL);
+    
+    return operation;
+}
+
+
+
 
 
 

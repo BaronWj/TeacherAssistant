@@ -342,6 +342,25 @@
 		3FE4DD0D1A664ED700F75E24 /* CurriculumTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE4DD0B1A664ED700F75E24 /* CurriculumTableViewController.xib */; };
 		3FE4DD131A66594E00F75E24 /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE4DD0F1A66594E00F75E24 /* down_dark.png */; };
 		3FE4DD141A66594E00F75E24 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4DD121A66594E00F75E24 /* DropDownListView.m */; };
+		3FE74D241A79D15A00004FA7 /* PeopleInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D221A79D15A00004FA7 /* PeopleInfoViewController.m */; };
+		3FE74D251A79D15A00004FA7 /* PeopleInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D231A79D15A00004FA7 /* PeopleInfoViewController.xib */; };
+		3FE74D2A1A79D33500004FA7 /* peopleInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D281A79D33500004FA7 /* peopleInfoCell.m */; };
+		3FE74D2B1A79D33500004FA7 /* peopleInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D291A79D33500004FA7 /* peopleInfoCell.xib */; };
+		3FE74D301A79D55400004FA7 /* peopleinfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D2F1A79D55400004FA7 /* peopleinfoModel.m */; };
+		3FE74D331A79DA3500004FA7 /* peopleInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D321A79DA3500004FA7 /* peopleInfoViewModel.m */; };
+		3FE74D371A79E6DF00004FA7 /* ModifyPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D351A79E6DF00004FA7 /* ModifyPwdViewController.m */; };
+		3FE74D381A79E6DF00004FA7 /* ModifyPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D361A79E6DF00004FA7 /* ModifyPwdViewController.xib */; };
+		3FE74D3B1A79E81500004FA7 /* textFiled.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D391A79E81500004FA7 /* textFiled.png */; };
+		3FE74D3C1A79E81500004FA7 /* textFiled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D3A1A79E81500004FA7 /* textFiled@2x.png */; };
+		3FE74D421A7A027000004FA7 /* UITextField+common.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D411A7A027000004FA7 /* UITextField+common.m */; };
+		3FE74D451A7A08BE00004FA7 /* softwareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D441A7A08BE00004FA7 /* softwareViewController.m */; };
+		3FE74D471A7A0ACA00004FA7 /* 1024Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D461A7A0ACA00004FA7 /* 1024Icon.png */; };
+		3FE74D4B1A7A12CA00004FA7 /* opinionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D491A7A12CA00004FA7 /* opinionViewController.m */; };
+		3FE74D4C1A7A12CA00004FA7 /* opinionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D4A1A7A12CA00004FA7 /* opinionViewController.xib */; };
+		3FE74D501A7A1AF000004FA7 /* RecommendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D4E1A7A1AF000004FA7 /* RecommendedViewController.m */; };
+		3FE74D511A7A1AF000004FA7 /* RecommendedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D4F1A7A1AF000004FA7 /* RecommendedViewController.xib */; };
+		3FE74D5A1A7A1E8D00004FA7 /* RecomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE74D581A7A1E8D00004FA7 /* RecomCollectionViewCell.m */; };
+		3FE74D5B1A7A1E8D00004FA7 /* RecomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE74D591A7A1E8D00004FA7 /* RecomCollectionViewCell.xib */; };
 		3FEB34AC1A6DE3C1002A42EC /* NewChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB34AA1A6DE3C1002A42EC /* NewChatViewController.m */; };
 		3FEB34AD1A6DE3C1002A42EC /* NewChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FEB34AB1A6DE3C1002A42EC /* NewChatViewController.xib */; };
 		3FEB34B11A6DE3EF002A42EC /* GroupChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB34AF1A6DE3EF002A42EC /* GroupChatViewController.m */; };
@@ -888,6 +907,35 @@
 		3FE4DD101A66594E00F75E24 /* DropDownChooseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownChooseProtocol.h; sourceTree = "<group>"; };
 		3FE4DD111A66594E00F75E24 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
 		3FE4DD121A66594E00F75E24 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
+		3FE74D211A79D15A00004FA7 /* PeopleInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleInfoViewController.h; sourceTree = "<group>"; };
+		3FE74D221A79D15A00004FA7 /* PeopleInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleInfoViewController.m; sourceTree = "<group>"; };
+		3FE74D231A79D15A00004FA7 /* PeopleInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleInfoViewController.xib; sourceTree = "<group>"; };
+		3FE74D271A79D33500004FA7 /* peopleInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleInfoCell.h; sourceTree = "<group>"; };
+		3FE74D281A79D33500004FA7 /* peopleInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleInfoCell.m; sourceTree = "<group>"; };
+		3FE74D291A79D33500004FA7 /* peopleInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = peopleInfoCell.xib; sourceTree = "<group>"; };
+		3FE74D2E1A79D55400004FA7 /* peopleinfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleinfoModel.h; sourceTree = "<group>"; };
+		3FE74D2F1A79D55400004FA7 /* peopleinfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleinfoModel.m; sourceTree = "<group>"; };
+		3FE74D311A79DA3500004FA7 /* peopleInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleInfoViewModel.h; sourceTree = "<group>"; };
+		3FE74D321A79DA3500004FA7 /* peopleInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleInfoViewModel.m; sourceTree = "<group>"; };
+		3FE74D341A79E6DF00004FA7 /* ModifyPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPwdViewController.h; sourceTree = "<group>"; };
+		3FE74D351A79E6DF00004FA7 /* ModifyPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPwdViewController.m; sourceTree = "<group>"; };
+		3FE74D361A79E6DF00004FA7 /* ModifyPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPwdViewController.xib; sourceTree = "<group>"; };
+		3FE74D391A79E81500004FA7 /* textFiled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textFiled.png; sourceTree = "<group>"; };
+		3FE74D3A1A79E81500004FA7 /* textFiled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textFiled@2x.png"; sourceTree = "<group>"; };
+		3FE74D401A7A027000004FA7 /* UITextField+common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+common.h"; sourceTree = "<group>"; };
+		3FE74D411A7A027000004FA7 /* UITextField+common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+common.m"; sourceTree = "<group>"; };
+		3FE74D431A7A08BE00004FA7 /* softwareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = softwareViewController.h; sourceTree = "<group>"; };
+		3FE74D441A7A08BE00004FA7 /* softwareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = softwareViewController.m; sourceTree = "<group>"; };
+		3FE74D461A7A0ACA00004FA7 /* 1024Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024Icon.png; sourceTree = "<group>"; };
+		3FE74D481A7A12CA00004FA7 /* opinionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opinionViewController.h; sourceTree = "<group>"; };
+		3FE74D491A7A12CA00004FA7 /* opinionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = opinionViewController.m; sourceTree = "<group>"; };
+		3FE74D4A1A7A12CA00004FA7 /* opinionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = opinionViewController.xib; sourceTree = "<group>"; };
+		3FE74D4D1A7A1AF000004FA7 /* RecommendedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedViewController.h; sourceTree = "<group>"; };
+		3FE74D4E1A7A1AF000004FA7 /* RecommendedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedViewController.m; sourceTree = "<group>"; };
+		3FE74D4F1A7A1AF000004FA7 /* RecommendedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendedViewController.xib; sourceTree = "<group>"; };
+		3FE74D571A7A1E8D00004FA7 /* RecomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecomCollectionViewCell.h; sourceTree = "<group>"; };
+		3FE74D581A7A1E8D00004FA7 /* RecomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecomCollectionViewCell.m; sourceTree = "<group>"; };
+		3FE74D591A7A1E8D00004FA7 /* RecomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecomCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FEB34A91A6DE3C1002A42EC /* NewChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewChatViewController.h; sourceTree = "<group>"; };
 		3FEB34AA1A6DE3C1002A42EC /* NewChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewChatViewController.m; sourceTree = "<group>"; };
 		3FEB34AB1A6DE3C1002A42EC /* NewChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewChatViewController.xib; sourceTree = "<group>"; };
@@ -1337,6 +1385,8 @@
 				3FDE31381A75E65400B3833B /* asActiveModel.m */,
 				3FD718511A772E9000681D1A /* asActiVityLabelModel.h */,
 				3FD718521A772E9000681D1A /* asActiVityLabelModel.m */,
+				3FE74D2E1A79D55400004FA7 /* peopleinfoModel.h */,
+				3FE74D2F1A79D55400004FA7 /* peopleinfoModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1446,9 +1496,12 @@
 		3FC321231A5A4FB000C4121E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FE74D391A79E81500004FA7 /* textFiled.png */,
+				3FE74D3A1A79E81500004FA7 /* textFiled@2x.png */,
 				3FD6490D1A71EB0D0061C69D /* substituteClass@2x.png */,
 				3FD7186E1A778A0E00681D1A /* add.png */,
 				3FD7186F1A778A0E00681D1A /* add@2x.png */,
+				3FE74D461A7A0ACA00004FA7 /* 1024Icon.png */,
 				3FD649171A71F0D10061C69D /* Vector-Smart-Object.png */,
 				3FD649101A71EB0D0061C69D /* Vector-Smart-Object@2x.png */,
 				3FE2D8EF1A70CD7D00F7019B /* menu.png */,
@@ -1667,9 +1720,25 @@
 		3FC3219F1A5A6DBB00C4121E /* 个人信息 */ = {
 			isa = PBXGroup;
 			children = (
+				3FE74D2D1A79D4EA00004FA7 /* ViewModel */,
+				3FE74D261A79D2D100004FA7 /* tableVireCell */,
 				3FC088BF1A5B768D009FB115 /* PeopleMessageViewController.h */,
 				3FC088C01A5B768D009FB115 /* PeopleMessageViewController.m */,
 				3FC088C11A5B768D009FB115 /* PeopleMessageViewController.xib */,
+				3FE74D211A79D15A00004FA7 /* PeopleInfoViewController.h */,
+				3FE74D221A79D15A00004FA7 /* PeopleInfoViewController.m */,
+				3FE74D231A79D15A00004FA7 /* PeopleInfoViewController.xib */,
+				3FE74D341A79E6DF00004FA7 /* ModifyPwdViewController.h */,
+				3FE74D351A79E6DF00004FA7 /* ModifyPwdViewController.m */,
+				3FE74D361A79E6DF00004FA7 /* ModifyPwdViewController.xib */,
+				3FE74D431A7A08BE00004FA7 /* softwareViewController.h */,
+				3FE74D441A7A08BE00004FA7 /* softwareViewController.m */,
+				3FE74D481A7A12CA00004FA7 /* opinionViewController.h */,
+				3FE74D491A7A12CA00004FA7 /* opinionViewController.m */,
+				3FE74D4A1A7A12CA00004FA7 /* opinionViewController.xib */,
+				3FE74D4D1A7A1AF000004FA7 /* RecommendedViewController.h */,
+				3FE74D4E1A7A1AF000004FA7 /* RecommendedViewController.m */,
+				3FE74D4F1A7A1AF000004FA7 /* RecommendedViewController.xib */,
 			);
 			name = "个人信息";
 			path = "个性信息";
@@ -1820,6 +1889,8 @@
 				3FDE12311A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m */,
 				3FD7186B1A777D4E00681D1A /* UITableView+tableViewRefresh.h */,
 				3FD7186C1A777D4E00681D1A /* UITableView+tableViewRefresh.m */,
+				3FE74D401A7A027000004FA7 /* UITextField+common.h */,
+				3FE74D411A7A027000004FA7 /* UITextField+common.m */,
 			);
 			path = "OC-Category";
 			sourceTree = "<group>";
@@ -2044,6 +2115,28 @@
 			path = dropDownList;
 			sourceTree = "<group>";
 		};
+		3FE74D261A79D2D100004FA7 /* tableVireCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FE74D271A79D33500004FA7 /* peopleInfoCell.h */,
+				3FE74D281A79D33500004FA7 /* peopleInfoCell.m */,
+				3FE74D291A79D33500004FA7 /* peopleInfoCell.xib */,
+				3FE74D571A7A1E8D00004FA7 /* RecomCollectionViewCell.h */,
+				3FE74D581A7A1E8D00004FA7 /* RecomCollectionViewCell.m */,
+				3FE74D591A7A1E8D00004FA7 /* RecomCollectionViewCell.xib */,
+			);
+			name = tableVireCell;
+			sourceTree = "<group>";
+		};
+		3FE74D2D1A79D4EA00004FA7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FE74D311A79DA3500004FA7 /* peopleInfoViewModel.h */,
+				3FE74D321A79DA3500004FA7 /* peopleInfoViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		3FEB34D21A6E03AA002A42EC /* ChineseCharactersChangePinyin */ = {
 			isa = PBXGroup;
 			children = (
@@ -2142,6 +2235,7 @@
 				3FC089081A5BE29A009FB115 /* schoolChat.png in Resources */,
 				3FC88A6F1A68E21800F0AF27 /* password-01.png in Resources */,
 				3FC321D91A5A951900C4121E /* educationSelected@2x.png in Resources */,
+				3FE74D251A79D15A00004FA7 /* PeopleInfoViewController.xib in Resources */,
 				3F0A163F1A5E24A7009F5580 /* options_pointer.png in Resources */,
 				3FC088D51A5BAB13009FB115 /* arrows.png in Resources */,
 				3FC088E01A5BD204009FB115 /* callName.png in Resources */,
@@ -2156,6 +2250,7 @@
 				3FC088C31A5B768D009FB115 /* PeopleMessageViewController.xib in Resources */,
 				3FCC57991A5CFF5F00D9A181 /* calendar.png in Resources */,
 				3FC322011A5A9FD400C4121E /* teacherEducation@2x.png in Resources */,
+				3FE74D5B1A7A1E8D00004FA7 /* RecomCollectionViewCell.xib in Resources */,
 				3FB7DFFF1A78E9EE005CE41F /* chatfrom_bg_normal.png in Resources */,
 				3FC089041A5BE1D8009FB115 /* soaft.png in Resources */,
 				3FDE12371A6F4A3300A14839 /* DataSearchViewController.xib in Resources */,
@@ -2202,6 +2297,7 @@
 				3FC321991A5A686100C4121E /* 下导航底图.png in Resources */,
 				3FF9D3941A6CDD7A00DD5D38 /* labelRectNormal.png in Resources */,
 				3FB7DFFA1A78E9EE005CE41F /* chat_message_back.png in Resources */,
+				3FE74D3C1A79E81500004FA7 /* textFiled@2x.png in Resources */,
 				3FD7186A1A775BA100681D1A /* properties.plist in Resources */,
 				3FE2D9011A70E07A00F7019B /* ClassAddressViewController.xib in Resources */,
 				3FC321801A5A655C00C4121E /* 点击前_12.png in Resources */,
@@ -2214,12 +2310,14 @@
 				3FC088BE1A5B70DC009FB115 /* SchoolChatViewController.xib in Resources */,
 				3FD718781A778E6000681D1A /* tabledelect@2x.png in Resources */,
 				3FB7DFC31A78E1B6005CE41F /* EvaluationViewController.xib in Resources */,
+				3FE74D2B1A79D33500004FA7 /* peopleInfoCell.xib in Resources */,
 				3F0A16421A5E2DFD009F5580 /* CollectionViewCellCustom.xib in Resources */,
 				3FC321D11A5A947600C4121E /* schoolChatSelectedNormal@2x.png in Resources */,
 				3FC3217D1A5A653900C4121E /* 点击前_03.png in Resources */,
 				3FC088F81A5BE102009FB115 /* equitAccount.png in Resources */,
 				3FCC57F91A5D310A00D9A181 /* pagebackImage.png in Resources */,
 				3FD718791A778E6000681D1A /* tabledelect.png in Resources */,
+				3FE74D511A7A1AF000004FA7 /* RecommendedViewController.xib in Resources */,
 				3FC321B91A5A71D500C4121E /* BaseViewController.xib in Resources */,
 				3FEB34CE1A6DF64F002A42EC /* phone.png in Resources */,
 				3FF9D38F1A6CAB6200DD5D38 /* tableViewBack.png in Resources */,
@@ -2229,13 +2327,16 @@
 				3FB7DFF71A78E9EE005CE41F /* chat_animation_white2.png in Resources */,
 				3FC088E11A5BD204009FB115 /* callName@2x.png in Resources */,
 				3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */,
+				3FE74D471A7A0ACA00004FA7 /* 1024Icon.png in Resources */,
 				66BC640E1A7487B3009EFB4E /* settingTableCollectionViewCell.xib in Resources */,
 				3FEB34CC1A6DF64F002A42EC /* chat.png in Resources */,
 				3F0A16401A5E24A7009F5580 /* options_pointer@2x.png in Resources */,
+				3FE74D4C1A7A12CA00004FA7 /* opinionViewController.xib in Resources */,
 				3FC992A61A63AA5D00ECAE64 /* 02@2x.png in Resources */,
 				3FC321CE1A5A947600C4121E /* schoolChatSelected.png in Resources */,
 				3FC088DC1A5BCF30009FB115 /* collect.png in Resources */,
 				3FC088F11A5BDF70009FB115 /* updatePassWord@2x.png in Resources */,
+				3FE74D381A79E6DF00004FA7 /* ModifyPwdViewController.xib in Resources */,
 				3FC321C11A5A86F300C4121E /* nav02@2x.png in Resources */,
 				3FEB34C21A6DF643002A42EC /* newFriend.png in Resources */,
 				3FC3217E1A5A653900C4121E /* 点击前_05.png in Resources */,
@@ -2347,6 +2448,7 @@
 				3FEB34B71A6DEA2C002A42EC /* AddressTableViewCell.xib in Resources */,
 				3FCC57E81A5D254E00D9A181 /* image3.png in Resources */,
 				3FC88A981A69150600F0AF27 /* arrow.png in Resources */,
+				3FE74D3B1A79E81500004FA7 /* textFiled.png in Resources */,
 				3FEB34D11A6DF64F002A42EC /* video@2x.png in Resources */,
 				3FB7E00E1A78EA0D005CE41F /* ChatViewController.xib in Resources */,
 				3FDE12511A6F7D0200A14839 /* croessNormal.png in Resources */,
@@ -2379,6 +2481,7 @@
 				3FC3215C1A5A517400C4121E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3FC88A691A68B36500F0AF27 /* CollapseClick.m in Sources */,
 				3FB7DFDB1A78E9C9005CE41F /* UUMessageContentButton.m in Sources */,
+				3FE74D4B1A7A12CA00004FA7 /* opinionViewController.m in Sources */,
 				3FEB34B61A6DEA2C002A42EC /* AddressTableViewCell.m in Sources */,
 				3FC992271A637D8100ECAE64 /* NSString+URLEncoding.m in Sources */,
 				3FC088BD1A5B70DC009FB115 /* SchoolChatViewController.m in Sources */,
@@ -2400,6 +2503,7 @@
 				3FD7186D1A777D4E00681D1A /* UITableView+tableViewRefresh.m in Sources */,
 				3FC321081A5A3FB600C4121E /* SDWebImageDecoder.m in Sources */,
 				3FC992261A637D8100ECAE64 /* NSString+Encryption.m in Sources */,
+				3FE74D2A1A79D33500004FA7 /* peopleInfoCell.m in Sources */,
 				3FB7DFD71A78E9C9005CE41F /* UUImageAvatarBrowser.m in Sources */,
 				3FC321761A5A600B00C4121E /* LeveyTabBarController.m in Sources */,
 				3FDE12631A6F894500A14839 /* CallNamelongitudinalViewController.m in Sources */,
@@ -2407,6 +2511,7 @@
 				3FC9928F1A63AA1C00ECAE64 /* ILRegularExpressionManager.m in Sources */,
 				3FC88A6C1A68B36500F0AF27 /* CollapseClickArrow.m in Sources */,
 				3FC321091A5A3FB600C4121E /* SDWebImageDownloader.m in Sources */,
+				3FE74D421A7A027000004FA7 /* UITextField+common.m in Sources */,
 				3FEB34B11A6DE3EF002A42EC /* GroupChatViewController.m in Sources */,
 				3FC88A801A68EA6600F0AF27 /* MyPieElement.m in Sources */,
 				3FE2D8DE1A70903000F7019B /* CrossView.m in Sources */,
@@ -2460,12 +2565,14 @@
 				3FDE31391A75E65400B3833B /* asActiveModel.m in Sources */,
 				3FC992831A63A9C500ECAE64 /* YMReplyInputView.m in Sources */,
 				3FF9D3881A6C8EFF00DD5D38 /* UITableViewCell+tableViewCell.m in Sources */,
+				3FE74D5A1A7A1E8D00004FA7 /* RecomCollectionViewCell.m in Sources */,
 				3FEB34E41A6E28FA002A42EC /* GroupChatTableViewCell.m in Sources */,
 				3FB7E0091A78E9F6005CE41F /* Mp3Recorder.m in Sources */,
 				3FC321551A5A517400C4121E /* AFNetworkReachabilityManager.m in Sources */,
 				3FC3210F1A5A3FB600C4121E /* UIImage+MultiFormat.m in Sources */,
 				3FC3215B1A5A517400C4121E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3FC321531A5A517400C4121E /* AFHTTPRequestOperationManager.m in Sources */,
+				3FE74D451A7A08BE00004FA7 /* softwareViewController.m in Sources */,
 				3FDE314B1A76347500B3833B /* asActivityViewModel.m in Sources */,
 				3FC3216D1A5A5E8600C4121E /* ALToastView.m in Sources */,
 				3FC321581A5A517400C4121E /* AFURLRequestSerialization.m in Sources */,
@@ -2482,12 +2589,15 @@
 				3FC992901A63AA1C00ECAE64 /* NSArray+NSArray_ILExtension.m in Sources */,
 				3FDE125E1A6F891000A14839 /* CallNameCrossViewController.m in Sources */,
 				3FC321771A5A600B00C4121E /* UIViewController+FindTabView.m in Sources */,
+				3FE74D331A79DA3500004FA7 /* peopleInfoViewModel.m in Sources */,
 				3FC88A6A1A68B36500F0AF27 /* CollapseClickCell.m in Sources */,
 				3FC3215D1A5A517400C4121E /* UIAlertView+AFNetworking.m in Sources */,
 				3FDE31481A7630F500B3833B /* ViewModelClass.m in Sources */,
 				3FE2D8E91A70C09100F7019B /* NSDate+Helper.m in Sources */,
 				3FC3210A1A5A3FB600C4121E /* SDWebImageDownloaderOperation.m in Sources */,
+				3FE74D241A79D15A00004FA7 /* PeopleInfoViewController.m in Sources */,
 				3FD718531A772E9000681D1A /* asActiVityLabelModel.m in Sources */,
+				3FE74D371A79E6DF00004FA7 /* ModifyPwdViewController.m in Sources */,
 				3FC321601A5A517400C4121E /* UIProgressView+AFNetworking.m in Sources */,
 				3FC88A8F1A68EAAE00F0AF27 /* PieElement.m in Sources */,
 				3FB7DFD61A78E9C9005CE41F /* UUAVAudioPlayer.m in Sources */,
@@ -2503,6 +2613,7 @@
 				3FCC578C1A5CCAD400D9A181 /* educationTeachingCell.m in Sources */,
 				3FEB34DB1A6E03B2002A42EC /* tableviewIndexSearch.m in Sources */,
 				3FC992821A63A9C500ECAE64 /* YMButton.m in Sources */,
+				3FE74D301A79D55400004FA7 /* peopleinfoModel.m in Sources */,
 				3FEB351B1A6E68F8002A42EC /* CallNameViewController.m in Sources */,
 				3FEB34AC1A6DE3C1002A42EC /* NewChatViewController.m in Sources */,
 				3FDF22351A675868002D122F /* TimeCell.m in Sources */,
@@ -2518,6 +2629,7 @@
 				3FB7DFD91A78E9C9005CE41F /* UUMessage.m in Sources */,
 				3FDE12681A6F950F00A14839 /* CallNameLongituginalViewCell.m in Sources */,
 				3FC321041A5A3FB600C4121E /* MKAnnotationView+WebCache.m in Sources */,
+				3FE74D501A7A1AF000004FA7 /* RecommendedViewController.m in Sources */,
 				3FDE123A1A6F4A4900A14839 /* Bank.m in Sources */,
 				3FDF22341A675868002D122F /* MyLabel.m in Sources */,
 				3FB7DFB81A78CEB9005CE41F /* SubstituteClassViewController.m in Sources */,

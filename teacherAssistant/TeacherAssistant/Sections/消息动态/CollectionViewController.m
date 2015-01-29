@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.\]
+    
     _collection_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 4, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
-
     [_collection_tableView setExtraCellLineHidden:YES];
     _collection_tableView.delegate = self;
     _collection_tableView.dataSource = self;

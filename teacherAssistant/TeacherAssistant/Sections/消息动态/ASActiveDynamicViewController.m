@@ -65,11 +65,12 @@
 //    [_asactive_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     // 2.集成刷新控件
 //    [self setupRefresh];
-    [_asactive_tableView creatRefresh];
+//    [_asactive_tableView creatRefresh];
 //    [SVProgressHUD showSuccessWithStatus:@"正在加载"];
     [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
     asActivityViewModel * actityViewModel = [[asActivityViewModel alloc]init];
     NSDictionary * dict = @{
+                            @"classId":@"1",
                             @"pageNo":@"1",
                             @"pageSize":@"5"
                             };
@@ -171,7 +172,6 @@
 -(void)EScrollerViewDidClicked:(NSUInteger)index
 {
     MyLog(@"aaa");
-  
 }
 #pragma mark --
 #pragma mark -- tableViewDelegate && tableViewSource

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "peopleInfoViewModel.h"
 @interface PeopleMessageViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView * peopleMess_tableView;
 @property (nonatomic,strong) NSArray * peopleMess_Array;

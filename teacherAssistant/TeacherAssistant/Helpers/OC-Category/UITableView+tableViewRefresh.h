@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UITableView (tableViewRefresh)
--(void)creatRefresh;
+- (void)creatRefresh;
 - (void)headerRereshing;
 - (void)footerRereshing;
 @end

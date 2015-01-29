@@ -21,7 +21,7 @@
 }
 
 +(NSString *)string_connctUrl:(NSString *)str{
-    NSString * str_url = [iPhoneDelegate.requestUrl stringByAppendingString:str];
-    return str_url;
+        NSString * str_url = [iPhoneDelegate.requestUrl stringByAppendingString:str];
+        return str_url;
 }
 @end

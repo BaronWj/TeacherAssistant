@@ -35,7 +35,6 @@
         [activeModelLabelArray addObject:activModelLabel];
     }
     self.returnBlock(activeModelLabelArray);
-    
 }
 
 #pragma 对ErrorCode进行处理

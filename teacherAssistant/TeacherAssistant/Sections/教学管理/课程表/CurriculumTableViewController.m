@@ -75,10 +75,10 @@
                                                    @[@"第一周",@"第二周",@"第三周",@"第四周"],
                                                    ]];
     
-    UIView * titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,200,40)];
+    UIView * titleView = [[UIView alloc]initWithFrame:CGRectMake(80, 0,140,40)];
     self.navigationItem.titleView = titleView;
 
-    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,0, titleView.frame.size.width, 40) dataSource:self delegate:self];
+    DropDownListView * dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0,0, 100, 40) dataSource:self delegate:self];
     dropDownView.backgroundColor = [UIColor clearColor];
     dropDownView.mSuperView = self.view;
     [titleView addSubview:dropDownView];
