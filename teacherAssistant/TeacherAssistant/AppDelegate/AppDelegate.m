@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,14 +18,12 @@
 
 -(void)initTabBarViewController{
     
+  
+    
     FTSlideAddViewController * newActiveDynamic = [[FTSlideAddViewController alloc]init];
     UINavigationController * newActiveDynamic_nav = [[UINavigationController alloc]initWithRootViewController:newActiveDynamic];
     newActiveDynamic_nav.delegate = self;
     newActiveDynamic.title = @"新闻";
-//    ASActiveDynamicViewController * activeDynamic = [[ASActiveDynamicViewController alloc]init];
-//    [activeDynamic changeViewControllTitle:@"新闻"];
-//    UINavigationController * public_nav = [[UINavigationController alloc]initWithRootViewController:activeDynamic];
-    
     
     EducationalTeachingViewController * education = [[EducationalTeachingViewController alloc]init];
     [education changeViewControllTitle:@"教学教务"];
@@ -74,13 +72,13 @@
     //
     NSArray *imgArr = [NSArray arrayWithObjects:imgDic,imgDic2,imgDic3,imgDic5,nil];
     
+    
     leveyTabBarController = [[LeveyTabBarController alloc] initWithViewControllers:ctrlArr imageArray:imgArr];
     [leveyTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"下导航底图"]];
     [leveyTabBarController setTabBarTransparent:YES];
     self.window.rootViewController = leveyTabBarController;
    
-    self.appdelegate = iPhoneDelegate;
-    self.appdelegate.requestUrl = @"http://192.168.1.200:8281";
+ 
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -118,10 +116,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [self initTabBarViewController];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(judgeLoginState) name:@"ROOT" object:nil];
+    self.appdelegate = iPhoneDelegate;
+    //    self.appdelegate.requestUrl = @"http://192.168.1.200:8281/";
+    self.appdelegate.requestUrl = @"http://192.168.1.10:8281/";
+    if ([StuSaveUserDefaults getFirstLogin]){
+        [self initTabBarViewController];
+        
+    }else{
+    
+        LoginViewController * loginView = [[LoginViewController alloc]init];
+        UINavigationController * loginNav = [[UINavigationController alloc]initWithRootViewController:loginView];
+        loginNav.navigationBarHidden = YES;
+        self.window.rootViewController = loginNav;
+    }
     return YES;
 }
 
+-(void)judgeLoginState{
+    [self initTabBarViewController];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

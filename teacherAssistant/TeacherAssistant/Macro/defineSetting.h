@@ -29,6 +29,13 @@ typedef void (^FailureBlock)();
 typedef void (^NetWorkBlock)(BOOL netConnetState);
 
 /**
+ * userAndPassWord
+ */
+#define USERANDPWED  @"USERANDPWD"
+
+#define FIRSTLODINSTATE @"FIRSTLODINSTATE"
+
+/**
  *  Device
  */
 #define isRetina ([[UIScreen mainScreen] scale]==2)

@@ -12,6 +12,7 @@
 #import "softwareViewController.h"
 #import "opinionViewController.h"
 #import "RecommendedViewController.h"
+#import "LoginViewController.h"
 @interface PeopleMessageViewController ()
 
 @end
@@ -97,7 +98,15 @@
         opinion.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:opinion animated:YES];
     
+    }else if (indexPath.row == 1 && indexPath.section == 2){
+        [StuSaveUserDefaults saveFirstLogin:NO];
+        LoginViewController * login = [[LoginViewController alloc]init];
+        login.title = @"登录";
+        login.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:login animated:YES];
+        
     }
+
 
 }
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath

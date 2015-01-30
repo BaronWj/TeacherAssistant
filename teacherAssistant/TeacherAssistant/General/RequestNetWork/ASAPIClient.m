@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "OpenUDID.h"
+#import "AppDelegate.h"
 #import "defineSetting.h"
 static NSString * const KDAPIBaseURLString = @"http://192.168.1.200:8281/Api/";
 static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 3;
@@ -21,10 +22,11 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
     static ASAPIClient *_sharedClient;
     dispatch_once(&onceToken, ^{
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:KDAPIBaseURLString]];
+        _sharedClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:iPhoneDelegate.requestUrl]];
         _sharedClient.maxCacheSize = kDefaultCacheMaxCacheSize;
         _sharedClient.maxCacheAge = kDefaultCacheMaxCacheAge;
         _sharedClient.requestSerializer.stringEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+       
     });
     
     return _sharedClient;
@@ -142,7 +144,7 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
          MyLog(@"error______%@",error);
      }];
     
-    MyLog(@"%@",operation.request.URL);
+    MyLog(@"===============%@",operation.request.URL);
     
     return operation;
 }
@@ -197,23 +199,24 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
 
 
 
-+ (AFHTTPRequestOperation *)loginWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
-    __weak id weakSelf = self;
++ (AFHTTPRequestOperation *)getLoginWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+//    __weak id weakSelf = self;
     AFHTTPRequestOperation *operation =
-    [[ASAPIClient sharedClient] GET:@"check_loginuser.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [[ASAPIClient sharedClient] POST:GetLogin parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         MyLog(@"%@",responseObject);
-         NSString *userID = [responseObject objectForKey:@"userid"];
-         //  KCLogInt([userID integerValue]);
-         if ([userID integerValue] > 0)
-             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
-         if (block) block([userID integerValue] > 0, responseObject, nil);
+//         MyLog(@"%@",responseObject);
+//         NSString *userID = [responseObject objectForKey:@"userid"];
+//         //  KCLogInt([userID integerValue]);
+//         if ([userID integerValue] > 0)
+//             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+//         if (block) block([userID integerValue] > 0, responseObject, nil);
+        if (block)block(YES,responseObject,nil);
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (block) block(NO, nil, error);
      }];
-    
-    MyLog(@"%@",operation.request.URL);
-    
+
+
+    MyLog(@"operation.request.URL%@",operation.request.URL);
     return operation;
 }
 

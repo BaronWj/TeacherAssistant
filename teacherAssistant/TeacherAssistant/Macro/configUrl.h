@@ -9,8 +9,9 @@
 #ifndef TeacherAssistant_configUrl_h
 #define TeacherAssistant_configUrl_h
 //#define GetActivityDataUrl  @"News/GetAllClasses"
-#define GetActivityLabel @"News/GetAllNewsSorts"//新闻标签
-#define GetActivityDataUrl  @"News/GetPaged"//新闻列表
-#define GetNewInfo @"News/Show"//新闻详情
-#define GetPeopleInfo @"News/peopleInfo"//个人详情
+#define GetActivityLabel @"api/News/GetAllNewsSorts"//新闻标签
+#define GetActivityDataUrl  @"api/News/GetPaged"//新闻列表
+#define GetNewInfo @"api/News/Show"//新闻详情
+#define GetPeopleInfo @"api/News/peopleInfo"//个人详情
+#define GetLogin @"api/Account/Login"//登录借口
 #endif

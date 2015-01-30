@@ -138,7 +138,9 @@
 }
 
 -(void)showAlert :(NSString *)title AndMessage:(NSString *)Message{
-
+    
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:Message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 -(void)showToast:(NSString *)format, ...{

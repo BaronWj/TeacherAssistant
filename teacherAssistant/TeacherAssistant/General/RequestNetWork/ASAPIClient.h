@@ -27,8 +27,10 @@
 + (AFHTTPRequestOperation *)getActiveDynameicWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
 //活动标签
 + (AFHTTPRequestOperation *)getActiveLabelWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
+//个人详情
 + (AFHTTPRequestOperation *)getPeopleInfoParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
-
+//登录
++ (AFHTTPRequestOperation *)getLoginWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block;
 //+ (NSString*)cacheName:(NSString*)name withID:(NSUInteger)itemID;
 + (void)cacheResults:(id)results forName:(NSString*)name;
 //+ (BOOL)removeCache:(NSString *)name;

@@ -15,6 +15,8 @@
 #import "ALToastView.h"
 #import "SVProgressHUD.h"
 #import "defineSetting.h"
+#import "StuSaveUserDefaults.h"
+
 @interface BaseViewController : UIViewController<UINavigationControllerDelegate,MBProgressHUDDelegate>{
     LeveyTabBarController * leverTab;
     BOOL isHiddenStatusBar;

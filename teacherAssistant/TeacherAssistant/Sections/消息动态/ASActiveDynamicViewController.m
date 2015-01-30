@@ -70,7 +70,7 @@
     [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
     asActivityViewModel * actityViewModel = [[asActivityViewModel alloc]init];
     NSDictionary * dict = @{
-                            @"classId":@"1",
+                            @"categoryId":@"1",
                             @"pageNo":@"1",
                             @"pageSize":@"5"
                             };

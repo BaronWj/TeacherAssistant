@@ -10,7 +10,6 @@
 #import "UIImageView+WebCache.h"
 #import "UIImageView+LK.h"
 #import "NSString_Encryption.h"
-#import "NSString+Encryption.h"
 #import "UIDevice+Info.h"
 @interface ViewController ()
 

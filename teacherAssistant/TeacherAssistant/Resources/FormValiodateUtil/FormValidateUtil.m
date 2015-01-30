@@ -68,9 +68,6 @@
     NSString *numberRegex = @"^[0-9]*$";
     NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
     return ([numberTest evaluateWithObject:number] == YES);
-
-
-
 }
 
 @end

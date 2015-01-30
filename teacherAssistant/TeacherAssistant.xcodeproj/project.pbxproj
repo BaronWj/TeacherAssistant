@@ -214,7 +214,6 @@
 		3FC98F191A5E19EE00192826 /* addFriend.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC98F171A5E19EE00192826 /* addFriend.png */; };
 		3FC98F1A1A5E19EE00192826 /* addFriend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC98F181A5E19EE00192826 /* addFriend@2x.png */; };
 		3FC992251A637D8100ECAE64 /* KDActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9921E1A637D8100ECAE64 /* KDActivityIndicatorView.m */; };
-		3FC992261A637D8100ECAE64 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992201A637D8100ECAE64 /* NSString+Encryption.m */; };
 		3FC992271A637D8100ECAE64 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992221A637D8100ECAE64 /* NSString+URLEncoding.m */; };
 		3FC992281A637D8100ECAE64 /* NSString_Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC992241A637D8100ECAE64 /* NSString_Encryption.m */; };
 		3FC9922B1A637D8B00ECAE64 /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9922A1A637D8B00ECAE64 /* UIDevice+Info.m */; };
@@ -317,6 +316,30 @@
 		3FDF22361A675868002D122F /* MeetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF22301A675868002D122F /* MeetModel.m */; };
 		3FDF22401A67C01B002D122F /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF223E1A67C01B002D122F /* AttendanceViewController.m */; };
 		3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDF223F1A67C01B002D122F /* AttendanceViewController.xib */; };
+		3FE1A7211A7B1DF000970B3C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A7181A7B1DF000970B3C /* LoginViewController.m */; };
+		3FE1A7221A7B1DF000970B3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7191A7B1DF000970B3C /* LoginViewController.xib */; };
+		3FE1A7231A7B1DF000970B3C /* ChooseShcoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A71B1A7B1DF000970B3C /* ChooseShcoolViewController.m */; };
+		3FE1A7241A7B1DF000970B3C /* ChooseShcoolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A71C1A7B1DF000970B3C /* ChooseShcoolViewController.xib */; };
+		3FE1A7251A7B1DF000970B3C /* chooseSchoolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A71D1A7B1DF000970B3C /* chooseSchoolCell.xib */; };
+		3FE1A7261A7B1DF000970B3C /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A71F1A7B1DF000970B3C /* ForgetViewController.m */; };
+		3FE1A7271A7B1DF000970B3C /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7201A7B1DF000970B3C /* ForgetViewController.xib */; };
+		3FE1A72A1A7B226D00970B3C /* findPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7281A7B226D00970B3C /* findPassword.png */; };
+		3FE1A72B1A7B226D00970B3C /* findPassword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7291A7B226D00970B3C /* findPassword@2x.png */; };
+		3FE1A72F1A7B228C00970B3C /* 登陆页_11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A72D1A7B228C00970B3C /* 登陆页_11@2x.png */; };
+		3FE1A7321A7B22C900970B3C /* loginIcon01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7301A7B22C900970B3C /* loginIcon01@2x.png */; };
+		3FE1A7331A7B22C900970B3C /* loginIcon01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7311A7B22C900970B3C /* loginIcon01.png */; };
+		3FE1A7351A7B25F800970B3C /* login_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7341A7B25F800970B3C /* login_19.png */; };
+		3FE1A7381A7B26EA00970B3C /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7361A7B26EA00970B3C /* login@2x.png */; };
+		3FE1A7391A7B26EA00970B3C /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7371A7B26EA00970B3C /* login.png */; };
+		3FE1A73E1A7B27A600970B3C /* 登录页_04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A73C1A7B27A600970B3C /* 登录页_04@2x.png */; };
+		3FE1A73F1A7B27A600970B3C /* 登录页_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A73D1A7B27A600970B3C /* 登录页_04.png */; };
+		3FE1A7421A7B284C00970B3C /* loginbackColor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7401A7B284C00970B3C /* loginbackColor@2x.png */; };
+		3FE1A7431A7B284C00970B3C /* loginbackColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7411A7B284C00970B3C /* loginbackColor.png */; };
+		3FE1A7451A7B289600970B3C /* 背景_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7441A7B289600970B3C /* 背景_03.png */; };
+		3FE1A7471A7B675F00970B3C /* teacherLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7461A7B675F00970B3C /* teacherLogin.png */; };
+		3FE1A74B1A7B79A100970B3C /* StuSaveMessPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A74A1A7B79A100970B3C /* StuSaveMessPlist.m */; };
+		3FE1A74E1A7B79F200970B3C /* StuSaveUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A74D1A7B79F200970B3C /* StuSaveUserDefaults.m */; };
+		3FE1A7521A7B8AB300970B3C /* newDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7511A7B8AB300970B3C /* newDefault.png */; };
 		3FE2D8DE1A70903000F7019B /* CrossView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8DD1A70903000F7019B /* CrossView.m */; };
 		3FE2D8E31A70C05A00F7019B /* NSDate+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8E01A70C05A00F7019B /* NSDate+Common.m */; };
 		3FE2D8E41A70C05A00F7019B /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2D8E21A70C05A00F7019B /* NSDate+convenience.m */; };
@@ -719,8 +742,6 @@
 		3FC98F181A5E19EE00192826 /* addFriend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addFriend@2x.png"; sourceTree = "<group>"; };
 		3FC9921D1A637D8100ECAE64 /* KDActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDActivityIndicatorView.h; sourceTree = "<group>"; };
 		3FC9921E1A637D8100ECAE64 /* KDActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDActivityIndicatorView.m; sourceTree = "<group>"; };
-		3FC9921F1A637D8100ECAE64 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
-		3FC992201A637D8100ECAE64 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
 		3FC992211A637D8100ECAE64 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
 		3FC992221A637D8100ECAE64 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		3FC992231A637D8100ECAE64 /* NSString_Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_Encryption.h; sourceTree = "<group>"; };
@@ -868,6 +889,35 @@
 		3FDF223D1A67C01B002D122F /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
 		3FDF223E1A67C01B002D122F /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
 		3FDF223F1A67C01B002D122F /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
+		3FE1A7171A7B1DF000970B3C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3FE1A7181A7B1DF000970B3C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3FE1A7191A7B1DF000970B3C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		3FE1A71A1A7B1DF000970B3C /* ChooseShcoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseShcoolViewController.h; sourceTree = "<group>"; };
+		3FE1A71B1A7B1DF000970B3C /* ChooseShcoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseShcoolViewController.m; sourceTree = "<group>"; };
+		3FE1A71C1A7B1DF000970B3C /* ChooseShcoolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseShcoolViewController.xib; sourceTree = "<group>"; };
+		3FE1A71D1A7B1DF000970B3C /* chooseSchoolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chooseSchoolCell.xib; sourceTree = "<group>"; };
+		3FE1A71E1A7B1DF000970B3C /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		3FE1A71F1A7B1DF000970B3C /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
+		3FE1A7201A7B1DF000970B3C /* ForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetViewController.xib; sourceTree = "<group>"; };
+		3FE1A7281A7B226D00970B3C /* findPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findPassword.png; sourceTree = "<group>"; };
+		3FE1A7291A7B226D00970B3C /* findPassword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findPassword@2x.png"; sourceTree = "<group>"; };
+		3FE1A72D1A7B228C00970B3C /* 登陆页_11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登陆页_11@2x.png"; sourceTree = "<group>"; };
+		3FE1A7301A7B22C900970B3C /* loginIcon01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginIcon01@2x.png"; sourceTree = "<group>"; };
+		3FE1A7311A7B22C900970B3C /* loginIcon01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginIcon01.png; sourceTree = "<group>"; };
+		3FE1A7341A7B25F800970B3C /* login_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_19.png; sourceTree = "<group>"; };
+		3FE1A7361A7B26EA00970B3C /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		3FE1A7371A7B26EA00970B3C /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		3FE1A73C1A7B27A600970B3C /* 登录页_04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页_04@2x.png"; sourceTree = "<group>"; };
+		3FE1A73D1A7B27A600970B3C /* 登录页_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页_04.png"; sourceTree = "<group>"; };
+		3FE1A7401A7B284C00970B3C /* loginbackColor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginbackColor@2x.png"; sourceTree = "<group>"; };
+		3FE1A7411A7B284C00970B3C /* loginbackColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbackColor.png; sourceTree = "<group>"; };
+		3FE1A7441A7B289600970B3C /* 背景_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景_03.png"; sourceTree = "<group>"; };
+		3FE1A7461A7B675F00970B3C /* teacherLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacherLogin.png; sourceTree = "<group>"; };
+		3FE1A7491A7B79A100970B3C /* StuSaveMessPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuSaveMessPlist.h; sourceTree = "<group>"; };
+		3FE1A74A1A7B79A100970B3C /* StuSaveMessPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuSaveMessPlist.m; sourceTree = "<group>"; };
+		3FE1A74C1A7B79F200970B3C /* StuSaveUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StuSaveUserDefaults.h; sourceTree = "<group>"; };
+		3FE1A74D1A7B79F200970B3C /* StuSaveUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StuSaveUserDefaults.m; sourceTree = "<group>"; };
+		3FE1A7511A7B8AB300970B3C /* newDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newDefault.png; sourceTree = "<group>"; };
 		3FE2D8DC1A70903000F7019B /* CrossView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossView.h; sourceTree = "<group>"; };
 		3FE2D8DD1A70903000F7019B /* CrossView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossView.m; sourceTree = "<group>"; };
 		3FE2D8DF1A70C05A00F7019B /* NSDate+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Common.h"; sourceTree = "<group>"; };
@@ -1369,6 +1419,7 @@
 		3FC320D21A5A38D200C4121E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3FE1A7481A7B799B00970B3C /* SaveData */,
 				3FE2D9071A70F06B00F7019B /* AadgeView */,
 				3FEB34D21A6E03AA002A42EC /* ChineseCharactersChangePinyin */,
 				3FC9921C1A637D8100ECAE64 /* OC-Category */,
@@ -1394,6 +1445,7 @@
 		3FC320D71A5A38DA00C4121E /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				3FE1A7161A7B1DEA00970B3C /* 登录 */,
 				3FC3219F1A5A6DBB00C4121E /* 个人信息 */,
 				3FC321A01A5A6DBB00C4121E /* 教学管理 */,
 				3FC321A11A5A6DBB00C4121E /* 消息动态 */,
@@ -1496,6 +1548,16 @@
 		3FC321231A5A4FB000C4121E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FE1A7301A7B22C900970B3C /* loginIcon01@2x.png */,
+				3FE1A7511A7B8AB300970B3C /* newDefault.png */,
+				3FE1A7461A7B675F00970B3C /* teacherLogin.png */,
+				3FE1A7311A7B22C900970B3C /* loginIcon01.png */,
+				3FE1A7361A7B26EA00970B3C /* login@2x.png */,
+				3FE1A7371A7B26EA00970B3C /* login.png */,
+				3FE1A72D1A7B228C00970B3C /* 登陆页_11@2x.png */,
+				3FE1A7341A7B25F800970B3C /* login_19.png */,
+				3FE1A7281A7B226D00970B3C /* findPassword.png */,
+				3FE1A7291A7B226D00970B3C /* findPassword@2x.png */,
 				3FE74D391A79E81500004FA7 /* textFiled.png */,
 				3FE74D3A1A79E81500004FA7 /* textFiled@2x.png */,
 				3FD6490D1A71EB0D0061C69D /* substituteClass@2x.png */,
@@ -1619,7 +1681,12 @@
 				3FC321C01A5A86F300C4121E /* nav02@2x.png */,
 				3FC322001A5A9FD400C4121E /* teacherEducation@2x.png */,
 				3FC321981A5A686100C4121E /* 下导航底图.png */,
+				3FE1A7441A7B289600970B3C /* 背景_03.png */,
+				3FE1A73C1A7B27A600970B3C /* 登录页_04@2x.png */,
+				3FE1A73D1A7B27A600970B3C /* 登录页_04.png */,
 				3FC321251A5A4FE400C4121E /* icon50reload@2x.png */,
+				3FE1A7401A7B284C00970B3C /* loginbackColor@2x.png */,
+				3FE1A7411A7B284C00970B3C /* loginbackColor.png */,
 				3FC321FC1A5A9EF200C4121E /* schoolChatTtitle.png */,
 				3FC321FD1A5A9EF200C4121E /* schoolChatTtitle@2x.png */,
 			);
@@ -1873,8 +1940,6 @@
 				3FC88A841A68EA8500F0AF27 /* NSArray+descValues.m */,
 				3FC9921D1A637D8100ECAE64 /* KDActivityIndicatorView.h */,
 				3FC9921E1A637D8100ECAE64 /* KDActivityIndicatorView.m */,
-				3FC9921F1A637D8100ECAE64 /* NSString+Encryption.h */,
-				3FC992201A637D8100ECAE64 /* NSString+Encryption.m */,
 				3FC992211A637D8100ECAE64 /* NSString+URLEncoding.h */,
 				3FC992221A637D8100ECAE64 /* NSString+URLEncoding.m */,
 				3FC992231A637D8100ECAE64 /* NSString_Encryption.h */,
@@ -2085,6 +2150,34 @@
 			path = tableCource;
 			sourceTree = "<group>";
 		};
+		3FE1A7161A7B1DEA00970B3C /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1A7171A7B1DF000970B3C /* LoginViewController.h */,
+				3FE1A7181A7B1DF000970B3C /* LoginViewController.m */,
+				3FE1A7191A7B1DF000970B3C /* LoginViewController.xib */,
+				3FE1A71A1A7B1DF000970B3C /* ChooseShcoolViewController.h */,
+				3FE1A71B1A7B1DF000970B3C /* ChooseShcoolViewController.m */,
+				3FE1A71C1A7B1DF000970B3C /* ChooseShcoolViewController.xib */,
+				3FE1A71D1A7B1DF000970B3C /* chooseSchoolCell.xib */,
+				3FE1A71E1A7B1DF000970B3C /* ForgetViewController.h */,
+				3FE1A71F1A7B1DF000970B3C /* ForgetViewController.m */,
+				3FE1A7201A7B1DF000970B3C /* ForgetViewController.xib */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		3FE1A7481A7B799B00970B3C /* SaveData */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1A7491A7B79A100970B3C /* StuSaveMessPlist.h */,
+				3FE1A74A1A7B79A100970B3C /* StuSaveMessPlist.m */,
+				3FE1A74C1A7B79F200970B3C /* StuSaveUserDefaults.h */,
+				3FE1A74D1A7B79F200970B3C /* StuSaveUserDefaults.m */,
+			);
+			path = SaveData;
+			sourceTree = "<group>";
+		};
 		3FE2D8E51A70C09100F7019B /* NSDate+Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -2256,6 +2349,7 @@
 				3FDE12371A6F4A3300A14839 /* DataSearchViewController.xib in Resources */,
 				3FC321F71A5A9D1000C4121E /* newNormal@2x.png in Resources */,
 				3F0A163D1A5E24A7009F5580 /* Menu_PopOver_BG.png in Resources */,
+				3FE1A7251A7B1DF000970B3C /* chooseSchoolCell.xib in Resources */,
 				3FE4DD131A66594E00F75E24 /* down_dark.png in Resources */,
 				3FEB34C51A6DF643002A42EC /* labeltag@2x.png in Resources */,
 				3FC088E91A5BD302009FB115 /* chooseClass@2x.png in Resources */,
@@ -2264,6 +2358,7 @@
 				3FDE12461A6F64B000A14839 /* student2.png in Resources */,
 				3FC320DA1A5A39A400C4121E /* Instructions.txt in Resources */,
 				3F4E85011A723DA00077D733 /* SettingTableBackViewController.xib in Resources */,
+				3FE1A7451A7B289600970B3C /* 背景_03.png in Resources */,
 				3FCC57EB1A5D254E00D9A181 /* image0.png in Resources */,
 				3FC088F91A5BE102009FB115 /* equitAccount@2x.png in Resources */,
 				3FB7DFB91A78CEB9005CE41F /* SubstituteClassViewController.xib in Resources */,
@@ -2278,12 +2373,14 @@
 				3FC321D61A5A951900C4121E /* educationNormal.png in Resources */,
 				3FC992AD1A63B07D00ECAE64 /* 1.png in Resources */,
 				3FCC57EA1A5D254E00D9A181 /* image1.png in Resources */,
+				3FE1A73F1A7B27A600970B3C /* 登录页_04.png in Resources */,
 				3FC089011A5BE193009FB115 /* myschool@2x.png in Resources */,
 				3FCC57971A5CFF5F00D9A181 /* score.png in Resources */,
 				3FB7DFF51A78E9EE005CE41F /* chat_animation3.png in Resources */,
 				3FC98F191A5E19EE00192826 /* addFriend.png in Resources */,
 				3FC88A601A68A60400F0AF27 /* icon57.png in Resources */,
 				3FC0890B1A5BEF72009FB115 /* educationCell.xib in Resources */,
+				3FE1A7351A7B25F800970B3C /* login_19.png in Resources */,
 				3FB7E0001A78E9EE005CE41F /* chatfrom_doctor_icon.png in Resources */,
 				3FB7DFFE1A78E9EE005CE41F /* chat_voice_record.png in Resources */,
 				3FCC57FA1A5D310A00D9A181 /* pagebackImage@2x.png in Resources */,
@@ -2294,6 +2391,7 @@
 				3FCC57FF1A5D3C1C00D9A181 /* AsActiveCell.xib in Resources */,
 				3FE2D90F1A71098300F7019B /* CourseInfoViewController.xib in Resources */,
 				3FC321C81A5A935700C4121E /* meSelectedNormal.png in Resources */,
+				3FE1A72A1A7B226D00970B3C /* findPassword.png in Resources */,
 				3FC321991A5A686100C4121E /* 下导航底图.png in Resources */,
 				3FF9D3941A6CDD7A00DD5D38 /* labelRectNormal.png in Resources */,
 				3FB7DFFA1A78E9EE005CE41F /* chat_message_back.png in Resources */,
@@ -2326,6 +2424,7 @@
 				3FDE12691A6F950F00A14839 /* CallNameLongituginalViewCell.xib in Resources */,
 				3FB7DFF71A78E9EE005CE41F /* chat_animation_white2.png in Resources */,
 				3FC088E11A5BD204009FB115 /* callName@2x.png in Resources */,
+				3FE1A7431A7B284C00970B3C /* loginbackColor.png in Resources */,
 				3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */,
 				3FE74D471A7A0ACA00004FA7 /* 1024Icon.png in Resources */,
 				66BC640E1A7487B3009EFB4E /* settingTableCollectionViewCell.xib in Resources */,
@@ -2333,6 +2432,7 @@
 				3F0A16401A5E24A7009F5580 /* options_pointer@2x.png in Resources */,
 				3FE74D4C1A7A12CA00004FA7 /* opinionViewController.xib in Resources */,
 				3FC992A61A63AA5D00ECAE64 /* 02@2x.png in Resources */,
+				3FE1A7421A7B284C00970B3C /* loginbackColor@2x.png in Resources */,
 				3FC321CE1A5A947600C4121E /* schoolChatSelected.png in Resources */,
 				3FC088DC1A5BCF30009FB115 /* collect.png in Resources */,
 				3FC088F11A5BDF70009FB115 /* updatePassWord@2x.png in Resources */,
@@ -2342,6 +2442,7 @@
 				3FC3217E1A5A653900C4121E /* 点击前_05.png in Resources */,
 				3FEB34E01A6E1EB4002A42EC /* newChatTableViewCell.xib in Resources */,
 				3FDE126C1A6F9CD200A14839 /* normal.png in Resources */,
+				3FE1A7331A7B22C900970B3C /* loginIcon01.png in Resources */,
 				3FDE313E1A760C3B00B3833B /* SVProgressHUD.bundle in Resources */,
 				3FCC579E1A5D000B00D9A181 /* checkIn@2x.png in Resources */,
 				3FE2D8F21A70CD7D00F7019B /* menu@2x.png in Resources */,
@@ -2361,6 +2462,10 @@
 				3FC1CE181A5F8FB600120A3B /* remind_noimage@2x.png in Resources */,
 				3FC088E51A5BD2AF009FB115 /* classTable@2x.png in Resources */,
 				3FC088F01A5BDF70009FB115 /* updatePassWord.png in Resources */,
+				3FE1A7241A7B1DF000970B3C /* ChooseShcoolViewController.xib in Resources */,
+				3FE1A72B1A7B226D00970B3C /* findPassword@2x.png in Resources */,
+				3FE1A7521A7B8AB300970B3C /* newDefault.png in Resources */,
+				3FE1A7391A7B26EA00970B3C /* login.png in Resources */,
 				3FCC578D1A5CCAD400D9A181 /* educationTeachingCell.xib in Resources */,
 				3FD718741A778AD500681D1A /* tableSetting@2x.png in Resources */,
 				3FDE124E1A6F7B8800A14839 /* longitudinal_buttonNormal@2x.png in Resources */,
@@ -2373,6 +2478,7 @@
 				3FF9D3A11A6CDE6E00DD5D38 /* labelRectNormalSelect@2x.png in Resources */,
 				3FB7DFF91A78E9EE005CE41F /* chat_ipunt_message.png in Resources */,
 				3FC992A91A63B07600ECAE64 /* 3.png in Resources */,
+				3FE1A73E1A7B27A600970B3C /* 登录页_04@2x.png in Resources */,
 				3FCC57981A5CFF5F00D9A181 /* score@2x.png in Resources */,
 				3FDE12591A6F7F5900A14839 /* submit.png in Resources */,
 				3FE2D8FC1A70D8B800F7019B /* newFriendTableViewCell.xib in Resources */,
@@ -2397,7 +2503,9 @@
 				3FC321FE1A5A9EF200C4121E /* schoolChatTtitle.png in Resources */,
 				3FD649181A71F0D10061C69D /* Vector-Smart-Object.png in Resources */,
 				3FEB34B21A6DE3EF002A42EC /* GroupChatViewController.xib in Resources */,
+				3FE1A7471A7B675F00970B3C /* teacherLogin.png in Resources */,
 				3FCC579D1A5D000B00D9A181 /* checkIn.png in Resources */,
+				3FE1A7381A7B26EA00970B3C /* login@2x.png in Resources */,
 				3FDE124D1A6F7B8800A14839 /* longitudinal_buttonNormal.png in Resources */,
 				3FC321EB1A5A9C1300C4121E /* topNav.png in Resources */,
 				3FDE125F1A6F891000A14839 /* CallNameCrossViewController.xib in Resources */,
@@ -2421,6 +2529,7 @@
 				3FC88A6B1A68B36500F0AF27 /* CollapseClickCell.xib in Resources */,
 				3FC320B31A5A36C100C4121E /* Images.xcassets in Resources */,
 				3FC3218C1A5A65DC00C4121E /* 点击后_07.png in Resources */,
+				3FE1A7321A7B22C900970B3C /* loginIcon01@2x.png in Resources */,
 				3FEB34AD1A6DE3C1002A42EC /* NewChatViewController.xib in Resources */,
 				3FE2D8F71A70D65700F7019B /* NewFriendViewController.xib in Resources */,
 				3FC089001A5BE193009FB115 /* myschool.png in Resources */,
@@ -2429,8 +2538,10 @@
 				3FC321CF1A5A947600C4121E /* schoolChatSelected@2x.png in Resources */,
 				3FB7DFBE1A78D2E5005CE41F /* SubstituteTableViewCell.xib in Resources */,
 				3FC88A991A69150600F0AF27 /* arrow@2x.png in Resources */,
+				3FE1A7271A7B1DF000970B3C /* ForgetViewController.xib in Resources */,
 				3FC321261A5A4FE400C4121E /* icon50reload.png in Resources */,
 				3FCC57A21A5D008100D9A181 /* evaluate@2x.png in Resources */,
+				3FE1A72F1A7B228C00970B3C /* 登陆页_11@2x.png in Resources */,
 				3FC089091A5BE29A009FB115 /* schoolChat@2x.png in Resources */,
 				3FF9D3951A6CDD7A00DD5D38 /* labelRectNormal@2x.png in Resources */,
 				3FC1CE171A5F8FB600120A3B /* remind_noimage.png in Resources */,
@@ -2444,6 +2555,7 @@
 				3FC088EC1A5BDEF9009FB115 /* me.png in Resources */,
 				3FC992AB1A63B07A00ECAE64 /* 2.png in Resources */,
 				3FC3218A1A5A65B600C4121E /* 点击前_11.png in Resources */,
+				3FE1A7221A7B1DF000970B3C /* LoginViewController.xib in Resources */,
 				3FE2D8EE1A70CBF500F7019B /* refresh@2x.png in Resources */,
 				3FEB34B71A6DEA2C002A42EC /* AddressTableViewCell.xib in Resources */,
 				3FCC57E81A5D254E00D9A181 /* image3.png in Resources */,
@@ -2502,11 +2614,11 @@
 				3FF9D37E1A6C84FB00DD5D38 /* CollectionViewController.m in Sources */,
 				3FD7186D1A777D4E00681D1A /* UITableView+tableViewRefresh.m in Sources */,
 				3FC321081A5A3FB600C4121E /* SDWebImageDecoder.m in Sources */,
-				3FC992261A637D8100ECAE64 /* NSString+Encryption.m in Sources */,
 				3FE74D2A1A79D33500004FA7 /* peopleInfoCell.m in Sources */,
 				3FB7DFD71A78E9C9005CE41F /* UUImageAvatarBrowser.m in Sources */,
 				3FC321761A5A600B00C4121E /* LeveyTabBarController.m in Sources */,
 				3FDE12631A6F894500A14839 /* CallNamelongitudinalViewController.m in Sources */,
+				3FE1A7231A7B1DF000970B3C /* ChooseShcoolViewController.m in Sources */,
 				3FDE12321A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m in Sources */,
 				3FC9928F1A63AA1C00ECAE64 /* ILRegularExpressionManager.m in Sources */,
 				3FC88A6C1A68B36500F0AF27 /* CollapseClickArrow.m in Sources */,
@@ -2518,6 +2630,7 @@
 				3FC088C21A5B768D009FB115 /* PeopleMessageViewController.m in Sources */,
 				3FF9D3831A6C8E1800DD5D38 /* CollectionTableViewCell.m in Sources */,
 				3FB7DFBD1A78D2E5005CE41F /* SubstituteTableViewCell.m in Sources */,
+				3FE1A7211A7B1DF000970B3C /* LoginViewController.m in Sources */,
 				3FC992251A637D8100ECAE64 /* KDActivityIndicatorView.m in Sources */,
 				3FC320E51A5A3EC600C4121E /* MBProgressHUD.m in Sources */,
 				3FCC57F61A5D2A4F00D9A181 /* EScrollerView.m in Sources */,
@@ -2539,6 +2652,7 @@
 				3FC3215E1A5A517400C4121E /* UIButton+AFNetworking.m in Sources */,
 				3FE4DD0C1A664ED700F75E24 /* CurriculumTableViewController.m in Sources */,
 				3FD6490B1A71DBDA0061C69D /* CourseInfoTableViewCell.m in Sources */,
+				3FE1A74B1A7B79A100970B3C /* StuSaveMessPlist.m in Sources */,
 				3FB7DFC21A78E1B6005CE41F /* EvaluationViewController.m in Sources */,
 				3FC992841A63A9C500ECAE64 /* YMShowImageView.m in Sources */,
 				3FB7E0201A78ED22005CE41F /* MJRefreshFooterView.m in Sources */,
@@ -2580,12 +2694,14 @@
 				3F0A16361A5E2466009F5580 /* MLKMenuPopover.m in Sources */,
 				3FE2D90E1A71098300F7019B /* CourseInfoViewController.m in Sources */,
 				3FB7E01E1A78ED22005CE41F /* MJRefreshBaseView.m in Sources */,
+				3FE1A74E1A7B79F200970B3C /* StuSaveUserDefaults.m in Sources */,
 				3FEB34BD1A6DEDD4002A42EC /* UIImageView+UIImageCategory.m in Sources */,
 				3FC9922B1A637D8B00ECAE64 /* UIDevice+Info.m in Sources */,
 				3FDE12361A6F4A3300A14839 /* DataSearchViewController.m in Sources */,
 				3FB7E0211A78ED22005CE41F /* MJRefreshHeaderView.m in Sources */,
 				3FEB34DF1A6E1EB4002A42EC /* newChatTableViewCell.m in Sources */,
 				3FC321111A5A3FB600C4121E /* UIImageView+WebCache.m in Sources */,
+				3FE1A7261A7B1DF000970B3C /* ForgetViewController.m in Sources */,
 				3FC992901A63AA1C00ECAE64 /* NSArray+NSArray_ILExtension.m in Sources */,
 				3FDE125E1A6F891000A14839 /* CallNameCrossViewController.m in Sources */,
 				3FC321771A5A600B00C4121E /* UIViewController+FindTabView.m in Sources */,

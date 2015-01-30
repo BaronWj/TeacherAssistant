@@ -23,7 +23,7 @@
     self.titleLabel.text = activeModel.title_str;
 //    self.ImageView.image = [UIImage imageNamed:activeModel.imageUrl_str];
 //    [self.ImageView setImageWithURL:[NSURL URLWithString:activeModel.imageUrl_str] placeholderImage:[UIImage imageNamed:@"2"] options:SDWebImageRefreshCached];
-    [self.ImageView setImageWithURL:[NSURL URLWithString:activeModel.imageUrl_str] placeholderImage:nil];
+    [self.ImageView setImageWithURL:[NSURL URLWithString:activeModel.imageUrl_str] placeholderImage:[UIImage imageNamed:@"newDefault"]];
 
 }
 
