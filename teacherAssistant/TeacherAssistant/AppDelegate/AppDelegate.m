@@ -121,6 +121,7 @@
     //    self.appdelegate.requestUrl = @"http://192.168.1.200:8281/";
     self.appdelegate.requestUrl = @"http://192.168.1.10:8281/";
     if ([StuSaveUserDefaults getFirstLogin]){
+
         [self initTabBarViewController];
         
     }else{
