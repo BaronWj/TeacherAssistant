@@ -29,7 +29,7 @@
     _educational_tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_educational_tableView];
     
-    UIImage * image =[[UIImage alloc]init];
+//    UIImage * image =[[UIImage alloc]init];
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
     

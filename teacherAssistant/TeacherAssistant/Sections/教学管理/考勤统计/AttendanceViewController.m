@@ -32,13 +32,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     UILabel * titleView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0,100,40)];
     titleView.textAlignment = NSTextAlignmentCenter;
     titleView.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = titleView;
     titleView.text = @"考勤统计";
-    
     chooseArray = [NSMutableArray arrayWithArray:@[
                                                    @[@"13级多艺101班",@"13级绘画101班",@"13级计算机101班",@"13级土木101班"],
                                                     @[@"舞蹈与形体",@"艺术概论",@"计算机信息",@"土木工程"],
@@ -54,7 +52,7 @@
     [myCollapseClick reloadCollapseClick];
     
     // If you want a cell open on load, run this method:
-    [myCollapseClick openCollapseClickCellAtIndex:1 animated:NO];
+    [myCollapseClick openCollapseClickCellAtIndex:0 animated:YES];
 
 
 }
@@ -146,17 +144,17 @@
     return label;
 }
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
-    switch (index) {
-        case 0:
+//    switch (index) {
+//        case 0:
             return  [self createView];
-            break;
-        case 1:
-            return [self createView];
-            break;
-        default:
-            return  [self createView];
-            break;
-    }
+//            break;
+//        case 1:
+//            return [self createView];
+//            break;
+//        default:
+//            return  [self createView];
+//            break;
+//    }
 }
 
 // Optional Methods
