@@ -106,13 +106,13 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    settingTableCollectionViewCell  * settingTable = [[settingTableCollectionViewCell alloc]init];
+//    settingTableCollectionViewCell  * settingTable = [[settingTableCollectionViewCell alloc]init];
 //    [settingTable selectCollectionView:indexPath];
     
     
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 130)];
-    imageView.image = [UIImage imageNamed:@"add"];
-    [collectionView addSubview:imageView];
+//    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 130)];
+//    imageView.image = [UIImage imageNamed:@"add"];
+//    [collectionView addSubview:imageView];
     
     
     if (indexPath.row == 0) {

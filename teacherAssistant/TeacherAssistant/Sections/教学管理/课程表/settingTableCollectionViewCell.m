@@ -11,17 +11,19 @@
 @implementation settingTableCollectionViewCell
 
 - (void)awakeFromNib {
+
+    //    if (self.imageView.tag > 100) {
+    self.imageView.tag += 100;
+    self.imageView.userInteractionEnabled = YES;
     // Initialization code
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture:)];
+    [self.imageView addGestureRecognizer:tapGesture];
+    self.selectState = YES;
     }
 -(void)setImage_array:(NSString *)image_name{
     self.image_name = image_name;
     self.imageView.image = [UIImage imageNamed:image_name];
-    if (self.imageView.tag > 100) {
-        self.imageView.userInteractionEnabled = YES;
-        UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture:)];
-        [self.imageView addGestureRecognizer:tapGesture];
-        self.selectState = YES;
-    }
+//    }
 }
 -(void)selectCollectionView:(NSIndexPath *)indexPath{
     NSLog(@"%ld--%ld",indexPath.row,indexPath.section);
@@ -32,7 +34,7 @@
 }
 
 -(void)tapGesture:(UITapGestureRecognizer *)tap{
-    NSLog(@"888888%@", [[self subviews] lastObject]);
+    NSLog(@"888888%@", [tap.view superview]);
     if (self.selectState == NO) {
         [self.imageView.layer setBorderWidth:2];
         [self.imageView.layer setBorderColor:[UIColor whiteColor].CGColor];
@@ -43,5 +45,9 @@
         [self.imageView.layer setBorderColor:[UIColor yellowColor].CGColor];
         self.selectState = NO;
     }
+    
+    
+    
+    
 }
 @end
