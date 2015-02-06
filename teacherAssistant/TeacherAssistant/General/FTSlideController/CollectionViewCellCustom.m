@@ -16,12 +16,7 @@
     NSLog(@"awakeFromNib");
 //    _ImageViewHead.image = [UIImage imageNamed:@"teacherhead2"];
     NSLog(@"__-%@",_CurMediaItem);
-//    _ImageViewHead.frame = CGRectMake(10, 20, 90, 50);
 
-//    [_ImageViewButton.layer setMasksToBounds:YES];
-//    [_ImageViewButton.layer setCornerRadius:4];
-//    [_ImageViewButton.layer setBorderColor:[UIColor grayColor].CGColor] ;
-//    [_ImageViewButton.layer setBorderWidth:0.1];
 
 
 }
@@ -30,10 +25,6 @@
     self = [super init];
     if (self) {
         NSLog(@"self");
-//        _ImageViewHead.image = [UIImage imageNamed:@"teacherhead2"];
-//        _ImageViewHead.frame = CGRectMake(10, 20, 90, 50);
-//        UICollectionViewFlowLayout的初始化（与刷新控件无关）
-        
 
         
     }

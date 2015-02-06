@@ -316,6 +316,7 @@
 		3FDF22361A675868002D122F /* MeetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF22301A675868002D122F /* MeetModel.m */; };
 		3FDF22401A67C01B002D122F /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF223E1A67C01B002D122F /* AttendanceViewController.m */; };
 		3FDF22411A67C01B002D122F /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDF223F1A67C01B002D122F /* AttendanceViewController.xib */; };
+		3FE106341A84C2B500A68A2F /* focusNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE106331A84C2B500A68A2F /* focusNewModel.m */; };
 		3FE1A7211A7B1DF000970B3C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A7181A7B1DF000970B3C /* LoginViewController.m */; };
 		3FE1A7221A7B1DF000970B3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1A7191A7B1DF000970B3C /* LoginViewController.xib */; };
 		3FE1A7231A7B1DF000970B3C /* ChooseShcoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1A71B1A7B1DF000970B3C /* ChooseShcoolViewController.m */; };
@@ -889,6 +890,8 @@
 		3FDF223D1A67C01B002D122F /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
 		3FDF223E1A67C01B002D122F /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
 		3FDF223F1A67C01B002D122F /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
+		3FE106321A84C2B500A68A2F /* focusNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = focusNewModel.h; sourceTree = "<group>"; };
+		3FE106331A84C2B500A68A2F /* focusNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = focusNewModel.m; sourceTree = "<group>"; };
 		3FE1A7171A7B1DF000970B3C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3FE1A7181A7B1DF000970B3C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3FE1A7191A7B1DF000970B3C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -2121,6 +2124,8 @@
 		3FDE31451A7630E600B3833B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3FE106321A84C2B500A68A2F /* focusNewModel.h */,
+				3FE106331A84C2B500A68A2F /* focusNewModel.m */,
 				3FDE31461A7630F500B3833B /* ViewModelClass.h */,
 				3FDE31471A7630F500B3833B /* ViewModelClass.m */,
 				3FDE31491A76347500B3833B /* asActivityViewModel.h */,
@@ -2715,6 +2720,7 @@
 				3FD718531A772E9000681D1A /* asActiVityLabelModel.m in Sources */,
 				3FE74D371A79E6DF00004FA7 /* ModifyPwdViewController.m in Sources */,
 				3FC321601A5A517400C4121E /* UIProgressView+AFNetworking.m in Sources */,
+				3FE106341A84C2B500A68A2F /* focusNewModel.m in Sources */,
 				3FC88A8F1A68EAAE00F0AF27 /* PieElement.m in Sources */,
 				3FB7DFD61A78E9C9005CE41F /* UUAVAudioPlayer.m in Sources */,
 				3FC3210E1A5A3FB600C4121E /* UIImage+GIF.m in Sources */,

@@ -8,38 +8,63 @@
 
 #import "ASActiveDetailsViewController.h"
 #import "NSString+URLEncoding.h"
+#import "UIKit+AFNetworking.h"
 @interface ASActiveDetailsViewController ()<UIWebViewDelegate>
 @property (nonatomic,strong)UIWebView *webView;
-
 @end
 
 @implementation ASActiveDetailsViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createShadow:YES];
     // Do any additional setup after loading the view from its nib.
+    UIButton * _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_rightButton setBackgroundImage:[UIImage imageNamed:@"collect"] forState:UIControlStateNormal];
+    _rightButton.frame = CGRectMake(0, 0, 24, 24);
+    UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_rightButton];
+    self.navigationItem.rightBarButtonItem = buttonItem;
+    [_rightButton addTarget:self action:@selector(pressCollection:) forControlEvents:UIControlEventTouchUpInside];
+    
     _webView=[[UIWebView alloc] initWithFrame:CGRectZero];
     _webView.translatesAutoresizingMaskIntoConstraints=NO;
     _webView.delegate = self;
     [self.view addSubview:_webView];
     self.webView.opaque = NO;
     NSArray *h=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[webView]-0-|" options:0 metrics:nil views:@{@"webView":_webView}];
-    NSArray *v=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-3-[webView]-0-|" options:0 metrics:nil views:@{@"webView":_webView}];
+    NSArray *v=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-4-[webView]-0-|" options:0 metrics:nil views:@{@"webView":_webView}];
     
     [self.view addConstraints:h];
     [self.view addConstraints:v];
     
     _webView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     _webView.scrollView.backgroundColor = backGround;
-//    _webView.
-    NSString * info_url =[NSString stringWithFormat:@"/%@/"@"%@",[NSString string_connctUrl:GetNewInfo],_activeNewID];
+    //    _webView.
+    MyLog(@"url%@",_activeNewID);
+    NSString * str =[NSString stringWithFormat:@"%@/%@",[NSString string_connctUrl:GetNewInfo],_activeNewID];
     
-    NSURLRequest * req=[NSURLRequest requestWithURL:[NSURL URLWithString:info_url]];
+    NSURLRequest * reqCase = [NSURLRequest requestWithURL:[NSURL URLWithString:str] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:15];
+    [_webView loadRequest:reqCase];
     
-    [_webView loadRequest:req];
-//    [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
     [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeBlack];
+    
+}
 
+-(void)pressCollection:(id)sender{
+    //    192.168.1.10:8281/api/News/CollectionNews?userId=4d03484e-4c3f-e411-9227-13fa5dc9122a&newsId=1e1e3e9d-b3a2-e411-96c2-d850e6dd285f
+    MyLog(@"getAccountAndPassWord___%@",[StuSaveUserDefaults getAccountAndPassWord] );
+    NSString * userID = [[StuSaveUserDefaults getAccountAndPassWord] valueForKey:@"Id"];
+    //    NSDictionary * dict = @{
+    //                            @"userId":@"4d03484e-4c3f-e411-9227-13fa5dc9122a",
+    //                            @"newsId":@"1e1e3e9d-b3a2-e411-96c2-d850e6dd285f",
+    //                            };
+    NSString * postrUrl =  [NSString stringWithFormat:@"userId=%@&newsId=%@",userID,_activeNewID];
+    [ASAPIClient requestPost:postrUrl parameter:nil result:^(BOOL finish , NSDictionary * dict ,NSError * error){
+        MyLog(@"000000999990000****%@",[dict valueForKey:@"msg"] );
+        if ([[dict valueForKey:@"success"] integerValue] == 1) {
+            [self showToast:@"收藏成功"];
+            
+        }
+    }];
 }
 
 #pragma mark --
@@ -52,17 +77,18 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     MyLog(@"webViewDidFinishLoad%@",webView);
     [SVProgressHUD dismiss];
-
+    
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{
     MyLog(@"webViewDidStartLoad%@",webView);
-
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

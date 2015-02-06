@@ -5,13 +5,14 @@
 //  Created by MyUpinup on 15/1/5.
 //  Copyright (c) 2015年 MyUpinup. All rights reserved.
 //
-
 #import "ASAPIClient.h"
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "OpenUDID.h"
 #import "AppDelegate.h"
 #import "defineSetting.h"
+#import "JSONKit.h"
+#import "NSString+URLEncoding.h"
 static NSString * const KDAPIBaseURLString = @"http://192.168.1.200:8281/Api/";
 static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 3;
 static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
@@ -26,36 +27,36 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
         _sharedClient.maxCacheSize = kDefaultCacheMaxCacheSize;
         _sharedClient.maxCacheAge = kDefaultCacheMaxCacheAge;
         _sharedClient.requestSerializer.stringEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-       
+        
     });
     
     return _sharedClient;
 }
 
-//+ (BOOL)networkReachable {
-//    // Create zero addy
-//    struct sockaddr_in zeroAddress;
-//    bzero(&zeroAddress, sizeof(zeroAddress));
-//    zeroAddress.sin_len = sizeof(zeroAddress);
-//    zeroAddress.sin_family = AF_INET;
-//    
-//    // Recover reachability flags
-//    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
-//    SCNetworkReachabilityFlags flags;
-//    
-//    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
-//    CFRelease(defaultRouteReachability);
-//    
-//    if (!didRetrieveFlags) {
-//        NSLog(@"Error: Could not recover network reachability flags");
-//        return NO;
-//    }
-//    
-//    BOOL isReachable = flags & kSCNetworkFlagsReachable;
-//    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
-//    
-//    return (isReachable && !needsConnection) ? YES : NO;
-//}
++ (BOOL)networkReachable {
+    //    // Create zero addy
+    //    struct sockaddr_in zeroAddress;
+    //    bzero(&zeroAddress, sizeof(zeroAddress));
+    //    zeroAddress.sin_len = sizeof(zeroAddress);
+    //    zeroAddress.sin_family = AF_INET;
+    //
+    //    // Recover reachability flags
+    //    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+    SCNetworkReachabilityFlags flags;
+    //
+    //    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+    //    CFRelease(defaultRouteReachability);
+    //
+    //    if (!didRetrieveFlags) {
+    //        NSLog(@"Error: Could not recover network reachability flags");
+    //        return NO;
+    //    }
+    //
+    BOOL isReachable = flags & kSCNetworkFlagsReachable;
+    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
+    //
+    return (isReachable && !needsConnection) ? YES : NO;
+}
 //
 #pragma 监测网络的可链接性
 + (BOOL) netWorkReachabilityWithURLString:(NSString *) strUrl
@@ -95,21 +96,54 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:parameters];
-//    [params setObject:@"iphone" forKey:@"device"];
-//    [params setObject:[OpenUDID value] forKey:@"deviceid"];
+    //    [params setObject:@"iphone" forKey:@"device"];
+    //    [params setObject:[OpenUDID value] forKey:@"deviceid"];
     return [super GET:URLString parameters:params success:success failure:failure];
 }
 
 - (AFHTTPRequestOperation *)POST:(NSString *)URLString
-                      parameters:(NSDictionary *)parameters
+                      parameters:(id)parameters
                          success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:parameters];
-//    [params setObject:@"iphone" forKey:@"device"];
-//    [params setObject:[OpenUDID value] forKey:@"deviceid"];
+    //    [params setObject:@"iphone" forKey:@"device"];
+    //    [params setObject:[OpenUDID value] forKey:@"deviceid"];
+    //    NSString * jsonString = [parameters JSONString];
+    //    MyLog(@"jsonStringjsonStringjsonString______%@",jsonString);
     return [super POST:URLString parameters:params success:success failure:failure];
 }
++(id)requestPost:(NSString *)URLString
+       parameter:(NSString *)parameters
+          result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block
+
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@?%@",iPhoneDelegate.requestUrl,GetCollectionNews,URLString]]] ;
+    [request setHTTPMethod:@"POST"];
+    [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    NSMutableData *postBody = [NSMutableData data];
+    [postBody appendData:[[parameters JSONString] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPBody:postBody];
+    
+    MyLog(@"requestUrl%@",[NSURL URLWithString:[NSString stringWithFormat:@"%@%@?%@",iPhoneDelegate.requestUrl,GetCollectionNews,URLString]]);
+    //发送异步请求
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:&connectionError];
+         //        NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+         block(1,dic,connectionError);
+     }];
+    
+    //    NSLog(@"服务器返回：%@",result);
+    
+    return nil;
+}
+
+
+//NSData *jsonData = [NSJSONSerialization dataWithJSONObject:info_dict options:NSJSONWritingPrettyPrinted error:&error];
 
 - (AFHTTPRequestOperation *)POST:(NSString *)URLString
                       parameters:(NSDictionary *)parameters
@@ -118,27 +152,27 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:parameters];
-//    [params setObject:@"iphone" forKey:@"device"];
-//    [params setObject:[OpenUDID value] forKey:@"deviceid"];
+    //    [params setObject:@"iphone" forKey:@"device"];
+    //    [params setObject:[OpenUDID value] forKey:@"deviceid"];
     return [super POST:URLString parameters:params constructingBodyWithBlock:block success:success failure:failure];
 }
 
 #pragma mark -
 #pragma mark _asActiveDynameic
 + (AFHTTPRequestOperation *)getActiveDynameicWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
-//    __weak id weakSelf = self;
+    //    __weak id weakSelf = self;
     AFHTTPRequestOperation *operation =
     [[ASAPIClient sharedClient] GET:GetActivityDataUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          MyLog(@"ActiveDynameicWithParameters_________%@",responseObject);
-//         NSString *userID = [responseObject objectForKey:@"userid"];
-//         //  KCLogInt([userID integerValue]);
-//         if ([userID integerValue] > 0)
-//             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
-//         if (block) block([userID integerValue] > 0, responseObject, nil);
-//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        if (block)block(YES,responseObject,nil);
-
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         //  KCLogInt([userID integerValue]);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
+         //        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+         if (block)block(YES,responseObject,nil);
+         
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (block) block(NO, nil, error);
          MyLog(@"error______%@",error);
@@ -172,18 +206,18 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
     
     return operation;
 }
-
+//个人信息
 + (AFHTTPRequestOperation *)getPeopleInfoParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
-//    __weak id weakSelf = self;
+    //    __weak id weakSelf = self;
     AFHTTPRequestOperation *operation =
     [[ASAPIClient sharedClient] GET:GetPeopleInfo parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          MyLog(@"%@",responseObject);
-//         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
          //  KCLogInt([userID integerValue]);
-//         if ([userID integerValue] > 0)
-//             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
-//         if (block) block([userID integerValue] > 0, responseObject, nil);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
          if (block)block(YES,responseObject,nil);
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (block) block(NO, nil, error);
@@ -196,27 +230,118 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
 
 
 
-
-
-
-+ (AFHTTPRequestOperation *)getLoginWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
-//    __weak id weakSelf = self;
+//登录接口
++ (AFHTTPRequestOperation *)getLoginWithParameters:(id )parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+    //    __weak id weakSelf = self;
     AFHTTPRequestOperation *operation =
     [[ASAPIClient sharedClient] POST:GetLogin parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     
      {
-//         MyLog(@"%@",responseObject);
-//         NSString *userID = [responseObject objectForKey:@"userid"];
-//         //  KCLogInt([userID integerValue]);
-//         if ([userID integerValue] > 0)
-//             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
-//         if (block) block([userID integerValue] > 0, responseObject, nil);
-        if (block)block(YES,responseObject,nil);
+         MyLog(@"operation.request.URL%@",operation.request.URL);
+         
+         MyLog(@"登录接口_____%@",responseObject);
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         //  KCLogInt([userID integerValue]);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
+         if (block)block(YES,responseObject,nil);
+         
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         if (block) block(NO, nil, error);
+         MyLog(@"登录接口_____%@",error);
+         MyLog(@"operation.request.URL%@",operation.request.URL);
+         
+     }];
+    return operation;
+}
+
+//新闻焦点图
++ (AFHTTPRequestOperation *)getFocusNews:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+    //    __weak id weakSelf = self;
+    AFHTTPRequestOperation *operation =
+    [[ASAPIClient sharedClient] GET:GetFocusNews parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         //         MyLog(@"%@",responseObject);
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         //  KCLogInt([userID integerValue]);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
+         if (block)block(YES,responseObject,nil);
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (block) block(NO, nil, error);
      }];
-
-
     MyLog(@"operation.request.URL%@",operation.request.URL);
+    return operation;
+}
+
+
+//收藏接口
++ (AFHTTPRequestOperation *)getCollectionWithUrl:(NSDictionary *)url AndParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+    //    __weak id weakSelf = self;
+    //    NSString * postUrl = [NSString stringWithFormat:@"%@?%@",GetCollectionNews,url];
+    
+    //    NSString * postUrl = [NSString stringWithFormat:@"%@%@?%@",@"http://192.168.1.10:8281",GetCollectionNews,@"userId=22&newsId=11"];
+    NSString * postUrl = [NSString stringWithFormat:@"userId=4d03484e-4c3f-e411-9227-13fa5dc9122a&newsId=a71e921b-57a1-e411-96c2-d850e6dd285f"];
+    NSLog(@"postUrlpostUrl——————%@",postUrl);
+    //   NSString * jsonString = [postUrl JSONString];
+    NSLog(@"postUrlpostUrljson————————%@",postUrl );
+    NSURL * utl = [NSURL URLWithString:postUrl];
+    
+    NSLog(@"NSURL——————%@",utl);
+    
+    AFHTTPRequestOperation *operation =
+    [[ASAPIClient sharedClient] POST:GetCollectionNews parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         //         MyLog(@"%@",responseObject);
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         //  KCLogInt([userID integerValue]);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
+         if (block)block(YES,responseObject,nil);
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         if (block) block(NO, nil, error);
+     }];
+    MyLog(@"operation.request.URL%@",operation.request.URL);
+    return operation;
+}
+
+//收藏列表接口
++ (AFHTTPRequestOperation *)getCollectionlistWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSDictionary *results, NSError *error))block {
+    //    __weak id weakSelf = self;
+    AFHTTPRequestOperation *operation =
+    [[ASAPIClient sharedClient] POST:GetCollectionNews parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         //         MyLog(@"%@",responseObject);
+         //         NSString *userID = [responseObject objectForKey:@"userid"];
+         //         //  KCLogInt([userID integerValue]);
+         //         if ([userID integerValue] > 0)
+         //             [weakSelf cacheResults:responseObject forName:[NSString stringWithFormat:@"user-%@", userID]];
+         //         if (block) block([userID integerValue] > 0, responseObject, nil);
+         if (block)block(YES,responseObject,nil);
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         if (block) block(NO, nil, error);
+     }];
+    MyLog(@"operation.request.URL%@",operation.request.URL);
+    return operation;
+}
+
+
+//上传图片
++ (AFHTTPRequestOperation *)uploadWithParameters:(NSDictionary *)parameters result:(void (^)(BOOL success, NSError *error))block {
+    AFHTTPRequestOperation *operation =
+    [[ASAPIClient sharedClient] POST:@"http://upfile1.kdnet.net/upload_mobile_pic.php" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:[parameters objectForKey:@"imageData"] name:@"ufilename" fileName:@"file.jpeg" mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    MyLog(@"operation.request.URL%@",operation.request.URL);
+    
     return operation;
 }
 
@@ -224,7 +349,6 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
 
 #pragma mark -
 #pragma mark Cache
-
 + (BOOL)cacheExists:(NSString *)name {
     return [[NSFileManager defaultManager] fileExistsAtPath:[self pathForCache:name]];
 }
@@ -359,6 +483,7 @@ static const unsigned long long kDefaultCacheMaxCacheSize = 20 * 1024 * 1024;
     }
     return [path stringByAppendingString:name];
 }
+
 
 
 @end

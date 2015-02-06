@@ -32,7 +32,6 @@
     
     UIButton * clearCache = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 300, 60)];
     [clearCache setTitle:@"清除缓存" forState:UIControlStateNormal];;
-//    clearCache.textColor = [UIColor redColor];
     [clearCache addTarget:self action:@selector(flushCache) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:clearCache];
     
@@ -53,7 +52,33 @@
 //    [self requestNetwork];
     [self requestNetworkAAAAApost];
     [self requestNetworkAAAAAget];
+    
+    [self request];
 }
+
+-(void)request{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];//我就加了这句话
+//    manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+    NSDictionary *parameters = @{
+                                 @"UserName": @"11111",
+                                 @"Password":@"123456",
+                                 @"LastLogonIp": @"asdfasdfasdf"
+                                 };
+    
+    [manager POST:GetLogin parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+//    
+//    [manager POST:GetLogin parameters:parameters constructingBodyWithBlock:<#^(id<AFMultipartFormData> formData)block#> success:<#^(AFHTTPRequestOperation *operation, id responseObject)success#> failure:<#^(AFHTTPRequestOperation *operation, NSError *error)failure#>]
+
+}
+
+
+
 
 //清除缓存
 - (void)flushCache

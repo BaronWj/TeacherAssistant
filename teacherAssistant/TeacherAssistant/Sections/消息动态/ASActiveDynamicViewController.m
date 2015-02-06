@@ -15,9 +15,9 @@
 #import "ASActiveDynamicViewController.h"
 #import "MJRefresh.h"
 #import "ASActiveDetailsViewController.h"
-#import "UITableView+tableViewRefresh.h"
+//#import "UITableView+tableViewRefresh.h"
 //NSString *const MJTableViewCellIdentifier = @"Cell";
- NSString * const  CellIdentifier = @"Cell";
+NSString * const  CellIdentifier = @"Cell";
 
 /**
  *  随机数据
@@ -27,14 +27,21 @@
 @interface ASActiveDynamicViewController ()<EScrollerViewDelegate>{
     EScrollerView * scroller;
     CGRect  ESCroller_rect;
-
+    
+    
+    
 }
 /**
  *  存放假数据
  */
-@property (strong, nonatomic) NSMutableArray *fakeData;
+@property (strong, nonatomic) NSMutableArray * activeNewData_array;
 
 @property (strong, nonatomic) NSArray * asActiveModelArray;
+@property (strong, nonatomic) NSArray * focusModelArray;
+
+@property (strong, nonatomic) MJRefreshHeaderView * head;
+@property (strong, nonatomic) MJRefreshFooterView * footer;
+@property (assign, nonatomic) NSInteger pageNum ;
 
 @end
 
@@ -42,136 +49,149 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _pageNum = 1;
+    self.activeNewData_array = [[NSMutableArray alloc]initWithCapacity:0];
     // Do any additional setup after loading the view from its nib.
     [self changeViewControllTitle:@"新闻"];
     [self createShadow:NO];
-//    [self createFocusScroller];
+    //    [self createFocusScroller];
     _asactive_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-88-40-30)];
     _asactive_tableView.delegate = self;
     _asactive_tableView.dataSource = self;
     _asactive_tableView.backgroundColor = [UIColor clearColor];
     [_asactive_tableView setExtraCellLineHidden:YES];
     [self.view addSubview:_asactive_tableView];
-    ESCroller_rect = CGRectMake(0, 0, ScreenWidth, 170);
-    scroller =[[EScrollerView alloc] initWithFrameRect:ESCroller_rect
-                                            ImageArray:[NSArray arrayWithObjects:@"image0",@"image1",@"image2",@"image3", nil]
-                                            TitleArray:[NSArray arrayWithObjects:@"2014年秋新生入学",@"学生学习交流",@"就业直到",@"毕业典礼",nil]];
     
-    scroller.delegate = self;
-    _asactive_tableView.tableHeaderView =  scroller;
-//    [_asactive_tableView reloadData];
-    
-    // 1.注册cell
-//    [_asactive_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-    // 2.集成刷新控件
-//    [self setupRefresh];
-//    [_asactive_tableView creatRefresh];
-//    [SVProgressHUD showSuccessWithStatus:@"正在加载"];
+    //    1. 添加头部控件的方法
+    [self addRefreshViews];
+    [self addfooterRefreshViews];
+    //    [SVProgressHUD showSuccessWithStatus:@"正在加载"];
     [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
+    
+    //注册一个observer来响应消息的传送
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)//接收消息方法
+                                                 name:@"FirstCategory"//消息识别名称
+                                               object:nil];
+    
+    
+}
+
+-(void)receiveNotification:(NSNotification *) not{
+    [self requestFocusNetData:[[not object] firstObject]];
+    [self requestNetListData:[[not object] firstObject]AndPageNo:@"1"];
+    //    [self.head beginRefreshing];
+    _sortID =[[not object] firstObject];
+    self.pageNum ++;
+}
+//添加刷新控件
+- (void)addRefreshViews
+{
+    __weak typeof(self) weakSelf = self;
+    //load more
+    _head = [MJRefreshHeaderView header];
+    _head.scrollView = self.asactive_tableView;
+    _head.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
+        [weakSelf.activeNewData_array removeAllObjects];
+        [weakSelf.asactive_tableView reloadData];
+        
+        [weakSelf requestFocusNetData:weakSelf.sortID];
+        [weakSelf requestNetListData:weakSelf.sortID AndPageNo:@"1"];
+        [weakSelf.head endRefreshing];
+    };
+}
+
+//添加加载控件
+- (void)addfooterRefreshViews
+{
+    __weak typeof(self) weakSelf = self;
+    //load more
+    _footer = [MJRefreshFooterView footer];
+    _footer.scrollView = self.asactive_tableView;
+    _footer.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
+        [weakSelf requestNetListData:weakSelf.sortID AndPageNo:[NSString stringWithFormat:@"%ld",(long)weakSelf.pageNum]] ;
+        [weakSelf.footer endRefreshing];
+        weakSelf.pageNum ++;
+    };
+}
+
+-(void)setSortID:(NSString *)sortID{
+    //    [self.head beginRefreshing];
+    [self requestFocusNetData:sortID];
+    [self requestNetListData:sortID AndPageNo:@"1"];
+    
+    
+}
+
+//请求新闻列表数据
+-(void)requestNetListData:(NSString *)sortID AndPageNo:(NSString *)pageNo{
     asActivityViewModel * actityViewModel = [[asActivityViewModel alloc]init];
     NSDictionary * dict = @{
-                            @"categoryId":@"1",
-                            @"pageNo":@"1",
+                            @"sortId":sortID,
+                            @"pageNo":pageNo,
                             @"pageSize":@"5"
                             };
     [actityViewModel requestActivityViewModelData:dict];
     [actityViewModel setBlockWithReturnBlock:^(id returnValue){
         _asActiveModelArray = returnValue;
-        [self.asactive_tableView reloadData];
-         [SVProgressHUD dismiss];
+        [self.activeNewData_array addObjectsFromArray:_asActiveModelArray];
+        //        [self.head endRefreshing];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [_asactive_tableView reloadData];
+        });
         
-        for (asActiveModel * labelModel in _asActiveModelArray) {
-            MyLog(@"%@",labelModel.title_str);
-        }
-
-        MyLog(@"__newsInfo_newsInfo______%@",returnValue);
+        [SVProgressHUD dismiss];
     } WithErrorBlock:^(id errorCode){
         [SVProgressHUD dismiss];
-
+        
     }WithFailureBlock:^{
         [SVProgressHUD dismiss];
-
     }];
 }
 
 
 
--(void)requestNetData{
-
+#pragma mark GetFocusNews
+-(void)requestFocusNetData:(NSString *)sortID{
+    focusNewModel * focusNewViewModel = [[focusNewModel alloc]init];
+    NSDictionary * dict = @{
+                            @"sortId":sortID
+                            };
+    [focusNewViewModel requestFocusNewsViewModelData:dict];
+    [focusNewViewModel setBlockWithReturnBlock: ^(id returnValue){
+        _focusModelArray = returnValue;
+        [SVProgressHUD dismiss];
+        NSMutableArray * titleArray = [[NSMutableArray alloc]initWithCapacity:0];
+        NSMutableArray * imageUrl_Array = [[NSMutableArray alloc]initWithCapacity:0];
+        
+        for (asActiveModel * labelModel in _focusModelArray) {
+            [titleArray addObject:labelModel.title_str];
+            [imageUrl_Array addObject:labelModel.imageUrl_str];
+        }
+        [self createFocusScroller:imageUrl_Array AndTitleName:titleArray];
+    } WithErrorBlock:^(id errorCode){
+        [SVProgressHUD dismiss];
+    }WithFailureBlock:^{
+        [SVProgressHUD dismiss];
+    }];
+    
 }
-
-
-///**
-// *  集成刷新控件
-// */
-//- (void)setupRefresh
-//{
-//    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
-//    [self.asactive_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-////#warning 自动刷新(一进入程序就下拉刷新)
-//    [self.asactive_tableView headerBeginRefreshing];
-//    
-//    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
-//    [self.asactive_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-//}
-///**
-// *  数据的懒加载
-// */
-//- (NSMutableArray *)fakeData
-//{
-//    if (!_fakeData) {
-//        self.fakeData = [NSMutableArray array];
-//        
-//        for (int i = 0; i<12; i++) {
-//            [self.fakeData addObject:MJRandomData];
-//        }
-//    }
-//    return _fakeData;
-//}
-//#pragma mark 开始进入刷新状态
-//- (void)headerRereshing
-//{
-//    // 1.添加假数据
-//    for (int i = 0; i<5; i++) {
-//        [self.fakeData insertObject:MJRandomData atIndex:0];
-//    }
-//    
-//    // 2.2秒后刷新表格UI
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        // 刷新表格
-//        [self.asactive_tableView reloadData];
-//        
-//        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-//        [self.asactive_tableView headerEndRefreshing];
-//    });
-//}
-//
-//- (void)footerRereshing
-//{
-//    // 1.添加假数据
-//    for (int i = 0; i<5; i++) {
-//        [self.fakeData addObject:MJRandomData];
-//    }
-//    
-//    // 2.2秒后刷新表格UI
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        // 刷新表格
-//        [self.asactive_tableView reloadData];
-//        
-//        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-//        [self.asactive_tableView footerEndRefreshing];
-//    });
-//}
-//
-
-
 #pragma mark - 构建广告滚动视图
--(void)createFocusScroller{
+-(void)createFocusScroller : (NSArray *)image_url AndTitleName:(NSArray *)title_array{
+    ESCroller_rect = CGRectMake(0, 0, ScreenWidth, 170);
+    scroller =[[EScrollerView alloc] initWithFrameRect:ESCroller_rect
+                                            ImageArray:image_url
+                                            TitleArray:title_array];
+    
+    scroller.delegate = self;
+    _asactive_tableView.tableHeaderView =  scroller;
+    
 }
 
 -(void)EScrollerViewDidClicked:(NSUInteger)index
 {
-    MyLog(@"aaa");
+    focusNewModel * asactivity = [[focusNewModel alloc]init];
+    [asactivity FocusNewsDetailWithPublicModel:_focusModelArray[index-1] WithViewController:self];
 }
 #pragma mark --
 #pragma mark -- tableViewDelegate && tableViewSource
@@ -180,46 +200,26 @@
     return 80;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  [_asActiveModelArray count];
+    return  [self.activeNewData_array count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-      AsActiveCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    AsActiveCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-       cell = [[[NSBundle mainBundle] loadNibNamed:@"AsActiveCell" owner:nil options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"AsActiveCell" owner:nil options:nil] lastObject];
     }
-    cell.activeModel = _asActiveModelArray[indexPath.row];
-     return cell;
+    cell.activeModel = self.activeNewData_array[indexPath.row];
+    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     asActivityViewModel * asactivity = [[asActivityViewModel alloc]init];
-    [asactivity ActivityDetailWithPublicModel:_asActiveModelArray[indexPath.row] WithViewController:self];
-
+    [asactivity ActivityDetailWithPublicModel:self.activeNewData_array[indexPath.row] WithViewController:self];
+    
 }
 
 
-
-//-(void)request{
-//    [SVProgressHUD showWithStatus:@"正在获取用户信息……" maskType:SVProgressHUDMaskTypeBlack];
-//      NSDictionary * dict = @{};
-//    [ASAPIClient getActiveDynameicWithParameters:dict result:^(BOOL sucess, NSDictionary *results, NSError *error){
-//        if (sucess) {
-//            
-//        }
-//        MyLog(@"ActiveDynameicWithParameters)))))0000___%@",results);
-//        [SVProgressHUD dismiss];
-//
-////        [self showMbProgressHud:NO];
-////        if (error) {
-////            [KDProgressHUD handleError:error showOnView:self.navigationController.view.window];
-////            if (loadMore) [self.loadMoreControl endLoading];
-////            else [self endRefreshing];
-////            return;
-////        }
-//    }];
-//}
 
 
 - (void)didReceiveMemoryWarning {
@@ -227,19 +227,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"FirstCategory" object:nil];
+    
+    
 }
-*/
+//- (void)dealloc
+//{
+//    [_header free];
+//    [_footer free];
+//}
+
+
 
 - (IBAction)aaa:(id)sender {
-    EducationalTeachingViewController * education = [[EducationalTeachingViewController alloc]init];
-    [self.navigationController pushViewController:education animated:YES];
+    //    EducationalTeachingViewController * education = [[EducationalTeachingViewController alloc]init];
+    //    [self.navigationController pushViewController:education animated:YES];
     
 }
 @end

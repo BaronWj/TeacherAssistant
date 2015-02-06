@@ -16,7 +16,7 @@
 #import "SVProgressHUD.h"
 #import "defineSetting.h"
 #import "StuSaveUserDefaults.h"
-
+#import "NSString+URLEncoding.h"
 @interface BaseViewController : UIViewController<UINavigationControllerDelegate,MBProgressHUDDelegate>{
     LeveyTabBarController * leverTab;
     BOOL isHiddenStatusBar;
