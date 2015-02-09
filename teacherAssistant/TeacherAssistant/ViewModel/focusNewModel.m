@@ -28,7 +28,14 @@
     NSMutableArray *activeModelArray = [[NSMutableArray alloc] initWithCapacity:statuses.count];
     for (int i = 0; i < statuses.count; i ++) {
         asActiveModel * activModel = [[asActiveModel alloc] init];
-        activModel.title_str = [statuses objectAtIndex:i][@"Title"];
+        NSString * title = [statuses objectAtIndex:i][@"Title"];
+        if (!ISNULLSTR(title)) {
+            activModel.title_str = [statuses objectAtIndex:i][@"Title"];
+        }else{
+            activModel.title_str = @"未知标题";
+        }
+        
+        
         activModel.time_str = [statuses objectAtIndex:i][@"CheckInTime"];
         if (activModel.time_str.length > 10) {
             activModel.time_str = [[statuses objectAtIndex:i][@"CheckInTime"] substringToIndex:10];
@@ -42,6 +49,8 @@
         if (!ISNULLSTR(PicUrl)) {
             MyLog(@"++++33++%@", PicUrl);
             activModel.imageUrl_str= [NSString string_connctUrl:[PicUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }else{
+             activModel.imageUrl_str = @"defaultFocus";
         }
       //activModel.imageUrl_str = @"http://tp1.sinaimg.cn/3044061360/180/5658706588/0";
         MyLog(@"++++++%@", activModel.imageUrl_str);

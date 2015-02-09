@@ -17,6 +17,14 @@
 		3F0A16451A5E2E0A009F5580 /* CollectionViewCellCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A16441A5E2E0A009F5580 /* CollectionViewCellCustom.m */; };
 		3F4E85001A723DA00077D733 /* SettingTableBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */; };
 		3F4E85011A723DA00077D733 /* SettingTableBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */; };
+		3F9296C91A88756A0036556B /* tabledelectSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296C71A88756A0036556B /* tabledelectSelect.png */; };
+		3F9296CA1A88756A0036556B /* tabledelectSelect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296C81A88756A0036556B /* tabledelectSelect@2x.png */; };
+		3F9296CD1A8875BD0036556B /* tableSettingNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296CB1A8875BD0036556B /* tableSettingNormal@2x.png */; };
+		3F9296CE1A8875BD0036556B /* tableSettingNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296CC1A8875BD0036556B /* tableSettingNormal.png */; };
+		3F9296D01A88A4460036556B /* defaultFocus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296CF1A88A4460036556B /* defaultFocus.png */; };
+		3F9296D21A88A5610036556B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296D11A88A5610036556B /* delete.png */; };
+		3F9296D71A88A6360036556B /* classTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296D51A88A6360036556B /* classTable.png */; };
+		3F9296D81A88A6360036556B /* classTable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9296D61A88A6360036556B /* classTable@2x.png */; };
 		3FB7DFB21A78729C005CE41F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFB11A78729C005CE41F /* UIRefreshControl+AFNetworking.m */; };
 		3FB7DFB81A78CEB9005CE41F /* SubstituteClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DFB61A78CEB9005CE41F /* SubstituteClassViewController.m */; };
 		3FB7DFB91A78CEB9005CE41F /* SubstituteClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB7DFB71A78CEB9005CE41F /* SubstituteClassViewController.xib */; };
@@ -74,8 +82,6 @@
 		3FC088DD1A5BCF30009FB115 /* collect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088DB1A5BCF30009FB115 /* collect@2x.png */; };
 		3FC088E01A5BD204009FB115 /* callName.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088DE1A5BD204009FB115 /* callName.png */; };
 		3FC088E11A5BD204009FB115 /* callName@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088DF1A5BD204009FB115 /* callName@2x.png */; };
-		3FC088E41A5BD2AF009FB115 /* classTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088E21A5BD2AF009FB115 /* classTable.png */; };
-		3FC088E51A5BD2AF009FB115 /* classTable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088E31A5BD2AF009FB115 /* classTable@2x.png */; };
 		3FC088E81A5BD302009FB115 /* chooseClass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088E61A5BD302009FB115 /* chooseClass.png */; };
 		3FC088E91A5BD302009FB115 /* chooseClass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088E71A5BD302009FB115 /* chooseClass@2x.png */; };
 		3FC088EC1A5BDEF9009FB115 /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC088EA1A5BDEF9009FB115 /* me.png */; };
@@ -452,6 +458,14 @@
 		3F4E84FD1A723DA00077D733 /* SettingTableBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableBackViewController.h; sourceTree = "<group>"; };
 		3F4E84FE1A723DA00077D733 /* SettingTableBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableBackViewController.m; sourceTree = "<group>"; };
 		3F4E84FF1A723DA00077D733 /* SettingTableBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableBackViewController.xib; sourceTree = "<group>"; };
+		3F9296C71A88756A0036556B /* tabledelectSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabledelectSelect.png; sourceTree = "<group>"; };
+		3F9296C81A88756A0036556B /* tabledelectSelect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabledelectSelect@2x.png"; sourceTree = "<group>"; };
+		3F9296CB1A8875BD0036556B /* tableSettingNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableSettingNormal@2x.png"; sourceTree = "<group>"; };
+		3F9296CC1A8875BD0036556B /* tableSettingNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableSettingNormal.png; sourceTree = "<group>"; };
+		3F9296CF1A88A4460036556B /* defaultFocus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultFocus.png; sourceTree = "<group>"; };
+		3F9296D11A88A5610036556B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		3F9296D51A88A6360036556B /* classTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classTable.png; sourceTree = "<group>"; };
+		3F9296D61A88A6360036556B /* classTable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "classTable@2x.png"; sourceTree = "<group>"; };
 		3FB7DFB01A78729C005CE41F /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		3FB7DFB11A78729C005CE41F /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		3FB7DFB51A78CEB9005CE41F /* SubstituteClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubstituteClassViewController.h; sourceTree = "<group>"; };
@@ -537,8 +551,6 @@
 		3FC088DB1A5BCF30009FB115 /* collect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect@2x.png"; sourceTree = "<group>"; };
 		3FC088DE1A5BD204009FB115 /* callName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callName.png; sourceTree = "<group>"; };
 		3FC088DF1A5BD204009FB115 /* callName@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callName@2x.png"; sourceTree = "<group>"; };
-		3FC088E21A5BD2AF009FB115 /* classTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classTable.png; sourceTree = "<group>"; };
-		3FC088E31A5BD2AF009FB115 /* classTable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "classTable@2x.png"; sourceTree = "<group>"; };
 		3FC088E61A5BD302009FB115 /* chooseClass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseClass.png; sourceTree = "<group>"; };
 		3FC088E71A5BD302009FB115 /* chooseClass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chooseClass@2x.png"; sourceTree = "<group>"; };
 		3FC088EA1A5BDEF9009FB115 /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
@@ -1551,7 +1563,10 @@
 		3FC321231A5A4FB000C4121E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3F9296D11A88A5610036556B /* delete.png */,
 				3FE1A7301A7B22C900970B3C /* loginIcon01@2x.png */,
+				3F9296D51A88A6360036556B /* classTable.png */,
+				3F9296D61A88A6360036556B /* classTable@2x.png */,
 				3FE1A7511A7B8AB300970B3C /* newDefault.png */,
 				3FE1A7461A7B675F00970B3C /* teacherLogin.png */,
 				3FE1A7311A7B22C900970B3C /* loginIcon01.png */,
@@ -1584,6 +1599,7 @@
 				3FDE124B1A6F7B8800A14839 /* longitudinal_buttonNormal.png */,
 				3FDE124C1A6F7B8800A14839 /* longitudinal_buttonNormal@2x.png */,
 				3FDE12471A6F7B4200A14839 /* longitudinal_button.png */,
+				3F9296CF1A88A4460036556B /* defaultFocus.png */,
 				3FDE12481A6F7B4200A14839 /* longitudinal_button@2x.png */,
 				3FEB34C61A6DF64F002A42EC /* chat.png */,
 				3FEB34C71A6DF64F002A42EC /* chat@2x.png */,
@@ -1638,8 +1654,6 @@
 				3FC088EB1A5BDEF9009FB115 /* me@2x.png */,
 				3FC088E61A5BD302009FB115 /* chooseClass.png */,
 				3FC088E71A5BD302009FB115 /* chooseClass@2x.png */,
-				3FC088E21A5BD2AF009FB115 /* classTable.png */,
-				3FC088E31A5BD2AF009FB115 /* classTable@2x.png */,
 				3FC088DA1A5BCF30009FB115 /* collect.png */,
 				3FC088DE1A5BD204009FB115 /* callName.png */,
 				3FC088DF1A5BD204009FB115 /* callName@2x.png */,
@@ -1664,6 +1678,8 @@
 				3FC321D41A5A951900C4121E /* educationSelected.png */,
 				3FC321D51A5A951900C4121E /* educationSelected@2x.png */,
 				3FC321CB1A5A947600C4121E /* schoolChatSelected@2x.png */,
+				3F9296C71A88756A0036556B /* tabledelectSelect.png */,
+				3F9296C81A88756A0036556B /* tabledelectSelect@2x.png */,
 				3FD718721A778AD500681D1A /* tableSetting@2x.png */,
 				3FD718761A778E6000681D1A /* tabledelect@2x.png */,
 				3FD718771A778E6000681D1A /* tabledelect.png */,
@@ -1674,6 +1690,8 @@
 				3FC321F81A5A9D1700C4121E /* newSelect@2x.png */,
 				3FC321CC1A5A947600C4121E /* schoolChatSelectedNormal.png */,
 				3FC321CD1A5A947600C4121E /* schoolChatSelectedNormal@2x.png */,
+				3F9296CB1A8875BD0036556B /* tableSettingNormal@2x.png */,
+				3F9296CC1A8875BD0036556B /* tableSettingNormal.png */,
 				3FC321851A5A65B000C4121E /* 点击后_03.png */,
 				3FC3217F1A5A655C00C4121E /* 点击前_12.png */,
 				3FC3217C1A5A653900C4121E /* 点击前_05.png */,
@@ -2346,6 +2364,7 @@
 				3FC320D31A5A38D200C4121E /* LaunchScreen.xib in Resources */,
 				3FC088F51A5BE0AF009FB115 /* recommed@2x.png in Resources */,
 				3FC088C31A5B768D009FB115 /* PeopleMessageViewController.xib in Resources */,
+				3F9296CE1A8875BD0036556B /* tableSettingNormal.png in Resources */,
 				3FCC57991A5CFF5F00D9A181 /* calendar.png in Resources */,
 				3FC322011A5A9FD400C4121E /* teacherEducation@2x.png in Resources */,
 				3FE74D5B1A7A1E8D00004FA7 /* RecomCollectionViewCell.xib in Resources */,
@@ -2440,6 +2459,7 @@
 				3FE1A7421A7B284C00970B3C /* loginbackColor@2x.png in Resources */,
 				3FC321CE1A5A947600C4121E /* schoolChatSelected.png in Resources */,
 				3FC088DC1A5BCF30009FB115 /* collect.png in Resources */,
+				3F9296D81A88A6360036556B /* classTable@2x.png in Resources */,
 				3FC088F11A5BDF70009FB115 /* updatePassWord@2x.png in Resources */,
 				3FE74D381A79E6DF00004FA7 /* ModifyPwdViewController.xib in Resources */,
 				3FC321C11A5A86F300C4121E /* nav02@2x.png in Resources */,
@@ -2459,13 +2479,14 @@
 				3FC088FC1A5BE151009FB115 /* opinion.png in Resources */,
 				3FC320B11A5A36C100C4121E /* Main.storyboard in Resources */,
 				3FD718711A778A0E00681D1A /* add@2x.png in Resources */,
+				3F9296D71A88A6360036556B /* classTable.png in Resources */,
 				3FDE126D1A6F9CD200A14839 /* normal@2x.png in Resources */,
 				3FB7E0011A78E9EE005CE41F /* chatto_bg_normal.png in Resources */,
 				3FC88A751A68E5C900F0AF27 /* unfilled.png in Resources */,
 				3FC321861A5A65B000C4121E /* 点击后_03.png in Resources */,
 				3FD6490C1A71DBDA0061C69D /* CourseInfoTableViewCell.xib in Resources */,
+				3F9296CA1A88756A0036556B /* tabledelectSelect@2x.png in Resources */,
 				3FC1CE181A5F8FB600120A3B /* remind_noimage@2x.png in Resources */,
-				3FC088E51A5BD2AF009FB115 /* classTable@2x.png in Resources */,
 				3FC088F01A5BDF70009FB115 /* updatePassWord.png in Resources */,
 				3FE1A7241A7B1DF000970B3C /* ChooseShcoolViewController.xib in Resources */,
 				3FE1A72B1A7B226D00970B3C /* findPassword@2x.png in Resources */,
@@ -2504,6 +2525,7 @@
 				3FC088D01A5B7A4A009FB115 /* FTSlideAddViewController.xib in Resources */,
 				3FEB34CF1A6DF64F002A42EC /* phone@2x.png in Resources */,
 				3FEB34C41A6DF643002A42EC /* labeltag.png in Resources */,
+				3F9296C91A88756A0036556B /* tabledelectSelect.png in Resources */,
 				3FE2D8EA1A70C09100F7019B /* README.textile in Resources */,
 				3FC321FE1A5A9EF200C4121E /* schoolChatTtitle.png in Resources */,
 				3FD649181A71F0D10061C69D /* Vector-Smart-Object.png in Resources */,
@@ -2517,11 +2539,11 @@
 				3FC88A821A68EA6600F0AF27 /* Example2Controller.xib in Resources */,
 				3FC321FB1A5A9D1D00C4121E /* newSelect.png in Resources */,
 				3FF9D3A01A6CDE6E00DD5D38 /* labelRectNormalSelect.png in Resources */,
-				3FC088E41A5BD2AF009FB115 /* classTable.png in Resources */,
 				3FCC57E91A5D254E00D9A181 /* image2.png in Resources */,
 				3FC321D81A5A951900C4121E /* educationSelected.png in Resources */,
 				3FDE12421A6F59DE00A14839 /* headImage.png in Resources */,
 				3FDE12441A6F5A3300A14839 /* headImage1.png in Resources */,
+				3F9296CD1A8875BD0036556B /* tableSettingNormal@2x.png in Resources */,
 				3FEB34CD1A6DF64F002A42EC /* chat@2x.png in Resources */,
 				3FCC57A11A5D008100D9A181 /* evaluate.png in Resources */,
 				3FC321841A5A657500C4121E /* 点击前_07.png in Resources */,
@@ -2554,6 +2576,7 @@
 				3FD718701A778A0E00681D1A /* add.png in Resources */,
 				3FEB34D01A6DF64F002A42EC /* video.png in Resources */,
 				3FF9D37F1A6C84FB00DD5D38 /* CollectionViewController.xib in Resources */,
+				3F9296D21A88A5610036556B /* delete.png in Resources */,
 				3FC98F1A1A5E19EE00192826 /* addFriend@2x.png in Resources */,
 				3FC321C71A5A935700C4121E /* meSelected@2x.png in Resources */,
 				3FEB351C1A6E68F8002A42EC /* CallNameViewController.xib in Resources */,
@@ -2576,6 +2599,7 @@
 				3FC3218E1A5A65ED00C4121E /* 点击后_05.png in Resources */,
 				3FB7E01D1A78ED22005CE41F /* MJRefresh.bundle in Resources */,
 				3FD649111A71EB0D0061C69D /* substituteClass@2x.png in Resources */,
+				3F9296D01A88A4460036556B /* defaultFocus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2858,7 +2882,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "2c522a31-7ead-4916-8c1b-5a6c0b0a340a";
@@ -2898,7 +2922,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "2c522a31-7ead-4916-8c1b-5a6c0b0a340a";
 				SDKROOT = iphoneos;
@@ -2915,7 +2939,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = TeacherAssistant/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2924,6 +2948,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2935,7 +2960,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = TeacherAssistant/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2944,6 +2969,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

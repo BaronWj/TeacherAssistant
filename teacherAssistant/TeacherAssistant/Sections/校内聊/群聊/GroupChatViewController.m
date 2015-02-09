@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self createShadow:NO];
+    self.view.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
     self.groupChat_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-160) style:UITableViewStylePlain];
     self.groupChat_tableView.backgroundColor = [UIColor clearColor];
     self.groupChat_tableView.delegate = self;

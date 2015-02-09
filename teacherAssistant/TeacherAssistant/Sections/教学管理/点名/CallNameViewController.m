@@ -30,7 +30,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"submit"] style:UIBarButtonItemStylePlain target:self action:@selector(submitData)];
     
     
-   self.callNameCross = [[CallNameCrossViewController alloc]init];
+    self.callNameCross = [[CallNameCrossViewController alloc]init];
     self.callNameCross.view.frame = CGRectMake(0, 48, ScreenWidth, ScreenHeight-40);
     
     self.longitudinal = [[CallNamelongitudinalViewController alloc]init];

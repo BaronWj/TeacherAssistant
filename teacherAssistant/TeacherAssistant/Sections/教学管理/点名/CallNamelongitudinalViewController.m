@@ -40,6 +40,7 @@
    static NSString * customCell = @"cell";
    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:customCell];
     // cell = [[[NSBundle mainBundle] loadNibNamed:@"educationTeachingCell" owner:nil options:nil] lastObject];
+//    cell.frame = CGRectMake(0, 0, ScreenWidth, 50);
     if (!cell) {
         //              cell = [[AddressTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell = [[[NSBundle mainBundle] loadNibNamed:@"CallNameLongituginalViewCell" owner:nil options:nil] lastObject];

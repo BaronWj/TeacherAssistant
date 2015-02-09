@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.frame = CGRectMake(0, 0, ScreenWidth, 50);
     [self tableViewCellBackbround];
     [self.headImage.layer setMasksToBounds:YES];
     [self.headImage.layer setCornerRadius:21];

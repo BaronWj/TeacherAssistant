@@ -31,7 +31,7 @@
 			btn = [UIButton buttonWithType:UIButtonTypeCustom];
 			btn.showsTouchWhenHighlighted = NO;
 			btn.tag = i;
-			btn.frame = CGRectMake(width * i + 13, 0+4, 55, frame.size.height-4);
+			btn.frame = CGRectMake(width * i + 13, 0+4, 55, frame.size.height-2);
 			[btn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Default"] forState:UIControlStateNormal];
 			[btn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Highlighted"] forState:UIControlStateHighlighted];
 			[btn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Seleted"] forState:UIControlStateSelected];
