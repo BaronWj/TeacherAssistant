@@ -29,7 +29,6 @@
     self.imageView.image = [UIImage imageNamed:image_name];
     [self.imageView.layer setBorderWidth:2];
     [self.imageView.layer setBorderColor:[UIColor whiteColor].CGColor];
-
 }
 
 -(void)tapGesture:(UITapGestureRecognizer *)tap{

@@ -105,23 +105,20 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    settingTableCollectionViewCell  * settingTable = [[settingTableCollectionViewCell alloc]init];
-//    [settingTable selectCollectionView:indexPath];
-//    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 130)];
-//    imageView.image = [UIImage imageNamed:@"add"];
-//    [collectionView addSubview:imageView];
-    if (indexPath.row == 0) {
-        self.runningCount++;
-        [_backImagesArray addObject:@"student2"];
-        [self.table_collectionView performBatchUpdates:^{
-            [self.table_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:_backImagesArray.count-1 inSection:0]]];
-        } completion:nil];
-    }else{
-//        [_backImagesArray removeObjectAtIndex:indexPath.item];
+    
+//    
+//    if (indexPath.row == 0) {
+//        self.runningCount++;
+//        [_backImagesArray addObject:@"student2"];
 //        [self.table_collectionView performBatchUpdates:^{
-//            [self.table_collectionView deleteItemsAtIndexPaths:@[indexPath]];
+//            [self.table_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:_backImagesArray.count-1 inSection:0]]];
 //        } completion:nil];
-    }
+//    }else{
+////        [_backImagesArray removeObjectAtIndex:indexPath.item];
+////        [self.table_collectionView performBatchUpdates:^{
+////            [self.table_collectionView deleteItemsAtIndexPaths:@[indexPath]];
+////        } completion:nil];
+//    }
 }
 -(void)chooseTableImage:(UITapGestureRecognizer *)tap{
     NSLog(@"UITapGestureRecognizer %ld",tap.view.tag);
@@ -130,25 +127,24 @@
         [self.table_collectionView performBatchUpdates:^{
             [self.table_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:_backImagesArray.count-1 inSection:0]]];
         } completion:nil];
-        
     }
-//  NSLog(@"UITapGestureRecognizer %@",tap.view);
-    MyLog(@"=====_=====%@",[_table_collectionView subviews]);
-    for (settingTableCollectionViewCell * cell in  [_table_collectionView subviews] ) {
-            if (tap.view.tag == cell.tag) {
-                self.removeImageTag = tap.view.tag;
-//                MyLog(@"cellSubViewsCellTag++____%ld",cell.tag );
-//                MyLog(@"cellSubViews++____%@",[cell subviews]);
-                MyLog(@"00999++____%@",[[[[cell subviews] lastObject] subviews] lastObject]);
-                UIImageView * imageView =[[[[cell subviews] lastObject] subviews] lastObject];
-                [imageView.layer setBorderWidth:2];
-                [imageView.layer setBorderColor:[UIColor yellowColor].CGColor];
-            }else{
-                UIImageView * imageView =[[[[cell subviews] lastObject] subviews] lastObject];
-                [imageView.layer setBorderWidth:2];
-                [imageView.layer setBorderColor:[UIColor whiteColor].CGColor];
-            }
+//    MyLog(@"=====_=====%@",[_table_collectionView subviews]);
+    [[_table_collectionView subviews] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        settingTableCollectionViewCell * cell = (settingTableCollectionViewCell*)obj;
+        if (tap.view.tag == cell.tag) {
+            NSLog(@"idx=%ld, id=%@", idx, obj);
+            self.removeImageTag = idx;
+            MyLog(@"00999++____%@",[[[[cell subviews] lastObject] subviews] lastObject]);
+            UIImageView * imageView =[[[[cell subviews] lastObject] subviews] lastObject];
+            [imageView.layer setBorderWidth:2];
+            [imageView.layer setBorderColor:[UIColor yellowColor].CGColor];
+        }else{
+            UIImageView * imageView =[[[[cell subviews] lastObject] subviews] lastObject];
+            [imageView.layer setBorderWidth:2];
+            [imageView.layer setBorderColor:[UIColor whiteColor].CGColor];
         }
+
+    }];
 
 }
 
@@ -156,24 +152,25 @@
 
 }
 -(void)deleteImageBackImage:(UIButton *)_button{
-    if (_removeImageTag == 100) {
+//    [_backImagesArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        NSLog(@"idx=%ld, id=%@", idx, obj);
+//        if ([(NSString *)obj isEqualToString: @"3"]) {
+//            NSLog(@"********_____*****%ld",idx);
+//        }
+//    }];
+    
+    
+    if (_removeImageTag == 0) {
         return ;
     }else{
-        MyLog(@"count__%ld,_removeImageTag___%ld",[_backImagesArray count],_removeImageTag-100);
-        if(_removeImageTag-100 == [_backImagesArray count]){
-            [_backImagesArray removeObjectAtIndex:_removeImageTag-101];
+        MyLog(@"count__%@",_backImagesArray);
+        MyLog(@"count__%ld,_removeImageTag___%ld",[_backImagesArray count],_removeImageTag);
+            [_backImagesArray removeObjectAtIndex:_removeImageTag];
             [self.table_collectionView performBatchUpdates:^{
-                NSIndexPath * dexpath = [NSIndexPath indexPathForRow:_removeImageTag-101 inSection:0];
+                NSIndexPath * dexpath = [NSIndexPath indexPathForRow:_removeImageTag inSection:0];
                 [self.table_collectionView deleteItemsAtIndexPaths:@[dexpath]];
             } completion:nil];
-
-        }else{
-            [_backImagesArray removeObjectAtIndex:_removeImageTag-100];
-            [self.table_collectionView performBatchUpdates:^{
-                NSIndexPath * dexpath = [NSIndexPath indexPathForRow:_removeImageTag-100 inSection:0];
-                [self.table_collectionView deleteItemsAtIndexPaths:@[dexpath]];
-            } completion:nil];
-        }
+      
     }
 }
 
