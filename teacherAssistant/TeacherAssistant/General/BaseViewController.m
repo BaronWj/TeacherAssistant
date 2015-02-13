@@ -22,9 +22,8 @@
     self.view.backgroundColor = backGround;
     if(IsAfterIOS7){
         self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.edgesForExtendedLayout = UIRectEdgeNone;
         self.extendedLayoutIncludesOpaqueBars = NO;
-        //        self.modalPresentationCapturesStatusBarAppearance = YES;
+        self.modalPresentationCapturesStatusBarAppearance = YES;
     }
 //    if (_isBackButton) {
 //        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -49,9 +48,13 @@
 //        UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithCustomView:_rightButton];
 //        self.navigationItem.leftBarButtonItem = buttonItem;
 //    }
+    MyLog(@"_________%f",self.navigationController.navigationBar.frame.size.height);
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"topNav"] forBarMetrics:UIBarMetricsDefault];
-//    [self.navigationController.navigationBar.layer setMasksToBounds:YES];       // 剪切掉多余的背景
+//[self.navigationController.navigationBar.layer setMasksToBounds:YES];
+//    self.navigationController.navigationBar.clipsToBounds = YES;
+
+
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor],
                                                                     UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
 //    self.navigationController.navigationBar
@@ -70,7 +73,12 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     
-}
+   }
+
+
+
+
+
 
 -(void)showMbProgressHud :(BOOL) showState{
     if (showState == YES) {

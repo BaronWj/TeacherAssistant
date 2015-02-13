@@ -80,7 +80,7 @@
 #pragma mark --
 #pragma mark -- textFiledDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    self.view.frame = CGRectMake(0, 0,320 ,ScreenHeight );
+    self.view.frame = CGRectMake(0, 0,ScreenWidth ,ScreenHeight );
     [_schoolTextFiled resignFirstResponder];
     [_accountTextFiled resignFirstResponder];
     [_passwordTextFiled resignFirstResponder];
@@ -89,7 +89,7 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     if (textField == _schoolTextFiled) {
-        self.view.frame = CGRectMake(0, 0,320 ,ScreenHeight );
+        self.view.frame = CGRectMake(0, 0,ScreenWidth ,ScreenHeight );
         [_schoolTextFiled resignFirstResponder];
         [_accountTextFiled resignFirstResponder];
         [_passwordTextFiled resignFirstResponder];
@@ -103,13 +103,13 @@
         [_schoolTextFiled resignFirstResponder];
         [_passwordTextFiled resignFirstResponder];
         if (iPhone4) {
-            self.view.frame = CGRectMake(0, -30,320 ,ScreenHeight );
+            self.view.frame = CGRectMake(0, -30,ScreenWidth ,ScreenHeight );
         }
     }else if(textField == _passwordTextFiled){
         [_schoolTextFiled resignFirstResponder];
         [_accountTextFiled resignFirstResponder];
         if (iPhone4) {
-            self.view.frame = CGRectMake(0, -30,320 ,ScreenHeight );
+            self.view.frame = CGRectMake(0, -30,ScreenWidth ,ScreenHeight );
 
         }
     }
@@ -130,7 +130,7 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
-    self.view.frame = CGRectMake(0, 0,320,ScreenHeight);
+    self.view.frame = CGRectMake(0, 0,ScreenWidth,ScreenHeight);
     [_schoolTextFiled resignFirstResponder];
     [_accountTextFiled resignFirstResponder];
     [_passwordTextFiled resignFirstResponder];
@@ -148,7 +148,11 @@
     [ASAPIClient getLoginWithParameters:dict result:^(BOOL sucess, NSDictionary *results, NSError *error){
         if(sucess == YES){
             [StuSaveUserDefaults saveAccountAndPassWord:dict];
+
+            [StuSaveUserDefaults saveUserID:[results valueForKey:@"Id"]];
+
             [StuSaveUserDefaults saveFirstLogin:YES];
+            
             NSLog(@"))))))))getLoginWithParameters******%@",results );
             NSLog(@"))))))))error******%@",error );
         }else{
@@ -220,7 +224,7 @@
 //    [_schoolTextFiled resignFirstResponder];
     [_accountTextFiled resignFirstResponder];
     [_passwordTextFiled resignFirstResponder];
-    self.view.frame = CGRectMake(0, 0,320 ,ScreenHeight );
+    self.view.frame = CGRectMake(0, 0,ScreenWidth ,ScreenHeight );
 
     ChooseShcoolViewController * chooseSchool = [[ChooseShcoolViewController alloc]init];
     UINavigationController * choose_nav = [[UINavigationController alloc]initWithRootViewController:chooseSchool];

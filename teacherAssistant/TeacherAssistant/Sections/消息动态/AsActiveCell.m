@@ -15,6 +15,9 @@
 - (void)awakeFromNib {
     // Initialization code
     [self tableViewCellBackbround];
+    self.titleLabel.frame = CGRectMake(0, 0, ScreenWidth - 100, self.frame.size.height);
+    self.timeLabel.frame = CGRectMake(0, 0, ScreenWidth - 100, self.frame.size.height);
+
 }
 
 -(void)setActiveModel:(asActiveModel *)activeModel{

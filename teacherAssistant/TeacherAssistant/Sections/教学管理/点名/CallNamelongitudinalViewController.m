@@ -33,7 +33,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 59;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -45,8 +45,9 @@
         //              cell = [[AddressTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell = [[[NSBundle mainBundle] loadNibNamed:@"CallNameLongituginalViewCell" owner:nil options:nil] lastObject];
     }
+    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     return cell;
-
+ 
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

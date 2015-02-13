@@ -7,24 +7,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="CallNameLongituginalViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="346" height="59"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="CallNameLongituginalViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="tA0-Oq-DQS">
-                        <rect key="frame" x="16" y="9" width="42" height="42"/>
+                        <rect key="frame" x="-7" y="-4" width="42" height="42"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="公孙绿萼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoC-G8-zNp">
-                        <rect key="frame" x="64" y="20" width="68" height="21"/>
+                        <rect key="frame" x="43" y="6" width="68" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjD-N1-2Cy">
-                        <rect key="frame" x="124" y="0.0" width="223" height="59"/>
+                        <rect key="frame" x="115" y="0.0" width="231" height="60"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </scrollView>
                 </subviews>
@@ -34,7 +34,7 @@
                 <outlet property="headImage" destination="tA0-Oq-DQS" id="lBe-bO-NQb"/>
                 <outlet property="namelabelname" destination="NoC-G8-zNp" id="YJ3-47-Q19"/>
             </connections>
-            <point key="canvasLocation" x="492" y="256.5"/>
+            <point key="canvasLocation" x="492" y="256"/>
         </tableViewCell>
     </objects>
     <resources>

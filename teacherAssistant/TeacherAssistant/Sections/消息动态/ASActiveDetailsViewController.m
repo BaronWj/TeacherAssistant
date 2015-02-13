@@ -52,19 +52,16 @@
 -(void)pressCollection:(id)sender{
     //    192.168.1.10:8281/api/News/CollectionNews?userId=4d03484e-4c3f-e411-9227-13fa5dc9122a&newsId=1e1e3e9d-b3a2-e411-96c2-d850e6dd285f
     MyLog(@"getAccountAndPassWord___%@",[StuSaveUserDefaults getAccountAndPassWord] );
-    NSString * userID = [[StuSaveUserDefaults getAccountAndPassWord] valueForKey:@"Id"];
-    //    NSDictionary * dict = @{
-    //                            @"userId":@"4d03484e-4c3f-e411-9227-13fa5dc9122a",
-    //                            @"newsId":@"1e1e3e9d-b3a2-e411-96c2-d850e6dd285f",
-    //                            };
-    NSString * postrUrl =  [NSString stringWithFormat:@"userId=%@&newsId=%@",userID,_activeNewID];
-    [ASAPIClient requestPost:postrUrl parameter:nil result:^(BOOL finish , NSDictionary * dict ,NSError * error){
-        MyLog(@"000000999990000****%@",[dict valueForKey:@"msg"] );
-        if ([[dict valueForKey:@"success"] integerValue] == 1) {
-            [self showToast:@"收藏成功"];
-            
-        }
-    }];
+        NSString * userID = [StuSaveUserDefaults getUserId];
+        NSString * postrUrl =  [NSString stringWithFormat:@"userId=%@&newsId=%@",userID,_activeNewID];
+        [ASAPIClient getCollectionWithUrl:postrUrl result:^(BOOL finish, NSDictionary * dict, NSError * error){
+            MyLog(@"%@",error);
+            if ([[dict valueForKey:@"success"] integerValue] == 1) {
+                [self showToast:@"收藏成功"];
+            }
+        }];
+
+
 }
 
 #pragma mark --

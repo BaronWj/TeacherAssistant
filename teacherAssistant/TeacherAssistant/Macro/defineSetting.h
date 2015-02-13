@@ -32,12 +32,16 @@ typedef void (^NetWorkBlock)(BOOL netConnetState);
  * userAndPassWord
  */
 #define USERANDPWED  @"USERANDPWD"
+#define USERID @"USERID"
 
 #define FIRSTLODINSTATE @"FIRSTLODINSTATE"
 
 /**
  *  Device
  */
+#define kTipAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show]
+
+
 #define isRetina ([[UIScreen mainScreen] scale]==2)
 
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

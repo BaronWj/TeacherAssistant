@@ -88,7 +88,7 @@
     if (!cell) {
         cell  = [[[NSBundle mainBundle] loadNibNamed:@"chooseSchoolCell" owner:self options:nil]lastObject];
     }
-    UIImageView * imageView_Line = [[UIImageView alloc]initWithFrame:CGRectMake(9,49.5 , 311, 0.5)];
+    UIImageView * imageView_Line = [[UIImageView alloc]initWithFrame:CGRectMake(9,49.5 ,ScreenWidth - 9, 0.5)];
     imageView_Line.backgroundColor = [UIColor grayColor];
     [cell addSubview:imageView_Line];
     if ([projectTitle_array count] > indexPath.section) {
@@ -168,7 +168,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text=[searchHead_array objectAtIndex:section];
     [myView addSubview:titleLabel];
-    UIImageView * upimageView_Line = [[UIImageView alloc]initWithFrame:CGRectMake(9,21.5 , 311, 0.5)];
+    UIImageView * upimageView_Line = [[UIImageView alloc]initWithFrame:CGRectMake(9,21.5 , ScreenWidth-9, 0.5)];
     upimageView_Line.backgroundColor = [UIColor grayColor];
     [myView addSubview:upimageView_Line];
 

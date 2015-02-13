@@ -8,6 +8,8 @@
 
 #import "CollectionViewController.h"
 #import "CollectionTableViewCell.h"
+#import "collectionModelView.h"
+
 @interface CollectionViewController ()
 
 @end
@@ -17,20 +19,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.\]
-    
+    _collection_array = [[NSMutableArray alloc]initWithCapacity:0];
+
     _collection_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 4, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
     [_collection_tableView setExtraCellLineHidden:YES];
     _collection_tableView.delegate = self;
     _collection_tableView.dataSource = self;
     _collection_tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_collection_tableView];
+    [self requestDate];
 
 }
+#pragma mark --
+#pragma mark -- collection
+-(void)requestDate{
+    [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
+    collectionModelView * collectionViewModel = [[collectionModelView alloc]init];
+    MyLog(@"getAccountAndPassWord___%@",[StuSaveUserDefaults getAccountAndPassWord]);
+    NSDictionary * dict = @{
+                            @"isCollection":@"1",
+                            @"pageNo":@"1",
+                            @"pageSize":@"10"
+                            };
+    [collectionViewModel requestCollectionViewModelData:dict];
+    [collectionViewModel setBlockWithReturnBlock:^(id returnValue){
+        //        _collection_array = returnValue;
+     
+        [self.collection_array addObjectsFromArray:(NSArray *)returnValue];
+        [self.collection_tableView reloadData];
+        [SVProgressHUD dismiss];
+    } WithErrorBlock:^(id errorCode){
+        [SVProgressHUD dismiss];
+        
+    }WithFailureBlock:^{
+        [SVProgressHUD dismiss];
+    }];
+}
+
+
 
 #pragma mark--
 #pragma mark--tableViewDelegate && tableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+   return self.collection_array.count;
 }
 
 //-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -61,6 +92,30 @@
 
 
 }
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle ==UITableViewCellEditingStyleDelete) {//如果编辑样式为删除样式
+        collectionModelView * collectionViewModel = [[collectionModelView alloc]init];
+        [collectionViewModel DeleteDetailWithPublicModel:self.collection_array[indexPath.row]];
+        //          if (indexPath.row<[self.arrayOfRows count]) {
+        [self.collection_array removeObjectAtIndex:indexPath.row];//移除数据源的数据
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];//移除tableView中的数据
+        
+        [collectionViewModel setBlockWithReturnBlock:^(NSDictionary * returnValue){
+            MyLog(@"__%@",returnValue);
+            [self showToast:@"删除成功"];
+            
+        } WithErrorBlock:^(id errorCode){
+            
+        }WithFailureBlock:^{
+        }];
+        
+        //    }
+    }
+    
+}
+
+
 
 //- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
 //{

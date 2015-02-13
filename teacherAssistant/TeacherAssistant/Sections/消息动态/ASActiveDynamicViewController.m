@@ -68,18 +68,42 @@ NSString * const  CellIdentifier = @"Cell";
     //    [SVProgressHUD showSuccessWithStatus:@"正在加载"];
     [SVProgressHUD showWithStatus:@"正在加载" maskType:SVProgressHUDMaskTypeGradient];
     
+    
+    
     //注册一个observer来响应消息的传送
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)//接收消息方法
                                                  name:@"FirstCategory"//消息识别名称
                                                object:nil];
-    
+    [self requestCategory];
     
 }
+-(void)requestCategory{
+//    
+//    if(!ISNULLSTR(_sortID)){
+//        [self requestFocusNetData:_sortID];
+//        [self requestNetListData:_sortID AndPageNo:@"1"];
+//    }
+
+}
+
+-(void)setSortID:(NSString *)sortID{
+    //    [self.head beginRefreshing];
+    if(!ISNULLSTR(sortID)){
+        [self requestFocusNetData:sortID];
+        [self requestNetListData:sortID AndPageNo:@"1"];
+    }
+    
+}
+//接受通知
 
 -(void)receiveNotification:(NSNotification *) not{
-    [self requestFocusNetData:[[not object] firstObject]];
-    [self requestNetListData:[[not object] firstObject]AndPageNo:@"1"];
+    
+    if ([[not object] firstObject]) {
+        [self requestFocusNetData:[[not object] firstObject]];
+        [self requestNetListData:[[not object] firstObject]AndPageNo:@"1"];
+    
+    }
     //    [self.head beginRefreshing];
     _sortID =[[not object] firstObject];
     self.pageNum ++;
@@ -94,9 +118,10 @@ NSString * const  CellIdentifier = @"Cell";
     _head.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
         [weakSelf.activeNewData_array removeAllObjects];
         [weakSelf.asactive_tableView reloadData];
-        
-        [weakSelf requestFocusNetData:weakSelf.sortID];
-        [weakSelf requestNetListData:weakSelf.sortID AndPageNo:@"1"];
+        if (weakSelf.sortID.length) {
+            [weakSelf requestFocusNetData:weakSelf.sortID];
+            [weakSelf requestNetListData:weakSelf.sortID AndPageNo:@"1"];
+        }
         [weakSelf.head endRefreshing];
     };
 }
@@ -109,19 +134,15 @@ NSString * const  CellIdentifier = @"Cell";
     _footer = [MJRefreshFooterView footer];
     _footer.scrollView = self.asactive_tableView;
     _footer.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
-        [weakSelf requestNetListData:weakSelf.sortID AndPageNo:[NSString stringWithFormat:@"%ld",(long)weakSelf.pageNum]] ;
+        if(!ISNULLSTR(weakSelf.sortID)){
+            [weakSelf requestNetListData:weakSelf.sortID AndPageNo:[NSString stringWithFormat:@"%ld",(long)weakSelf.pageNum]] ;
+        }
         [weakSelf.footer endRefreshing];
         weakSelf.pageNum ++;
     };
 }
 
--(void)setSortID:(NSString *)sortID{
-    //    [self.head beginRefreshing];
-    [self requestFocusNetData:sortID];
-    [self requestNetListData:sortID AndPageNo:@"1"];
-    
-    
-}
+
 
 //请求新闻列表数据
 -(void)requestNetListData:(NSString *)sortID AndPageNo:(NSString *)pageNo{
@@ -134,8 +155,11 @@ NSString * const  CellIdentifier = @"Cell";
     [actityViewModel requestActivityViewModelData:dict];
     [actityViewModel setBlockWithReturnBlock:^(id returnValue){
         _asActiveModelArray = returnValue;
-        [self.activeNewData_array addObjectsFromArray:_asActiveModelArray];
-        //        [self.head endRefreshing];
+        if ([((NSArray *) returnValue) count] >0) {
+            [self.activeNewData_array addObjectsFromArray:_asActiveModelArray];
+        }else{
+            [self.head endRefreshing];
+        }
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_asactive_tableView reloadData];
         });

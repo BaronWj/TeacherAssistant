@@ -267,6 +267,20 @@
 		3FCC57FA1A5D310A00D9A181 /* pagebackImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCC57F81A5D310A00D9A181 /* pagebackImage@2x.png */; };
 		3FCC57FE1A5D3C1C00D9A181 /* AsActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC57FC1A5D3C1C00D9A181 /* AsActiveCell.m */; };
 		3FCC57FF1A5D3C1C00D9A181 /* AsActiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCC57FD1A5D3C1C00D9A181 /* AsActiveCell.xib */; };
+		3FD35CE81A89A3C50028ADE2 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CE71A89A3C50028ADE2 /* Helper.m */; };
+		3FD35CFF1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CEB1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.m */; };
+		3FD35D001A89A84E0028ADE2 /* QBAssetsCollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CED1A89A84E0028ADE2 /* QBAssetsCollectionFooterView.m */; };
+		3FD35D011A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CEF1A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.m */; };
+		3FD35D021A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CF11A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.m */; };
+		3FD35D031A89A84E0028ADE2 /* QBAssetsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CF31A89A84E0028ADE2 /* QBAssetsCollectionViewCell.m */; };
+		3FD35D041A89A84E0028ADE2 /* QBAssetsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CF51A89A84E0028ADE2 /* QBAssetsCollectionViewController.m */; };
+		3FD35D051A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CF71A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.m */; };
+		3FD35D061A89A84E0028ADE2 /* QBImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CF91A89A84E0028ADE2 /* QBImagePickerController.m */; };
+		3FD35D071A89A84E0028ADE2 /* QBImagePickerController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD35CFA1A89A84E0028ADE2 /* QBImagePickerController.strings */; };
+		3FD35D081A89A84E0028ADE2 /* QBImagePickerGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CFC1A89A84E0028ADE2 /* QBImagePickerGroupCell.m */; };
+		3FD35D091A89A84E0028ADE2 /* QBImagePickerThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD35CFE1A89A84E0028ADE2 /* QBImagePickerThumbnailView.m */; };
+		3FD35D0B1A89AA3C0028ADE2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD35D0A1A89AA3C0028ADE2 /* AVFoundation.framework */; };
+		3FD35D0D1A89ABB60028ADE2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD35D0C1A89ABB60028ADE2 /* AssetsLibrary.framework */; };
 		3FD6490B1A71DBDA0061C69D /* CourseInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD649091A71DBDA0061C69D /* CourseInfoTableViewCell.m */; };
 		3FD6490C1A71DBDA0061C69D /* CourseInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6490A1A71DBDA0061C69D /* CourseInfoTableViewCell.xib */; };
 		3FD649111A71EB0D0061C69D /* substituteClass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6490D1A71EB0D0061C69D /* substituteClass@2x.png */; };
@@ -282,6 +296,12 @@
 		3FD718751A778AD500681D1A /* tableSetting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD718731A778AD500681D1A /* tableSetting.png */; };
 		3FD718781A778E6000681D1A /* tabledelect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD718761A778E6000681D1A /* tabledelect@2x.png */; };
 		3FD718791A778E6000681D1A /* tabledelect.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD718771A778E6000681D1A /* tabledelect.png */; };
+		3FD952721A8C7E2C00B9D069 /* collectionModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD952711A8C7E2C00B9D069 /* collectionModelView.m */; };
+		3FD952741A8C8AF800B9D069 /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD952731A8C8AF800B9D069 /* 111.jpg */; };
+		3FD952761A8C8F5600B9D069 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD952751A8C8F5600B9D069 /* 22.jpg */; };
+		3FD9DA621A8D9440004D3B36 /* 22@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9DA611A8D9440004D3B36 /* 22@3x.jpg */; };
+		3FD9DA641A8D95C9004D3B36 /* 22@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD9DA631A8D95C9004D3B36 /* 22@3x.png */; };
+		3FD9DA671A8D99AC004D3B36 /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9DA661A8D99AC004D3B36 /* CustomImage.m */; };
 		3FDE12321A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE12311A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m */; };
 		3FDE12361A6F4A3300A14839 /* DataSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE12341A6F4A3300A14839 /* DataSearchViewController.m */; };
 		3FDE12371A6F4A3300A14839 /* DataSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE12351A6F4A3300A14839 /* DataSearchViewController.xib */; };
@@ -822,6 +842,31 @@
 		3FCC57FB1A5D3C1C00D9A181 /* AsActiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsActiveCell.h; sourceTree = "<group>"; };
 		3FCC57FC1A5D3C1C00D9A181 /* AsActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsActiveCell.m; sourceTree = "<group>"; };
 		3FCC57FD1A5D3C1C00D9A181 /* AsActiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AsActiveCell.xib; sourceTree = "<group>"; };
+		3FD35CE61A89A3C50028ADE2 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		3FD35CE71A89A3C50028ADE2 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		3FD35CEA1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionCheckmarkView.h; sourceTree = "<group>"; };
+		3FD35CEB1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionCheckmarkView.m; sourceTree = "<group>"; };
+		3FD35CEC1A89A84E0028ADE2 /* QBAssetsCollectionFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionFooterView.h; sourceTree = "<group>"; };
+		3FD35CED1A89A84E0028ADE2 /* QBAssetsCollectionFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionFooterView.m; sourceTree = "<group>"; };
+		3FD35CEE1A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionOverlayView.h; sourceTree = "<group>"; };
+		3FD35CEF1A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionOverlayView.m; sourceTree = "<group>"; };
+		3FD35CF01A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionVideoIndicatorView.h; sourceTree = "<group>"; };
+		3FD35CF11A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionVideoIndicatorView.m; sourceTree = "<group>"; };
+		3FD35CF21A89A84E0028ADE2 /* QBAssetsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionViewCell.h; sourceTree = "<group>"; };
+		3FD35CF31A89A84E0028ADE2 /* QBAssetsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionViewCell.m; sourceTree = "<group>"; };
+		3FD35CF41A89A84E0028ADE2 /* QBAssetsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionViewController.h; sourceTree = "<group>"; };
+		3FD35CF51A89A84E0028ADE2 /* QBAssetsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionViewController.m; sourceTree = "<group>"; };
+		3FD35CF61A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsCollectionViewLayout.h; sourceTree = "<group>"; };
+		3FD35CF71A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsCollectionViewLayout.m; sourceTree = "<group>"; };
+		3FD35CF81A89A84E0028ADE2 /* QBImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBImagePickerController.h; sourceTree = "<group>"; };
+		3FD35CF91A89A84E0028ADE2 /* QBImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBImagePickerController.m; sourceTree = "<group>"; };
+		3FD35CFA1A89A84E0028ADE2 /* QBImagePickerController.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = QBImagePickerController.strings; sourceTree = "<group>"; };
+		3FD35CFB1A89A84E0028ADE2 /* QBImagePickerGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBImagePickerGroupCell.h; sourceTree = "<group>"; };
+		3FD35CFC1A89A84E0028ADE2 /* QBImagePickerGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBImagePickerGroupCell.m; sourceTree = "<group>"; };
+		3FD35CFD1A89A84E0028ADE2 /* QBImagePickerThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBImagePickerThumbnailView.h; sourceTree = "<group>"; };
+		3FD35CFE1A89A84E0028ADE2 /* QBImagePickerThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBImagePickerThumbnailView.m; sourceTree = "<group>"; };
+		3FD35D0A1A89AA3C0028ADE2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3FD35D0C1A89ABB60028ADE2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		3FD649081A71DBDA0061C69D /* CourseInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfoTableViewCell.h; sourceTree = "<group>"; };
 		3FD649091A71DBDA0061C69D /* CourseInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInfoTableViewCell.m; sourceTree = "<group>"; };
 		3FD6490A1A71DBDA0061C69D /* CourseInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -843,6 +888,14 @@
 		3FD718731A778AD500681D1A /* tableSetting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableSetting.png; sourceTree = "<group>"; };
 		3FD718761A778E6000681D1A /* tabledelect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabledelect@2x.png"; sourceTree = "<group>"; };
 		3FD718771A778E6000681D1A /* tabledelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabledelect.png; sourceTree = "<group>"; };
+		3FD952701A8C7E2C00B9D069 /* collectionModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionModelView.h; sourceTree = "<group>"; };
+		3FD952711A8C7E2C00B9D069 /* collectionModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionModelView.m; sourceTree = "<group>"; };
+		3FD952731A8C8AF800B9D069 /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
+		3FD952751A8C8F5600B9D069 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		3FD9DA611A8D9440004D3B36 /* 22@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "22@3x.jpg"; sourceTree = "<group>"; };
+		3FD9DA631A8D95C9004D3B36 /* 22@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22@3x.png"; sourceTree = "<group>"; };
+		3FD9DA651A8D99AC004D3B36 /* CustomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImage.h; sourceTree = "<group>"; };
+		3FD9DA661A8D99AC004D3B36 /* CustomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImage.m; sourceTree = "<group>"; };
 		3FDE12301A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+ChatSearchBar.h"; sourceTree = "<group>"; };
 		3FDE12311A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+ChatSearchBar.m"; sourceTree = "<group>"; };
 		3FDE12331A6F4A3300A14839 /* DataSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSearchViewController.h; sourceTree = "<group>"; };
@@ -1064,6 +1117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD35D0D1A89ABB60028ADE2 /* AssetsLibrary.framework in Frameworks */,
+				3FD35D0B1A89AA3C0028ADE2 /* AVFoundation.framework in Frameworks */,
 				3FB7E0081A78E9F6005CE41F /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1304,6 +1359,7 @@
 		3FC1CE0E1A5F8F7F00120A3B /* venator */ = {
 			isa = PBXGroup;
 			children = (
+				3FD35CE91A89A84E0028ADE2 /* QBImagePickerController */,
 				3FC1CE0F1A5F8FB600120A3B /* SDWebImage-Category */,
 			);
 			path = venator;
@@ -1333,6 +1389,8 @@
 		3FC320991A5A36C100C4121E = {
 			isa = PBXGroup;
 			children = (
+				3FD35D0C1A89ABB60028ADE2 /* AssetsLibrary.framework */,
+				3FD35D0A1A89AA3C0028ADE2 /* AVFoundation.framework */,
 				3FC1CE051A5F69A900120A3B /* libcorecrypto.dylib */,
 				3FC320A41A5A36C100C4121E /* TeacherAssistant */,
 				3FC320BE1A5A36C100C4121E /* TeacherAssistantTests */,
@@ -1434,6 +1492,7 @@
 		3FC320D21A5A38D200C4121E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3FD35CE51A89A3B10028ADE2 /* AuthorizationHelper */,
 				3FE1A7481A7B799B00970B3C /* SaveData */,
 				3FE2D9071A70F06B00F7019B /* AadgeView */,
 				3FEB34D21A6E03AA002A42EC /* ChineseCharactersChangePinyin */,
@@ -1709,7 +1768,11 @@
 				3FE1A7401A7B284C00970B3C /* loginbackColor@2x.png */,
 				3FE1A7411A7B284C00970B3C /* loginbackColor.png */,
 				3FC321FC1A5A9EF200C4121E /* schoolChatTtitle.png */,
+				3FD9DA611A8D9440004D3B36 /* 22@3x.jpg */,
+				3FD9DA631A8D95C9004D3B36 /* 22@3x.png */,
 				3FC321FD1A5A9EF200C4121E /* schoolChatTtitle@2x.png */,
+				3FD952751A8C8F5600B9D069 /* 22.jpg */,
+				3FD952731A8C8AF800B9D069 /* 111.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -2120,6 +2183,43 @@
 			path = AdScrollView;
 			sourceTree = "<group>";
 		};
+		3FD35CE51A89A3B10028ADE2 /* AuthorizationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3FD35CE61A89A3C50028ADE2 /* Helper.h */,
+				3FD35CE71A89A3C50028ADE2 /* Helper.m */,
+			);
+			path = AuthorizationHelper;
+			sourceTree = "<group>";
+		};
+		3FD35CE91A89A84E0028ADE2 /* QBImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				3FD35CEA1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.h */,
+				3FD35CEB1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.m */,
+				3FD35CEC1A89A84E0028ADE2 /* QBAssetsCollectionFooterView.h */,
+				3FD35CED1A89A84E0028ADE2 /* QBAssetsCollectionFooterView.m */,
+				3FD35CEE1A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.h */,
+				3FD35CEF1A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.m */,
+				3FD35CF01A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.h */,
+				3FD35CF11A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.m */,
+				3FD35CF21A89A84E0028ADE2 /* QBAssetsCollectionViewCell.h */,
+				3FD35CF31A89A84E0028ADE2 /* QBAssetsCollectionViewCell.m */,
+				3FD35CF41A89A84E0028ADE2 /* QBAssetsCollectionViewController.h */,
+				3FD35CF51A89A84E0028ADE2 /* QBAssetsCollectionViewController.m */,
+				3FD35CF61A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.h */,
+				3FD35CF71A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.m */,
+				3FD35CF81A89A84E0028ADE2 /* QBImagePickerController.h */,
+				3FD35CF91A89A84E0028ADE2 /* QBImagePickerController.m */,
+				3FD35CFA1A89A84E0028ADE2 /* QBImagePickerController.strings */,
+				3FD35CFB1A89A84E0028ADE2 /* QBImagePickerGroupCell.h */,
+				3FD35CFC1A89A84E0028ADE2 /* QBImagePickerGroupCell.m */,
+				3FD35CFD1A89A84E0028ADE2 /* QBImagePickerThumbnailView.h */,
+				3FD35CFE1A89A84E0028ADE2 /* QBImagePickerThumbnailView.m */,
+			);
+			path = QBImagePickerController;
+			sourceTree = "<group>";
+		};
 		3FDE123D1A6F4AF400A14839 /* JOSN */ = {
 			isa = PBXGroup;
 			children = (
@@ -2145,6 +2245,8 @@
 				3FE106321A84C2B500A68A2F /* focusNewModel.h */,
 				3FE106331A84C2B500A68A2F /* focusNewModel.m */,
 				3FDE31461A7630F500B3833B /* ViewModelClass.h */,
+				3FD952701A8C7E2C00B9D069 /* collectionModelView.h */,
+				3FD952711A8C7E2C00B9D069 /* collectionModelView.m */,
 				3FDE31471A7630F500B3833B /* ViewModelClass.m */,
 				3FDE31491A76347500B3833B /* asActivityViewModel.h */,
 				3FDE314A1A76347500B3833B /* asActivityViewModel.m */,
@@ -2207,6 +2309,8 @@
 				3FE2D8E61A70C09100F7019B /* NSDate+Helper.h */,
 				3FE2D8E71A70C09100F7019B /* NSDate+Helper.m */,
 				3FE2D8E81A70C09100F7019B /* README.textile */,
+				3FD9DA651A8D99AC004D3B36 /* CustomImage.h */,
+				3FD9DA661A8D99AC004D3B36 /* CustomImage.m */,
 			);
 			path = "NSDate+Helper";
 			sourceTree = "<group>";
@@ -2413,6 +2517,7 @@
 				3FC321C91A5A935700C4121E /* meSelectedNormal@2x.png in Resources */,
 				3FC88A951A68EE3300F0AF27 /* sectorView.xib in Resources */,
 				3FCC57FF1A5D3C1C00D9A181 /* AsActiveCell.xib in Resources */,
+				3FD952741A8C8AF800B9D069 /* 111.jpg in Resources */,
 				3FE2D90F1A71098300F7019B /* CourseInfoViewController.xib in Resources */,
 				3FC321C81A5A935700C4121E /* meSelectedNormal.png in Resources */,
 				3FE1A72A1A7B226D00970B3C /* findPassword.png in Resources */,
@@ -2542,6 +2647,7 @@
 				3FCC57E91A5D254E00D9A181 /* image2.png in Resources */,
 				3FC321D81A5A951900C4121E /* educationSelected.png in Resources */,
 				3FDE12421A6F59DE00A14839 /* headImage.png in Resources */,
+				3FD952761A8C8F5600B9D069 /* 22.jpg in Resources */,
 				3FDE12441A6F5A3300A14839 /* headImage1.png in Resources */,
 				3F9296CD1A8875BD0036556B /* tableSettingNormal@2x.png in Resources */,
 				3FEB34CD1A6DF64F002A42EC /* chat@2x.png in Resources */,
@@ -2560,11 +2666,14 @@
 				3FEB34AD1A6DE3C1002A42EC /* NewChatViewController.xib in Resources */,
 				3FE2D8F71A70D65700F7019B /* NewFriendViewController.xib in Resources */,
 				3FC089001A5BE193009FB115 /* myschool.png in Resources */,
+				3FD35D071A89A84E0028ADE2 /* QBImagePickerController.strings in Resources */,
 				3FC088D21A5B80E9009FB115 /* red_line_and_shadow@2x.png in Resources */,
 				3FF9D3841A6C8E1800DD5D38 /* CollectionTableViewCell.xib in Resources */,
 				3FC321CF1A5A947600C4121E /* schoolChatSelected@2x.png in Resources */,
 				3FB7DFBE1A78D2E5005CE41F /* SubstituteTableViewCell.xib in Resources */,
 				3FC88A991A69150600F0AF27 /* arrow@2x.png in Resources */,
+				3FD9DA621A8D9440004D3B36 /* 22@3x.jpg in Resources */,
+				3FD9DA641A8D95C9004D3B36 /* 22@3x.png in Resources */,
 				3FE1A7271A7B1DF000970B3C /* ForgetViewController.xib in Resources */,
 				3FC321261A5A4FE400C4121E /* icon50reload.png in Resources */,
 				3FCC57A21A5D008100D9A181 /* evaluate@2x.png in Resources */,
@@ -2625,6 +2734,7 @@
 				3FE74D4B1A7A12CA00004FA7 /* opinionViewController.m in Sources */,
 				3FEB34B61A6DEA2C002A42EC /* AddressTableViewCell.m in Sources */,
 				3FC992271A637D8100ECAE64 /* NSString+URLEncoding.m in Sources */,
+				3FD35D031A89A84E0028ADE2 /* QBAssetsCollectionViewCell.m in Sources */,
 				3FC088BD1A5B70DC009FB115 /* SchoolChatViewController.m in Sources */,
 				3FC321521A5A517400C4121E /* AFHTTPRequestOperation.m in Sources */,
 				3FC321591A5A517400C4121E /* AFURLResponseSerialization.m in Sources */,
@@ -2635,6 +2745,7 @@
 				3FC3215F1A5A517400C4121E /* UIImageView+AFNetworking.m in Sources */,
 				3FDE12401A6F4AFB00A14839 /* JSONKit.m in Sources */,
 				3FC321101A5A3FB600C4121E /* UIImage+WebP.m in Sources */,
+				3FD35D021A89A84E0028ADE2 /* QBAssetsCollectionVideoIndicatorView.m in Sources */,
 				3FC3211D1A5A428000C4121E /* OpenUDID.m in Sources */,
 				3FE2D9051A70E1FA00F7019B /* ClassAddressTableViewCell.m in Sources */,
 				3F4E85001A723DA00077D733 /* SettingTableBackViewController.m in Sources */,
@@ -2649,6 +2760,7 @@
 				3FDE12631A6F894500A14839 /* CallNamelongitudinalViewController.m in Sources */,
 				3FE1A7231A7B1DF000970B3C /* ChooseShcoolViewController.m in Sources */,
 				3FDE12321A6F3D5E00A14839 /* UISearchBar+ChatSearchBar.m in Sources */,
+				3FD35D041A89A84E0028ADE2 /* QBAssetsCollectionViewController.m in Sources */,
 				3FC9928F1A63AA1C00ECAE64 /* ILRegularExpressionManager.m in Sources */,
 				3FC88A6C1A68B36500F0AF27 /* CollapseClickArrow.m in Sources */,
 				3FC321091A5A3FB600C4121E /* SDWebImageDownloader.m in Sources */,
@@ -2670,6 +2782,7 @@
 				3FDF22401A67C01B002D122F /* AttendanceViewController.m in Sources */,
 				3FC88A851A68EA8500F0AF27 /* NSArray+descValues.m in Sources */,
 				3FE2D8E31A70C05A00F7019B /* NSDate+Common.m in Sources */,
+				3FD35D061A89A84E0028ADE2 /* QBImagePickerController.m in Sources */,
 				3FC3215A1A5A517400C4121E /* AFURLSessionManager.m in Sources */,
 				3FB7E00D1A78EA0D005CE41F /* ChatViewController.m in Sources */,
 				3FC321211A5A4A5000C4121E /* FormValidateUtil.m in Sources */,
@@ -2679,6 +2792,7 @@
 				3FB7DFB21A78729C005CE41F /* UIRefreshControl+AFNetworking.m in Sources */,
 				3FC88A8E1A68EAAE00F0AF27 /* NSMutableArray+pieEx.m in Sources */,
 				3FC3215E1A5A517400C4121E /* UIButton+AFNetworking.m in Sources */,
+				3FD35D091A89A84E0028ADE2 /* QBImagePickerThumbnailView.m in Sources */,
 				3FE4DD0C1A664ED700F75E24 /* CurriculumTableViewController.m in Sources */,
 				3FD6490B1A71DBDA0061C69D /* CourseInfoTableViewCell.m in Sources */,
 				3FE1A74B1A7B79A100970B3C /* StuSaveMessPlist.m in Sources */,
@@ -2700,12 +2814,14 @@
 				3FC88A811A68EA6600F0AF27 /* Example2Controller.m in Sources */,
 				3FCC57FE1A5D3C1C00D9A181 /* AsActiveCell.m in Sources */,
 				3FF9D38C1A6C97EA00DD5D38 /* ASActiveDetailsViewController.m in Sources */,
+				3FD35CE81A89A3C50028ADE2 /* Helper.m in Sources */,
 				3FC3210D1A5A3FB600C4121E /* UIButton+WebCache.m in Sources */,
 				3FE4DD041A66083900F75E24 /* UITableView+tableViewExtraCellHidden.m in Sources */,
 				3FDF22361A675868002D122F /* MeetModel.m in Sources */,
 				3FC88A931A68EBEA00F0AF27 /* SectorView.m in Sources */,
 				3FC992921A63AA1C00ECAE64 /* YMTextData.m in Sources */,
 				3FDE31391A75E65400B3833B /* asActiveModel.m in Sources */,
+				3FD952721A8C7E2C00B9D069 /* collectionModelView.m in Sources */,
 				3FC992831A63A9C500ECAE64 /* YMReplyInputView.m in Sources */,
 				3FF9D3881A6C8EFF00DD5D38 /* UITableViewCell+tableViewCell.m in Sources */,
 				3FE74D5A1A7A1E8D00004FA7 /* RecomCollectionViewCell.m in Sources */,
@@ -2715,6 +2831,7 @@
 				3FC3210F1A5A3FB600C4121E /* UIImage+MultiFormat.m in Sources */,
 				3FC3215B1A5A517400C4121E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3FC321531A5A517400C4121E /* AFHTTPRequestOperationManager.m in Sources */,
+				3FD35D081A89A84E0028ADE2 /* QBImagePickerGroupCell.m in Sources */,
 				3FE74D451A7A08BE00004FA7 /* softwareViewController.m in Sources */,
 				3FDE314B1A76347500B3833B /* asActivityViewModel.m in Sources */,
 				3FC3216D1A5A5E8600C4121E /* ALToastView.m in Sources */,
@@ -2731,6 +2848,7 @@
 				3FEB34DF1A6E1EB4002A42EC /* newChatTableViewCell.m in Sources */,
 				3FC321111A5A3FB600C4121E /* UIImageView+WebCache.m in Sources */,
 				3FE1A7261A7B1DF000970B3C /* ForgetViewController.m in Sources */,
+				3FD35D001A89A84E0028ADE2 /* QBAssetsCollectionFooterView.m in Sources */,
 				3FC992901A63AA1C00ECAE64 /* NSArray+NSArray_ILExtension.m in Sources */,
 				3FDE125E1A6F891000A14839 /* CallNameCrossViewController.m in Sources */,
 				3FC321771A5A600B00C4121E /* UIViewController+FindTabView.m in Sources */,
@@ -2742,6 +2860,7 @@
 				3FC3210A1A5A3FB600C4121E /* SDWebImageDownloaderOperation.m in Sources */,
 				3FE74D241A79D15A00004FA7 /* PeopleInfoViewController.m in Sources */,
 				3FD718531A772E9000681D1A /* asActiVityLabelModel.m in Sources */,
+				3FD9DA671A8D99AC004D3B36 /* CustomImage.m in Sources */,
 				3FE74D371A79E6DF00004FA7 /* ModifyPwdViewController.m in Sources */,
 				3FC321601A5A517400C4121E /* UIProgressView+AFNetworking.m in Sources */,
 				3FE106341A84C2B500A68A2F /* focusNewModel.m in Sources */,
@@ -2778,6 +2897,7 @@
 				3FE74D501A7A1AF000004FA7 /* RecommendedViewController.m in Sources */,
 				3FDE123A1A6F4A4900A14839 /* Bank.m in Sources */,
 				3FDF22341A675868002D122F /* MyLabel.m in Sources */,
+				3FD35CFF1A89A84E0028ADE2 /* QBAssetsCollectionCheckmarkView.m in Sources */,
 				3FB7DFB81A78CEB9005CE41F /* SubstituteClassViewController.m in Sources */,
 				3FC321061A5A3FB600C4121E /* SDImageCache.m in Sources */,
 				3FB7DFE11A78E9E3005CE41F /* NSDate+Utils.m in Sources */,
@@ -2786,8 +2906,10 @@
 				3FC992851A63A9C500ECAE64 /* YMTableViewCell.m in Sources */,
 				3FD718501A772DD800681D1A /* asActivityLabelViewModel.m in Sources */,
 				3FC321B81A5A71D500C4121E /* BaseViewController.m in Sources */,
+				3FD35D011A89A84E0028ADE2 /* QBAssetsCollectionOverlayView.m in Sources */,
 				3FDF22331A675868002D122F /* TimeView.m in Sources */,
 				3FB7DFD81A78E9C9005CE41F /* UUInputFunctionView.m in Sources */,
+				3FD35D051A89A84E0028ADE2 /* QBAssetsCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

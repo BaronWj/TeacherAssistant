@@ -12,13 +12,16 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.frame = CGRectMake(0, 0, ScreenWidth, 50);
+    self.frame = CGRectMake(0, 0, ScreenWidth, 59);
+    UIImageView * lineImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 58, ScreenWidth-10, 0.5)];
+    lineImage.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [self addSubview:lineImage];
     [self tableViewCellBackbround];
     [self.headImage.layer setMasksToBounds:YES];
     [self.headImage.layer setCornerRadius:21];
     [self.headImage.layer setBorderColor:[UIColor whiteColor].CGColor];
     [self.headImage.layer setBorderWidth:1];
-    self.callScrollView.contentSize = CGSizeMake(self.frame.size.width, 50);
+    self.callScrollView.contentSize = CGSizeMake(ScreenWidth, 59);
     self.callScrollView.showsVerticalScrollIndicator = NO;
     self.callScrollView.showsHorizontalScrollIndicator = NO;
 
@@ -29,7 +32,7 @@
     NSArray * nameArray = @[@"正",@"迟",@"早",@"旷",@"事",@"病"];
     for (NSInteger i = 0; i<6; i++) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(10 + 50 *i, 10, 40, 40);
+        button.frame = CGRectMake( 50 *i, 10, 40, 40);
 //        [button setBackgroundImage:[UIImage imageNamed:@"normal"] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         button.tag = 1000+i;

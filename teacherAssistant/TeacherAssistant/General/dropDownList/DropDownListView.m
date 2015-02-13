@@ -66,7 +66,7 @@
             if (sectionNum > 1) {
                 sectionBtnIv = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/sectionNum*i + 140, (self.frame.size.height-12)/2 , 12, 12)];
             }else{
-                sectionBtnIv = [[UIImageView alloc] initWithFrame:CGRectMake(sectionWidth*i +(sectionWidth - 16)-50, (self.frame.size.height-12)/2, 12, 12)];
+                sectionBtnIv = [[UIImageView alloc] initWithFrame:CGRectMake(sectionWidth*i +(sectionWidth - 16), (self.frame.size.height-12)/2, 12, 12)];
             }
             [sectionBtnIv setImage:[UIImage imageNamed:@"down_dark.png"]];
             [sectionBtnIv setContentMode:UIViewContentModeScaleToFill];
@@ -164,7 +164,7 @@
              self.mTableView = [[UITableView alloc] initWithFrame:CGRectMake(self.frame.origin.x/2 + 240/4 , 5, self.frame.size.width , ScreenWidth/sectionNum) style:UITableViewStylePlain];
         }else{
         
-            self.mTableView = [[UITableView alloc] initWithFrame:CGRectMake(0 , 5, self.frame.size.width , ScreenHeight -100) style:UITableViewStylePlain];
+            self.mTableView = [[UITableView alloc] initWithFrame:CGRectMake(self.frame.origin.x/2+ 240/4 , 5, self.frame.size.width , ScreenHeight -100) style:UITableViewStylePlain];
         }
         
         self.mTableView.delegate = self;
@@ -186,7 +186,7 @@
     if(sectionNum > 1){
         self.mTableView.frame = CGRectMake(rect.origin.x  , 44, ScreenWidth/2, 0);
     }else{
-        self.mTableView.frame =CGRectMake(0, 5, self.frame.size.width, 0);
+        self.mTableView.frame =CGRectMake(rect.origin.x + 100, 5, self.frame.size.width, 0);
 
     }
     [self.mSuperView addSubview:self.mTableBaseView];
@@ -204,7 +204,7 @@
           self.mTableView.frame =  CGRectMake(rect.origin.x , 44, ScreenWidth/sectionNum, 240);
 
         }else{
-            self.mTableView.frame =  CGRectMake(0 , 5, self.frame.size.width, ScreenHeight -100);
+            self.mTableView.frame =  CGRectMake(100 , 5, 200, ScreenHeight -100);
         }
     }];
     [self.mTableView reloadData];
